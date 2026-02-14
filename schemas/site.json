@@ -1,0 +1,25 @@
+{
+  "PK": { "S": "DATASET#CURRENT" },
+  "SK": { "S": "site" },
+
+  "site": {
+    "M": {
+      "clientlib": { "S": "1.0.0" },
+      "pages": {
+        "L": [
+          {
+            "M": {
+              "page": { "S": "https://google.com/contact/" },
+              "components": {
+                "L": [
+                  { "S": "components/analytics" },
+                  { "S": "components/header" }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
