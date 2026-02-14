@@ -1,0 +1,21 @@
+{
+  "PK": { "S": "DATASET#CURRENT" },
+  "SK": { "S": "OVERVIEW" },
+  "overview": {
+    "M": {
+      "filters": {
+        "M": {
+          "domains": {
+            "L": [
+              { "S": "https://google.com" },
+              { "S": "https://www.google.com" }
+            ]
+          },
+          "clientlibs": {
+            "L": [{ "S": "1.0.0" }, { "S": "1.0.1" }]
+          }
+        }
+      }
+    }
+  }
+}
