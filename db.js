@@ -104,19 +104,32 @@ const overview = {
     M: {
       filters: {
         M: {
-          domains: {
+          websites: {
             L: domains.map((d) => ({ S: d })),
           },
           clientlibs: {
             L: [...clientlibs].map((c) => ({ S: c })),
           },
           components: {
-            L: [...temp.keys()].map((c) => ({
-              M: {
-                component: { S: c },
-                count: { N: String(temp.get(c)?.length ?? 0) },
-              },
-            })),
+            L: [...temp.entries()].map(([component, refs]) => {
+              const websites = [...new Set(refs.map((r) => r.domain))].sort();
+              const componentClientlibs = [
+                ...new Set(refs.map((r) => r.clientlib).filter(Boolean)),
+              ].sort();
+
+              return {
+                M: {
+                  component: { S: component },
+                  count: { N: String(refs.length) },
+                  websites: {
+                    L: websites.map((w) => ({ S: w })),
+                  },
+                  clientlibs: {
+                    L: componentClientlibs.map((c) => ({ S: c })),
+                  },
+                },
+              };
+            }),
           },
         },
       },
