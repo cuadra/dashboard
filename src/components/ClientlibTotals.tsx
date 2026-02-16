@@ -1,6 +1,7 @@
 import { createSignal, onMount, For, Show } from "solid-js";
 
 import { SolidApexCharts } from "solid-apexcharts";
+import { styled } from "@macaron-css/solid";
 type SiteRecord = {
   site: {
     M: {
@@ -47,23 +48,8 @@ export const ClientlibTotals = () => {
     labels: ["Team A", "Team B", "Team C", "Team D", "Team E"], // Labels for each slice
     chart: {
       type: "donut", // Specify chart type as 'pie'
-      width: "50%",
+      width: "100%",
     },
-    responsive: [
-      {
-        // Optional responsive settings
-        breakpoint: 480,
-        options: {
-          chart: {
-            width: "50%",
-            height: "500px",
-          },
-          legend: {
-            position: "bottom",
-          },
-        },
-      },
-    ],
   });
   onMount(async () => {
     setStatus("loading");
@@ -126,8 +112,13 @@ export const ClientlibTotals = () => {
     }
   });
 
+  const Section = styled("section", {
+    base: {
+      width: "100%",
+    },
+  });
   return (
-    <section>
+    <Section>
       <SolidApexCharts
         options={clientOptions()}
         series={clientSeries()}
@@ -151,6 +142,6 @@ export const ClientlibTotals = () => {
           </For>
         </ol>
       </Show>
-    </section>
+    </Section>
   );
 };

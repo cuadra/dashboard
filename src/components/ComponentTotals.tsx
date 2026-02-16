@@ -1,5 +1,6 @@
 import { createSignal, onMount, For, Show } from "solid-js";
 import { SolidApexCharts } from "solid-apexcharts";
+import { styled } from "@macaron-css/solid";
 import type {
   DynamoList,
   DynamoMap,
@@ -73,23 +74,9 @@ export const ComponentTotals = () => {
     labels: ["Team A", "Team B", "Team C", "Team D", "Team E"], // Labels for each slice
     chart: {
       type: "donut", // Specify chart type as 'pie'
-      width: "50%",
+      width: "100%",
+      height: "500px",
     },
-    responsive: [
-      {
-        // Optional responsive settings
-        breakpoint: 480,
-        options: {
-          chart: {
-            width: "50%",
-            height: "500px",
-          },
-          legend: {
-            position: "bottom",
-          },
-        },
-      },
-    ],
   });
   onMount(async () => {
     setStatus("loading");
@@ -144,24 +131,25 @@ export const ComponentTotals = () => {
             `${getComponentDisplayName(entry.component)} ${entry.percentage.toFixed(1)}%`,
         ),
       }));
-
-      setComponentSeries(arr.map((entry) => entry.percentage));
-      setComponentOptions((prev) => ({
-        ...prev,
-        labels: arr.map(
-          (entry) =>
-            `${getComponentDisplayName(entry.component)} ${entry.percentage.toFixed(1)}%`,
-        ),
-      }));
     } catch (error) {
       console.error(error);
       setStatus("error");
     }
   });
 
+  const Section = styled("section", {
+    base: {
+      width: "100%",
+    },
+  });
+
   return (
-    <section>
-      <h2>Most Used Components (All Sites)</h2>
+    <Section>
+      <SolidApexCharts
+        options={componentOptions()}
+        series={componentSeries()}
+        type="pie"
+      />
       <Show when={status() === "loading"} fallback={null}>
         <p>Loading totals...</p>
       </Show>
@@ -179,12 +167,6 @@ export const ComponentTotals = () => {
           </For>
         </ol>
       </Show>
-
-      <SolidApexCharts
-        options={componentOptions()}
-        series={componentSeries()}
-        type="pie"
-      />
-    </section>
+    </Section>
   );
 };

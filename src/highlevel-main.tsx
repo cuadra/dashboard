@@ -2,12 +2,20 @@ import { render } from "solid-js/web";
 import { ComponentTotals } from "./components/ComponentTotals";
 import { ClientlibTotals } from "./components/ClientlibTotals";
 
+import { styled } from "@macaron-css/solid";
+
 const HighLevelPage = () => {
+  const Main = styled("main", {
+    base: {
+      display: "flex",
+      gap: "24px",
+    },
+  });
   return (
-    <main style={{ padding: "24px", "font-family": "Arial, sans-serif" }}>
+    <Main>
       <ComponentTotals />
       <ClientlibTotals />
-    </main>
+    </Main>
   );
 };
 
