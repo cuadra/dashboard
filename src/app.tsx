@@ -84,6 +84,15 @@ export const App: Component = () => {
     },
   });
 
+  const getComponentDisplayName = (componentName: string) => {
+    const raw = componentName.split("/").pop() ?? componentName;
+    const cleaned = raw.replace(/[-_]+/g, " ").trim().toLowerCase();
+    if (!cleaned) {
+      return componentName;
+    }
+    return cleaned.replace(/\b\w/g, (char) => char.toUpperCase());
+  };
+
   const lTheme = createTheme(vars, {
     color: {
       background: "#ffffff",
@@ -122,7 +131,15 @@ export const App: Component = () => {
     const componentNames = json.overview.M.filters.M.components.L.map(
       (component: { M: { component: { S: string } } }) =>
         component.M.component.S,
-    );
+    ).sort((a: string, b: string) => {
+      const nameA = getComponentDisplayName(a).toLowerCase();
+      const nameB = getComponentDisplayName(b).toLowerCase();
+      const byName = nameA.localeCompare(nameB);
+      if (byName !== 0) {
+        return byName;
+      }
+      return a.localeCompare(b);
+    });
     setComponentsList(componentNames);
 
     const totalsList = json.overview.M.filters.M.websitesWithTotals?.L ?? [];
@@ -344,6 +361,22 @@ export const App: Component = () => {
     return getWebsitesForComponent(component).length > 0;
   };
 
+  const getSortedComponents = () => {
+    const list = filteredComponents()?.L ?? [];
+    return list
+      .filter(isComponentVisible)
+      .slice()
+      .sort((a, b) => {
+        const nameA = getComponentDisplayName(a.M.component.S).toLowerCase();
+        const nameB = getComponentDisplayName(b.M.component.S).toLowerCase();
+        const byName = nameA.localeCompare(nameB);
+        if (byName !== 0) {
+          return byName;
+        }
+        return a.M.component.S.localeCompare(b.M.component.S);
+      });
+  };
+
   const toggleDomainFilter = (domain: string, isChecked: boolean) => {
     setDomainsFilter((current) => {
       if (isChecked) {
@@ -373,19 +406,11 @@ export const App: Component = () => {
     });
   };
 
-  const getComponentDisplayName = (componentName: string) => {
-    const raw = componentName.split("/").pop() ?? componentName;
-    const cleaned = raw.replace(/[-_]+/g, " ").trim().toLowerCase();
-    if (!cleaned) {
-      return componentName;
-    }
-    return cleaned.replace(/\b\w/g, (char) => char.toUpperCase());
-  };
-
   return (
     <>
       <Filters>
         <Menu>
+          Total websites: {domainsList().length}
           <Show when={filteredComponents()} fallback={<div>Loading...</div>}>
             <For each={domainsList().sort()}>
               {(domain) => (
@@ -404,6 +429,7 @@ export const App: Component = () => {
           </Show>
         </Menu>
         <Menu>
+          Total Client Libraries: {clientLibsList().length}
           <For each={clientLibsList().sort()}>
             {(clientlib) => (
               <Label>
@@ -423,6 +449,7 @@ export const App: Component = () => {
           </For>
         </Menu>
         <Menu>
+          Total component types: {getSortedComponents().length}
           <For each={componentsList().sort()}>
             {(componentName) => (
               <Label>
@@ -442,11 +469,20 @@ export const App: Component = () => {
           </For>
         </Menu>
       </Filters>
+      Total websites: {domainsList().length}
+      <br />
+      Total component types: {getSortedComponents().length}
+      <br />
+      Total Client Libraries: {clientLibsList().length}
       <Show when={filteredComponents()} fallback={<div>Loading...</div>}>
-        <For each={filteredComponents()!.L.filter(isComponentVisible)}>
+        <For each={getSortedComponents()}>
           {(component) => (
             <Details>
-              <Summary>
+              <Summary
+                onClick={(evt) => {
+                  console.log("Clicked component", component.M.component.S);
+                }}
+              >
                 {getComponentDisplayName(component.M.component.S)} (
                 {getWebsitesForComponent(component).length} sites
                 {/*getComponentInstancesTotal(component)*/})
