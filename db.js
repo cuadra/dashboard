@@ -65,6 +65,10 @@ const SitePromises = sets.map(async (page) => {
 
   const types = walk(res, clientlib, page, domain);
   const pageComponents = [...types.keys()];
+  const pageComponentCounts = new Map();
+  for (const [key, value] of types.entries()) {
+    pageComponentCounts.set(key, value.length);
+  }
 
   for (const [key, value] of types.entries()) {
     components.add(key);
@@ -79,6 +83,7 @@ const SitePromises = sets.map(async (page) => {
   pagesMap.set(page, {
     clientlib,
     components: pageComponents,
+    componentCounts: pageComponentCounts,
   });
 
   return { ok: true, page, domain };
@@ -97,6 +102,20 @@ results.forEach((r) => {
   }
 });
 
+const websitesWithTotals = domains.map((domain) => {
+  const pagesMap = websitesMap.get(domain);
+  if (!pagesMap) {
+    return { domain, totalComponents: 0 };
+  }
+
+  const componentSet = new Set();
+  for (const meta of pagesMap.values()) {
+    meta.components.forEach((component) => componentSet.add(component));
+  }
+
+  return { domain, totalComponents: componentSet.size };
+});
+
 const overview = {
   PK: { S: "DATASET#CURRENT" },
   SK: { S: "OVERVIEW" },
@@ -106,6 +125,14 @@ const overview = {
         M: {
           websites: {
             L: domains.map((d) => ({ S: d })),
+          },
+          websitesWithTotals: {
+            L: websitesWithTotals.map(({ domain, totalComponents }) => ({
+              M: {
+                domain: { S: domain },
+                totalComponents: { N: String(totalComponents) },
+              },
+            })),
           },
           clientlibs: {
             L: [...clientlibs].map((c) => ({ S: c })),
@@ -222,6 +249,16 @@ for (const [domain, pagesMap] of websitesMap.entries()) {
         page: { S: page },
         clientlib: { S: meta.clientlib ?? "" },
         componentCount: { N: String(meta.components.length) },
+        componentCounts: {
+          L: [...meta.componentCounts.entries()]
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([component, count]) => ({
+              M: {
+                component: { S: component },
+                count: { N: String(count) },
+              },
+            })),
+        },
         components: {
           L: meta.components.sort().map((c) => ({ S: c })),
         },
