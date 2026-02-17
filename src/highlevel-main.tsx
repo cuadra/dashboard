@@ -7,7 +7,6 @@ import { styled } from "@macaron-css/solid";
 const HighLevelPage = () => {
   const Main = styled("main", {
     base: {
-      display: "flex",
       gap: "24px",
     },
   });

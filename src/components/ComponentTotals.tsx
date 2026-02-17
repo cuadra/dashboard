@@ -71,6 +71,13 @@ export const ComponentTotals = () => {
     44, 55, 13, 43, 22,
   ]);
   const [componentOptions, setComponentOptions] = createSignal({
+    stroke: {
+      width: 0,
+    },
+    dataLabels: {},
+    legend: {
+      show: false,
+    },
     labels: ["Team A", "Team B", "Team C", "Team D", "Team E"], // Labels for each slice
     chart: {
       type: "donut", // Specify chart type as 'pie'
@@ -78,6 +85,26 @@ export const ComponentTotals = () => {
       height: "500px",
     },
   });
+  const excludedComponentDisplayNames = [
+    "Button",
+    "Container",
+    "ResponsiveGrid",
+    "ExperienceFragment",
+    "Header",
+    "Primary Nav",
+    "Utility Nav",
+    "Utility Navigation Item",
+    "Page",
+    "Rte",
+    "Proxyexitnotification",
+    "Exit Overlay",
+    "Proxyheader",
+    "Proxyfooter",
+    "Footer",
+  ];
+  const excludedComponents = new Set(
+    excludedComponentDisplayNames.map((name) => name.trim().toLowerCase()),
+  );
   onMount(async () => {
     setStatus("loading");
     try {
@@ -111,25 +138,36 @@ export const ComponentTotals = () => {
         .filter((entry) => entry.count > 0)
         .sort((a, b) => b.count - a.count);
 
-      setTotals(sortedTotals);
+      const filteredTotals = sortedTotals.filter(
+        (entry) =>
+          !excludedComponents.has(
+            getComponentDisplayName(entry.component).toLowerCase(),
+          ),
+      );
+
+      setTotals(filteredTotals);
       setStatus("loaded");
 
-      const totalCount = sortedTotals.reduce(
+      const totalCount = filteredTotals.reduce(
         (sum, entry) => sum + entry.count,
         0,
       );
-      const arr = sortedTotals.map(({ component, count }) => ({
+      const arr = filteredTotals.map(({ component, count }) => ({
         component,
+        count,
         percentage: totalCount > 0 ? (count / totalCount) * 100 : 0,
       }));
 
-      setComponentSeries(arr.map((entry) => entry.percentage));
+      setComponentSeries(arr.map((entry) => entry.count));
       setComponentOptions((prev) => ({
         ...prev,
-        labels: arr.map(
-          (entry) =>
-            `${getComponentDisplayName(entry.component)} ${entry.percentage.toFixed(1)}%`,
-        ),
+        labels: arr.map((entry) => {
+          const percentLabel =
+            entry.percentage > 0 && entry.percentage < 0.01
+              ? "<0.01%"
+              : `${entry.percentage.toFixed(2)}%`;
+          return `${getComponentDisplayName(entry.component)} ${percentLabel}`;
+        }),
       }));
     } catch (error) {
       console.error(error);
@@ -139,7 +177,7 @@ export const ComponentTotals = () => {
 
   const Section = styled("section", {
     base: {
-      width: "100%",
+      width: "50%",
     },
   });
 
@@ -150,6 +188,11 @@ export const ComponentTotals = () => {
         series={componentSeries()}
         type="pie"
       />
+      <ul>
+        <For each={excludedComponentDisplayNames}>
+          {(componentName) => <li>{componentName}</li>}
+        </For>
+      </ul>
       <Show when={status() === "loading"} fallback={null}>
         <p>Loading totals...</p>
       </Show>
