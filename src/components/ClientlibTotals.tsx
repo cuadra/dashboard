@@ -45,6 +45,13 @@ export const ClientlibTotals = () => {
 
   const [clientSeries, setClientSeries] = createSignal([44, 55, 13, 43, 22]);
   const [clientOptions, setClientOptions] = createSignal({
+    stroke: {
+      width: 0,
+    },
+    dataLabels: {},
+    legend: {
+      show: false,
+    },
     labels: ["Team A", "Team B", "Team C", "Team D", "Team E"], // Labels for each slice
     chart: {
       type: "donut", // Specify chart type as 'pie'
@@ -114,7 +121,7 @@ export const ClientlibTotals = () => {
 
   const Section = styled("section", {
     base: {
-      width: "100%",
+      width: "50%",
     },
   });
   return (
