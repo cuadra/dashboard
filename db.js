@@ -1,37 +1,13 @@
 import scrutari from "scrutari";
 import { mkdir, writeFile } from "node:fs/promises";
 import { domains } from "./sites.js";
+import { generateOverviewJSON } from "./crawler/schemas/overview.ts";
+import { getWebsiteJSON } from "./crawler/schemas/website.ts";
+import { crawler, condensePageComponent } from "./crawler/utils/crawler.ts";
 
-const components = new Set();
-const clientlibs = new Set();
 const sites = [];
 const websitesMap = new Map();
-
-function walk(node, clientlib, page, domain, types = new Map()) {
-  if (!node || typeof node !== "object") return types;
-
-  if (typeof node[":type"] === "string") {
-    const t = node[":type"];
-    const arr = types.get(t) ?? [];
-    arr.push({ domain, clientlib, page });
-    types.set(t, arr);
-  }
-
-  const items = node[":items"];
-  if (items && typeof items === "object") {
-    for (const child of Object.values(items)) {
-      walk(child, clientlib, page, domain, types);
-    }
-  }
-
-  for (const v of Object.values(node)) {
-    if (Array.isArray(v)) {
-      v.forEach((child) => walk(child, clientlib, page, domain, types));
-    }
-  }
-
-  return types;
-}
+const websitesSet = new Set();
 
 for (const domain of domains) {
   const s = await scrutari({ origin: `https://${domain}` });
@@ -42,9 +18,10 @@ const sets = sites.flat();
 
 const temp = new Map();
 
-const SitePromises = sets.map(async (page) => {
-  const j = `${page}.model.json`;
-  const urlObj = new URL(page);
+const SitePromises = sets.map(async (url) => {
+  //returns pageObject
+  const j = `${url}.model.json`;
+  const urlObj = new URL(url);
   let domain = urlObj.hostname.replace(/^www\./, "");
 
   const response = await fetch(j);
@@ -55,52 +32,123 @@ const SitePromises = sets.map(async (page) => {
     .includes("application/json");
 
   if (!response.ok || !isJson) {
-    return { ok: false, page, domain };
+    return { ok: false, pageObject: null };
   }
 
   const res = await response.json();
 
-  const clientlib = String(res.clientAppVersion ?? "");
-  if (clientlib) clientlibs.add(clientlib);
+  //Collect all clientlibs
+  const clientlib = String(res.clientAppVersion ?? "Not Found");
 
-  const types = walk(res, clientlib, page, domain);
-  const pageComponents = [...types.keys()];
-  const pageComponentCounts = new Map();
-  for (const [key, value] of types.entries()) {
-    pageComponentCounts.set(key, value.length);
-  }
+  const pageComponentMap = crawler(res, clientlib, url, new Map());
 
-  for (const [key, value] of types.entries()) {
-    components.add(key);
-    const existing = temp.get(key) ?? [];
-    temp.set(key, existing.concat(value));
-  }
+  const pageComponents = condensePageComponent(pageComponentMap, clientlib);
 
-  if (!websitesMap.has(domain)) {
-    websitesMap.set(domain, new Map());
-  }
-  const pagesMap = websitesMap.get(domain);
-  pagesMap.set(page, {
-    clientlib,
+  const metadata = res["metaTags"] || {};
+
+  const whitelistedExternalDomains = res["whitelistedExternalDomains"] || [];
+
+  const trealiumDatalayer = res["trealiumDataLayer"] || {};
+
+  const wizardAttributes = res["wizardAttributes"] || {};
+
+  const designToken = res["designTokenFilePath"] || {};
+
+  const googleAPIKey =
+    res["genericConfigurationMap"]?.Generic.googleApiKey || null;
+
+  const lastModified = res["lastModifiedDate"] || null;
+
+  const pageObject = {
+    lastModified: lastModified,
+    clientlib: clientlib,
+    designToken: designToken,
+    googleAPIKey: googleAPIKey,
+    trealiumDataLayer: trealiumDatalayer,
+    wizardAttributes: wizardAttributes,
+    whitelistedExternalDomains: whitelistedExternalDomains,
+    metadata: metadata,
+    domain: domain,
+    url: url,
     components: pageComponents,
-    componentCounts: pageComponentCounts,
-  });
-
-  return { ok: true, page, domain };
+  };
+  return { ok: true, pageObject: pageObject };
 });
 
 const results = await Promise.allSettled(SitePromises);
-
 const processedPages = [];
 const errorPages = [];
+const overview = {
+  clientlibs: new Map(),
+  components: new Map(), //include instances
+  latestPages: [],
+  totalSites: domains.length,
+  totalPages: 0,
+  tokens: new Map(),
+};
+const allSites = new Map();
+
 results.forEach((r) => {
   if (r.status === "fulfilled") {
-    if (r.value.ok) processedPages.push(r.value.page);
-    else errorPages.push(r.value.page);
+    if (r.value.ok) {
+      processedPages.push(r.value.pageObject.url);
+
+      r.value.pageObject.components.forEach((value, key) => {
+        if (overview.components.has(key)) {
+          overview.components.set(key, overview.components.get(key) + 1);
+        } else {
+          overview.components.set(key, 1);
+        }
+      });
+
+      if (allSites.has(r.value.pageObject.domain)) {
+        allSites.get(r.value.pageObject.domain).push(r.value.pageObject);
+      } else {
+        allSites.set(r.value.pageObject.domain, [r.value.pageObject]);
+      }
+
+      //Set overview props
+      if (overview.clientlibs.has(r.value.pageObject.clientlib)) {
+        const arr = overview.clientlibs.get(r.value.pageObject.clientlib);
+        if (!arr.includes(r.value.pageObject.domain)) {
+          arr.push(r.value.pageObject.domain);
+        }
+        overview.clientlibs.set(r.value.pageObject.clientlib, [...arr]);
+      } else {
+        overview.clientlibs.set(r.value.pageObject.clientlib, [
+          r.value.pageObject.domain,
+        ]);
+      }
+
+      if (overview.tokens.has(r.value.pageObject.designToken)) {
+        const arr = overview.tokens.get(r.value.pageObject.designToken);
+        if (!arr.includes(r.value.pageObject.domain)) {
+          arr.push(r.value.pageObject.domain);
+        } else {
+          overview.tokens.set(r.value.pageObject.designToken, [...arr]);
+        }
+      } else {
+        overview.tokens.set(r.value.pageObject.designToken, [
+          r.value.pageObject.domain,
+        ]);
+      }
+
+      overview.totalPages += 1;
+    } else errorPages.push(r.value.pageObject.url);
   } else {
     errorPages.push("(promise rejected)");
   }
 });
+
+overview.latestPages = [...allSites.values()]
+  .flat()
+  .sort((a, b) => b.lastModified - a.lastModified)
+  .map((item) => item.url)
+  .slice(0, 10);
+
+console.log(overview);
+
+//console.log(allSites);
 
 const websitesWithTotals = domains.map((domain) => {
   const pagesMap = websitesMap.get(domain);
@@ -112,62 +160,28 @@ const websitesWithTotals = domains.map((domain) => {
   for (const meta of pagesMap.values()) {
     meta.components.forEach((component) => componentSet.add(component));
   }
-
   return { domain, totalComponents: componentSet.size };
 });
 
-const overview = {
-  PK: { S: "DATASET#CURRENT" },
-  SK: { S: "OVERVIEW" },
-  overview: {
-    M: {
-      filters: {
-        M: {
-          websites: {
-            L: domains.map((d) => ({ S: d })),
-          },
-          websitesWithTotals: {
-            L: websitesWithTotals.map(({ domain, totalComponents }) => ({
-              M: {
-                domain: { S: domain },
-                totalComponents: { N: String(totalComponents) },
-              },
-            })),
-          },
-          clientlibs: {
-            L: [...clientlibs].map((c) => ({ S: c })),
-          },
-          components: {
-            L: [...temp.entries()].map(([component, refs]) => {
-              const websites = [...new Set(refs.map((r) => r.domain))].sort();
-              const componentClientlibs = [
-                ...new Set(refs.map((r) => r.clientlib).filter(Boolean)),
-              ].sort();
-
-              return {
-                M: {
-                  component: { S: component },
-                  count: { N: String(refs.length) },
-                  websites: {
-                    L: websites.map((w) => ({ S: w })),
-                  },
-                  clientlibs: {
-                    L: componentClientlibs.map((c) => ({ S: c })),
-                  },
-                },
-              };
-            }),
-          },
-        },
-      },
-    },
-  },
-};
-
-console.log("overview:", JSON.stringify(overview));
+/*
+const overview = generateOverviewJSON(
+  domains,
+  temp,
+  websitesWithTotals,
+  clientlibs,
+);
+*/
+//console.log("allComponents:", [...allComponents].sort());
+//console.log("overview:", JSON.stringify(overview, null, 2));
 
 await mkdir("./data/components", { recursive: true });
-await writeFile("./data/overview.json", JSON.stringify(overview, null, 2), "utf8");
+/*
+await writeFile(
+  "./data/overview.json",
+  JSON.stringify(overview, null, 2),
+  "utf8",
+);
+*/
 
 const componentItems = [];
 
@@ -225,73 +239,44 @@ for (const [component, refs] of temp.entries()) {
   componentItems.push(item);
 
   const safeFileName = component.replace(/[^\w.-]+/g, "_");
+  /*
   await writeFile(
     `./data/components/${safeFileName}.json`,
     JSON.stringify(item, null, 2),
     "utf8",
   );
+  */
 }
-
+/*
 await writeFile(
   "./data/components/items.json",
   JSON.stringify(componentItems, null, 2),
   "utf8",
 );
+*/
 
 await mkdir("./data/websites", { recursive: true });
 const websiteItems = [];
 
 for (const [domain, pagesMap] of websitesMap.entries()) {
-  const pages = [...pagesMap.entries()]
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([page, meta]) => ({
-      M: {
-        page: { S: page },
-        clientlib: { S: meta.clientlib ?? "" },
-        componentCount: { N: String(meta.components.length) },
-        componentCounts: {
-          L: [...meta.componentCounts.entries()]
-            .sort(([a], [b]) => a.localeCompare(b))
-            .map(([component, count]) => ({
-              M: {
-                component: { S: component },
-                count: { N: String(count) },
-              },
-            })),
-        },
-        components: {
-          L: meta.components.sort().map((c) => ({ S: c })),
-        },
-      },
-    }));
-
-  const item = {
-    PK: { S: "DATASET#CURRENT" },
-    SK: { S: `SITE#${domain}` },
-    site: {
-      M: {
-        domain: { S: domain },
-        pageCount: { N: String(pages.length) },
-        pages: { L: pages },
-      },
-    },
-  };
-
-  websiteItems.push(item);
+  websiteItems.push(getWebsiteJSON(pages, domain));
 
   const safeFileName = domain.replace(/[^\w.-]+/g, "_");
+  /*
   await writeFile(
     `./data/websites/${safeFileName}.json`,
     JSON.stringify(item, null, 2),
     "utf8",
   );
+  */
 }
-
+/*
 await writeFile(
   "./data/websites/items.json",
   JSON.stringify(websiteItems, null, 2),
   "utf8",
 );
+*/
 
 //console.log("entireMap:", temp);
 // console.log("processedPages:", processedPages);
