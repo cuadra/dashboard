@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --brand-orange: #f97316;
+  --radius: 10px;
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e294b;
+  --card-foreground: #f1f5f9;
+  --muted-foreground: #94a3b8;
+  --border: rgba(148, 163, 184, 0.35);
+}
+
+body {
+  margin: 0;
+  padding-left: 70px;
+  padding-right: 20px;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+small {
+  color: var(--muted-foreground);
+}
+
+.layout-row {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.navigation {
+  width: 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--card);
+  position: fixed;
+  left: 0;
+}
+
+.card {
+  background: var(--card);
+  color: var(--card-foreground);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.card-flex {
+  flex: 1 1 0;
+  min-width: 220px;
+}
+
+.card-grow {
+  flex: 1 1 auto;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-pad {
+  padding: 40px 0;
+}
+
+.section-pad-lg {
+  padding: 0px;
+  padding-top: 0;
+}
+.mt-md {
+  margin-top: 12px;
+}
+
+.mt-lg {
+  margin-top: 24px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--card-foreground);
+  padding: 5px 8px;
+  font-size: 12px;
+  margin: 0 4px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table--mt {
+  margin-top: 16px;
+}
+
+.table caption {
+  caption-side: bottom;
+  font-size: 12px;
+  color: var(--muted-foreground);
+  padding-top: 8px;
+}
+
+.table th,
+.table td {
+  padding: 20px 12px;
+  vertical-align: top;
+}
+.table td details ol {
+  margin: 0;
+}
+.table th {
+  font-weight: 600;
+}
+
+.table-row {
+  border-top: 1px solid var(--border);
+}
+.table-row:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.subtitle {
+  display: block;
+  text-align: center;
+  color: var(--muted-foreground);
+  margin-bottom: 12px;
+}
+
+.chart {
+  width: 100%;
+}
+
+.chart--vertical {
+  min-height: 1200px;
+}
+
+.chart--stack {
+  height: 240px;
+}
+
+.chart--polar {
+  height: 500px;
+}
+
+.chart--donut {
+  margin-top: 24px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
