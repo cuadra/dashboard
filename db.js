@@ -1,5 +1,5 @@
 import scrutari from "scrutari";
-import { mkdir, writeFile } from "node:fs/promises";
+import { writeFile } from "node:fs/promises";
 import { domains } from "./sites.js";
 import { crawler, condensePageComponent } from "./crawler/utils/crawler.ts";
 

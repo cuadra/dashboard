@@ -19,13 +19,19 @@ const COLORS = Array.from({ length: 16 }, (_, i) => {
 
 ChartJS.register(ArcElement, ChartJsTooltip, ChartJsLegend);
 
-export function PChart(props: any) {
-  const revisedData = props.data.map((entry: any, index: number) => ({
+type ClientlibEntry = {
+  name: string;
+  percentage: number;
+  fill?: string;
+};
+
+export function PChart(props: { data: ClientlibEntry[] }) {
+  const revisedData = props.data.map((entry, index) => ({
     ...entry,
     fill: COLORS[index % COLORS.length],
   }));
 
-  function compareVersions(a, b) {
+  function compareVersions(a: string, b: string) {
     const aParts = a.split(".").map(Number);
     const bParts = b.split(".").map(Number);
 
@@ -37,20 +43,20 @@ export function PChart(props: any) {
     return 0;
   }
 
-  const sortedData = revisedData.sort((a: any, b: any) =>
+  const sortedData = revisedData.sort((a, b) =>
     compareVersions(b.name, a.name),
   );
 
   const doughnutData = {
-    labels: sortedData.map((entry: any) => entry.name),
+    labels: sortedData.map((entry) => entry.name),
     datasets: [
       {
         spacing: 10,
         borderRadius: 10,
         borderWidth: 4,
         borderColor: "rgb(30, 41, 75)",
-        data: sortedData.map((entry: any) => entry.percentage),
-        backgroundColor: sortedData.map((entry: any) => entry.fill),
+        data: sortedData.map((entry) => entry.percentage),
+        backgroundColor: sortedData.map((entry) => entry.fill),
       },
     ],
   };

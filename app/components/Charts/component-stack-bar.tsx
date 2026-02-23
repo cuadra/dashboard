@@ -8,6 +8,8 @@ import {
   LinearScale,
   Tooltip as ChartJsTooltip,
   Legend as ChartJsLegend,
+  type ChartOptions,
+  type TooltipItem,
 } from "chart.js";
 
 ChartJS.register(
@@ -26,21 +28,24 @@ const COLORS = Array.from({ length: 24 }, (_, i) => {
   return `hsla(${hue}, 95%, ${lightness}%, ${alpha})`;
 });
 
-export function ComponentStackBar(props: any) {
-  const sorted = [...props.data].sort(
-    (a: any, b: any) => b.percentage - a.percentage,
-  );
+type ComponentDatum = {
+  name: string;
+  percentage: number;
+};
+
+export function ComponentStackBar(props: { data: ComponentDatum[] }) {
+  const sorted = [...props.data].sort((a, b) => b.percentage - a.percentage);
 
   const data = {
     labels: ["Components"],
-    datasets: sorted.map((item: any, index: number) => ({
+    datasets: sorted.map((item, index) => ({
       label: item.name,
       data: [item.percentage],
       backgroundColor: COLORS[index % COLORS.length],
     })),
   };
 
-  const options = {
+  const options: ChartOptions<"bar"> = {
     responsive: true,
     maintainAspectRatio: false,
     indexAxis: "y" as const,
@@ -57,9 +62,12 @@ export function ComponentStackBar(props: any) {
       tooltip: {
         enabled: true,
         callbacks: {
-          label: (context: any) => {
-            const value = context.raw ?? 0;
-            return `${context.dataset.label}: ${value}%`;
+          label: (context: TooltipItem<"bar">) => {
+            const raw =
+              typeof context.raw === "number"
+                ? context.raw
+                : Number(context.raw ?? 0);
+            return `${context.dataset.label ?? "Value"}: ${raw}%`;
           },
         },
       },
@@ -69,7 +77,7 @@ export function ComponentStackBar(props: any) {
         stacked: true,
         max: 100,
         ticks: {
-          callback: (value: number) => `${value}%`,
+          callback: (value) => `${value}%`,
         },
         grid: {
           display: false,

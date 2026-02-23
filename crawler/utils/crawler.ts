@@ -3,23 +3,27 @@ interface Components {
   clientlib: string;
 }
 
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null;
+
 export const crawler = (
-  node: any,
+  node: unknown,
   clientlib: string,
   url: string,
   components: Map<string, Components[]> = new Map(),
 ) => {
-  if (!node || typeof node !== "object") return components;
+  if (!isRecord(node)) return components;
 
-  if (typeof node[":type"] === "string") {
-    const t = node[":type"];
+  const nodeType = node[":type"];
+  if (typeof nodeType === "string") {
+    const t = nodeType;
     const arr = components.get(t) ?? [];
     arr.push({ clientlib, url });
     components.set(t, arr);
   }
 
   const items = node[":items"];
-  if (items && typeof items === "object") {
+  if (isRecord(items)) {
     for (const child of Object.values(items)) {
       crawler(child, clientlib, url, components);
     }
@@ -34,7 +38,10 @@ export const crawler = (
   return components;
 };
 
-export const condensePageComponent = (pageComponentMap, clientlib) => {
+export const condensePageComponent = (
+  pageComponentMap: Map<string, Components[]>,
+  clientlib: string,
+) => {
   const pageComponentTotals: Map<string, { total: number; clientlib: string }> =
     new Map();
   for (const [key, value] of pageComponentMap.entries()) {

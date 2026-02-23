@@ -7,6 +7,7 @@ import {
   ArcElement,
   Tooltip as ChartJsTooltip,
   Legend as ChartJsLegend,
+  type ChartOptions,
 } from "chart.js";
 import { ChartPie } from "lucide-react";
 ChartJS.register(RadialLinearScale, ArcElement, ChartJsTooltip, ChartJsLegend);
@@ -19,25 +20,34 @@ const COLORS = Array.from({ length: 16 }, (_, i) => {
   return `hsla(${hue}, 95%, ${lightness}%, ${alpha})`;
 });
 
-export function TokenChart(props: any) {
-  const revisedData = props.data.map((entry: any, index: number) => ({
+type TokenDatum = {
+  name: string;
+  value?: number;
+  domains?: string[];
+  fill?: string;
+};
+
+export function TokenChart(props: { data: TokenDatum[] }) {
+  const revisedData = props.data.map((entry, index) => ({
     ...entry,
     fill: COLORS[index % COLORS.length],
     value: Array.isArray(entry.domains) ? entry.domains.length : entry.value,
   }));
 
-  const sortedData = revisedData.sort((a: any, b: any) => b.value - a.value);
+  const sortedData = revisedData.sort(
+    (a, b) => (b.value ?? 0) - (a.value ?? 0),
+  );
 
   const data = {
-    labels: sortedData.map((entry: any) =>
+    labels: sortedData.map((entry) =>
       typeof entry.name === "string"
         ? entry.name.replace(".json", "")
         : entry.name,
     ),
     datasets: [
       {
-        data: sortedData.map((entry: any) => entry.value),
-        backgroundColor: sortedData.map((entry: any) => entry.fill),
+        data: sortedData.map((entry) => entry.value ?? 0),
+        backgroundColor: sortedData.map((entry) => entry.fill),
         spacing: 10,
         borderRadius: 5,
         borderWidth: 3,
@@ -46,28 +56,9 @@ export function TokenChart(props: any) {
     ],
   };
 
-  const options = {
+  const options: ChartOptions<"polarArea"> = {
     responsive: true,
     maintainAspectRatio: false,
-    cutout: "70%",
-
-    scales: {
-      r: {
-        grid: {
-          color: "rgba(255,255,255,0.15)", // circular lines
-        },
-        angleLines: {
-          color: "rgba(255,255,255,0.25)", // radial spokes
-        },
-        pointLabels: {
-          color: "#fff", // category labels
-        },
-        ticks: {
-          color: "#ccc",
-          backdropColor: "transparent", // remove white tick background
-        },
-      },
-    },
 
     plugins: {
       legend: {
@@ -93,6 +84,9 @@ export function TokenChart(props: any) {
         },
         angleLines: {
           color: "rgba(0,0,0,0.08)",
+        },
+        pointLabels: {
+          color: "#fff",
         },
       },
     },
