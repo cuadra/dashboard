@@ -1,4 +1,13 @@
-export const getWebsiteJSON = (websiteMap: Map<string, {}>, domain: string) => {
+type WebsitePageMeta = {
+  clientlib?: string;
+  components: string[];
+  componentCounts: Map<string, number>;
+};
+
+export const getWebsiteJSON = (
+  websiteMap: Map<string, WebsitePageMeta>,
+  domain: string,
+) => {
   const pages = [...websiteMap.entries()]
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([page, meta]) => ({

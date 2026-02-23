@@ -8,6 +8,7 @@ import {
   LinearScale,
   Tooltip as ChartJsTooltip,
   Legend as ChartJsLegend,
+  type ChartOptions,
 } from "chart.js";
 
 ChartJS.register(
@@ -19,18 +20,20 @@ ChartJS.register(
 );
 import { ChartBarDecreasing } from "lucide-react";
 
-export function ChartExample(props: any) {
-  const sorted = [...props.data].sort(
-    (a: any, b: any) => b.instances - a.instances,
-  );
-  console.log("sorted", sorted);
+type ComponentInstanceDatum = {
+  name: string;
+  instances: number;
+};
+
+export function ChartExample(props: { data: ComponentInstanceDatum[] }) {
+  const sorted = [...props.data].sort((a, b) => b.instances - a.instances);
 
   const data = {
-    labels: sorted.map((item: any) => item.name),
+    labels: sorted.map((item) => item.name),
     datasets: [
       {
         label: "Instances",
-        data: sorted.map((item: any) => item.instances),
+        data: sorted.map((item) => item.instances),
         backgroundColor: "rgb(30, 41, 75)",
         borderRadius: 6,
         barThickness: 12,
@@ -38,7 +41,7 @@ export function ChartExample(props: any) {
     ],
   };
 
-  const options = {
+  const options: ChartOptions<"bar"> = {
     responsive: true,
     maintainAspectRatio: false,
     indexAxis: "y" as const,

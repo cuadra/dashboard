@@ -1,6 +1,6 @@
 export const generateOverviewJSON = (
   domains: string[],
-  temp: Map<string, string>,
+  temp: Map<string, { domain: string; clientlib?: string }[]>,
   websitesWithTotals: { domain: string; totalComponents: number }[],
   clientlibs: Set<string>,
 ) => {

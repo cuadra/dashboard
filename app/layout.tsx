@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { AppWindow, Settings, Bug, House } from "lucide-react";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,18 +30,18 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <nav className="navigation">
-          <a href="/">
+          <Link href="/" aria-label="Home">
             <House />
-          </a>
-          <a href="">
+          </Link>
+          <Link href="/" aria-label="Settings">
             <Settings />
-          </a>
-          <a href="">
+          </Link>
+          <Link href="/" aria-label="Overview">
             <AppWindow />
-          </a>
-          <a href="#errors">
+          </Link>
+          <Link href="/#errors" aria-label="Errors">
             <Bug />
-          </a>
+          </Link>
         </nav>
         {children}
       </body>

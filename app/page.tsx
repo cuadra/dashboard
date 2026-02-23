@@ -1,11 +1,8 @@
-import Image from "next/image";
 import overview from "@/data/overview.json";
 import { ChartExample } from "./components/Charts";
 import { PChart } from "./components/Charts/clientlibs";
-import { TokenChart } from "./components/Charts/tokens";
 import { ComponentStackBar } from "./components/Charts/component-stack-bar";
 import {
-  Smile,
   Library,
   Coins,
   Layers,
@@ -42,7 +39,7 @@ export default function Home() {
   ];
   const components = overview.components.filter((c) => {
     const shortened = c.name.split("/").pop();
-    return !excludeList.includes(shortened?.toLowerCase());
+    return !excludeList.includes((shortened ?? "").toLowerCase());
   });
 
   const totalInstances = components.reduce((sum, c) => sum + c.instances, 0);
@@ -68,10 +65,6 @@ export default function Home() {
     name: clientlib.name,
     percentage: parseFloat(clientlib.percentage),
   }));
-
-  const sortedComponents = [...components].sort(
-    (a, b) => b.instances - a.instances,
-  );
 
   console.log(overview);
 
