@@ -1,5 +1,5 @@
 import scrutari from "scrutari";
-import { writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { domains } from "./sites.js";
 import { crawler, condensePageComponent } from "./crawler/utils/crawler.ts";
 
@@ -219,10 +219,60 @@ overview.tokens = [...overview.tokens.entries()].map(([key, value]) => ({
   domains: value,
 }));
 
-console.log(overview);
+//console.log(allSites);
+
+const stamp = new Date().toISOString().split("T")[0];
+
+await mkdir(`./data/${stamp}`, { recursive: true });
+
 await writeFile(
-  `./data/overview.json`,
+  `./data/${stamp}/overview.json`,
   JSON.stringify(overview, null, 2),
+  "utf8",
+);
+////////////////////////// create website overview JSON
+
+const websitesJson = {};
+websitesJson.websites = [...allSites.entries()].map(([domain, pages]) => {
+  let lastModified = null;
+  let totalInstances = 0;
+  let componentSet = new Map();
+  let clientlib = null;
+  let token = null;
+  pages.forEach((page) => {
+    clientlib = page.clientlib;
+    token = page.designToken;
+    lastModified = Math.max(lastModified, page.lastModified);
+
+    totalInstances += page.components.size;
+
+    for (const [key, value] of page.components) {
+      if (componentSet.has(key)) {
+        componentSet.set(key, componentSet.get(key) + value.total);
+      } else {
+        componentSet.set(key, value.total);
+      }
+    }
+  });
+  componentSet = [...componentSet.entries()].map(([name, instances]) => ({
+    name,
+    instances,
+  }));
+
+  return {
+    lastModified: lastModified,
+    clientlib: clientlib,
+    designToken: token,
+    totalInstances: totalInstances,
+    domain,
+    componentCount: componentSet.length,
+    components: componentSet,
+  };
+});
+
+await writeFile(
+  `./data/${stamp}/websites.json`,
+  JSON.stringify(websitesJson, null, 2),
   "utf8",
 );
 
