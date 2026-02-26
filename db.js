@@ -233,42 +233,66 @@ await writeFile(
 ////////////////////////// create website overview JSON
 
 const websitesJson = {};
-websitesJson.websites = [...allSites.entries()].map(([domain, pages]) => {
-  let lastModified = null;
-  let totalInstances = 0;
-  let componentSet = new Map();
-  let clientlib = null;
-  let token = null;
-  pages.forEach((page) => {
-    clientlib = page.clientlib;
-    token = page.designToken;
-    lastModified = Math.max(lastModified, page.lastModified);
+websitesJson.websites = [...allSites.entries()]
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([domain, pages]) => {
+    let lastModified = null;
+    let totalInstances = 0;
+    let componentSet = new Map();
+    const clientlibs = new Set();
+    const tokens = new Set();
 
-    totalInstances += page.components.size;
-
-    for (const [key, value] of page.components) {
-      if (componentSet.has(key)) {
-        componentSet.set(key, componentSet.get(key) + value.total);
-      } else {
-        componentSet.set(key, value.total);
+    pages.forEach((page) => {
+      if (page?.clientlib) {
+        clientlibs.add(page.clientlib);
       }
-    }
-  });
-  componentSet = [...componentSet.entries()].map(([name, instances]) => ({
-    name,
-    instances,
-  }));
+      if (page?.designToken) {
+        tokens.add(page.designToken);
+      }
 
-  return {
-    lastModified: lastModified,
-    clientlib: clientlib,
-    designToken: token,
-    totalInstances: totalInstances,
-    domain,
-    componentCount: componentSet.length,
-    components: componentSet,
-  };
-});
+      const pageLast =
+        typeof page.lastModified === "number"
+          ? page.lastModified
+          : Number.isFinite(Date.parse(page.lastModified))
+            ? Date.parse(page.lastModified)
+            : null;
+      if (pageLast !== null && (lastModified === null || pageLast > lastModified)) {
+        lastModified = pageLast;
+      }
+
+      for (const [key, value] of page.components) {
+        const count = value?.total ?? 0;
+        totalInstances += count;
+        componentSet.set(key, (componentSet.get(key) ?? 0) + count);
+      }
+    });
+
+    const clientlib =
+      clientlibs.size === 1
+        ? [...clientlibs][0]
+        : clientlibs.size === 0
+          ? null
+          : "mixed";
+    const token =
+      tokens.size === 1 ? [...tokens][0] : tokens.size === 0 ? null : "mixed";
+
+    componentSet = [...componentSet.entries()]
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([name, instances]) => ({
+        name,
+        instances,
+      }));
+
+    return {
+      lastModified: lastModified,
+      clientlib: clientlib,
+      designToken: token,
+      totalInstances: totalInstances,
+      domain,
+      componentCount: componentSet.length,
+      components: componentSet,
+    };
+  });
 
 await writeFile(
   `./data/${stamp}/websites.json`,

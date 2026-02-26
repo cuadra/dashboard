@@ -1,4 +1,3 @@
-import { domains } from "@/sites.js";
 import { Fragment } from "react";
 import {
   Library,
@@ -9,15 +8,39 @@ import {
   Sparkles,
   Bug,
 } from "lucide-react";
-import websites from "@/data/2026-02-26/websites.json";
+import { readdir, readFile } from "node:fs/promises";
+import path from "node:path";
+
+const DATA_DIR = path.join(process.cwd(), "data");
+
+async function loadLatestWebsites() {
+  const entries = await readdir(DATA_DIR, { withFileTypes: true });
+  const datedDirs = entries
+    .filter(
+      (entry) => entry.isDirectory() && /^\d{4}-\d{2}-\d{2}$/.test(entry.name),
+    )
+    .map((entry) => entry.name)
+    .sort();
+
+  const latest = datedDirs.at(-1);
+  if (!latest) {
+    return { websites: [] };
+  }
+
+  const filePath = path.join(DATA_DIR, latest, "websites.json");
+  const raw = await readFile(filePath, "utf8");
+  return JSON.parse(raw);
+}
+
 export default async function Home({
   searchParams,
 }: {
-  searchParams: Promise<{ status?: string }>;
+  searchParams?: { status?: string };
 }) {
-  const { status = "all" } = await searchParams;
+  const { status = "all" } = searchParams ?? {};
+  const websites = await loadLatestWebsites();
 
-  console.log(status);
+  void status;
 
   return (
     <>
@@ -25,7 +48,7 @@ export default async function Home({
         <Sparkles size={48} className="animate-pulse text-primary" />
         <h1 className="text-4xl font-bold">Websites tested</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <table>
+          <table className="w-full">
             <thead>
               <tr>
                 <th className="px-4 py-2">Domain</th>
@@ -76,13 +99,17 @@ export default async function Home({
                   </tr>
                   <tr>
                     <td colSpan={7} className="px-4 py-2 bg-gray-100">
-                      <table>
-                        {website.components.map((component) => (
-                          <tr key={component.name} className="border-b">
-                            <td className="px-4 py-2">{component.name}</td>
-                            <td className="px-4 py-2">{component.instances}</td>
-                          </tr>
-                        ))}
+                      <table className="w-full">
+                        <tbody>
+                          {website.components.map((component) => (
+                            <tr key={component.name} className="border-b">
+                              <td className="px-4 py-2">{component.name}</td>
+                              <td className="px-4 py-2">
+                                {component.instances}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
                       </table>
                     </td>
                   </tr>
