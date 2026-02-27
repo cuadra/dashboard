@@ -19,24 +19,40 @@ ChartJS.register(
   ChartJsLegend,
 );
 import { ChartBarDecreasing } from "lucide-react";
-
+import { friendlyMapping } from "@/src/data/friendlyMapping";
 type ComponentInstanceDatum = {
   name: string;
   instances: number;
+  //percentage: string;
 };
 
-export function ChartExample(props: { data: ComponentInstanceDatum[] }) {
-  const sorted = [...props.data].sort((a, b) => b.instances - a.instances);
+export function ChartExample({
+  data,
+  heightClass,
+  basedOn,
+}: {
+  data: ComponentInstanceDatum[];
+  heightClass: string;
+  basedOn?: string;
+}) {
+  const chartData = data.map((component) => ({
+    name: component.name.split("/").pop() || component.name,
+    //percentage: parseFloat(component.percentage),
+    instances: component.instances,
+  }));
 
-  const data = {
-    labels: sorted.map((item) => item.name),
+  const sorted = [...chartData].sort((a, b) => b.instances - a.instances);
+
+  const d = {
+    labels: sorted.map((item) => friendlyMapping[item.name] || item.name),
     datasets: [
       {
         label: "Instances",
         data: sorted.map((item) => item.instances),
         backgroundColor: "rgb(30, 41, 75)",
         borderRadius: 6,
-        barThickness: 12,
+        barThickness: 7,
+        categoryPercentage: 0.9,
       },
     ],
   };
@@ -85,16 +101,22 @@ export function ChartExample(props: { data: ComponentInstanceDatum[] }) {
   return (
     <>
       <h2 className="text-center">
-        <ChartBarDecreasing />
-        Component Usage
+        {basedOn && (
+          <>
+            <ChartBarDecreasing />
+            `Component Usage based on ${basedOn}`
+          </>
+        )}
       </h2>
-      <small className="subtitle">
-        This chart provides a comparative view of component deployment volume,
-        identifying which components are most heavily leveraged within the
-        current implementation landscape.
-      </small>
-      <div className="chart chart--vertical">
-        <Bar data={data} options={options} />
+      {basedOn && (
+        <small className="subtitle">
+          This chart provides a comparative view of component deployment volume,
+          identifying which components are most heavily leveraged within the
+          current implementation landscape.
+        </small>
+      )}
+      <div className={`${heightClass} chart chart--vertical`}>
+        <Bar data={d} options={options} />
       </div>
     </>
   );

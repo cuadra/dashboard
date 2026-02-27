@@ -1,0 +1,3926 @@
+{
+  "components": [
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+      "totalInstances": 298,
+      "sites": [
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 8
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 1
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 7
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 41
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 18
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 62
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 13
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 3
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 2
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 15
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 92
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 30
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 1
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-teaser",
+      "totalInstances": 24,
+      "sites": [
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 2
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 11
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 7
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 4
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/authorable-container",
+      "totalInstances": 8,
+      "sites": [
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 8
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+      "totalInstances": 9921,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 585
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 160
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 204
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 247
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 237
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 340
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 621
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 24
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 976
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 2122
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 346
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 468
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 97
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 252
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 33
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 1057
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1354
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 620
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 178
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+      "totalInstances": 274,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 16
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 5
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 3
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 3
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 7
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 6
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 4
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 12
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 140
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 2
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 18
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 2
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 14
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 18
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 16
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 4
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 4
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+      "totalInstances": 1254,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 19
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 12
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 22
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 23
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 9
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 66
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 83
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 4
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 149
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 319
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 75
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 78
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 106
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 157
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 106
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+      "totalInstances": 240,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 6
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 6
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 19
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 19
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 12
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 3
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 2
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 2
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 65
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 1
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 18
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 3
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 11
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 36
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 11
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 12
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/data-highlight",
+      "totalInstances": 68,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 17
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 2
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 2
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 33
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 3
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+      "totalInstances": 395,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 37
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 6
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 8
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 2
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 4
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 27
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 49
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 4
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 2
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 4
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 8
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 1
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 14
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 120
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 80
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 7
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 22
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+      "totalInstances": 1147,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 19
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 12
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 16
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 23
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 9
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 66
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 83
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 126
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 285
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 69
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 78
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 97
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 157
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 80
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/error-page",
+      "totalInstances": 4,
+      "sites": [
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 4
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+      "totalInstances": 482,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 71
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/externalapp",
+      "totalInstances": 118,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 1
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 1
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 2
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 2
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 102
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 1
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 4
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 5
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+      "totalInstances": 386,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 64
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 13
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 17
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/five-star-voc",
+      "totalInstances": 107,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 23
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 4
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 3
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 8
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 10
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 17
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 25
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 9
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 8
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+      "totalInstances": 501,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 71
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+      "totalInstances": 272,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 1
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 25
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 5
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 11
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 2
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 24
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 55
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 48
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 5
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 9
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 10
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 51
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 7
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 8
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/gigya-form",
+      "totalInstances": 34,
+      "sites": [
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 1
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 1
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 1
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 18
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 6
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 6
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+      "totalInstances": 501,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 71
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/help-center-card",
+      "totalInstances": 126,
+      "sites": [
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-2-0",
+      "totalInstances": 35,
+      "sites": [
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 10
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 8
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 4
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 11
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 2
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+      "totalInstances": 249,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 2
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 3
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 1
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 14
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 26
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 41
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 13
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 17
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 6
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 11
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 8
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 69
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 1
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+      "totalInstances": 206,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 20
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 7
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 12
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 44
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 3
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 8
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 2
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 11
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 12
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 38
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+      "totalInstances": 501,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 71
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/information-box",
+      "totalInstances": 1,
+      "sites": [
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 1
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+      "totalInstances": 373,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 28
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 13
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 18
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 10
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+      "totalInstances": 391,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 126
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+      "totalInstances": 199,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 1
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 2
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 1
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 22
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 4
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/more-links",
+      "totalInstances": 77,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 10
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 5
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 26
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 9
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 20
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 7
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-eligibility-table",
+      "totalInstances": 80,
+      "sites": [
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 80
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+      "totalInstances": 155,
+      "sites": [
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+      "totalInstances": 501,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 71
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/quick-links",
+      "totalInstances": 74,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+      "totalInstances": 137,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 9
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 6
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 46
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 9
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 9
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 33
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 6
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+      "totalInstances": 1957,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 143
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 39
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 43
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 100
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 168
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 164
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 383
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 50
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 57
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 12
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 38
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 323
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 241
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 76
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 97
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/screener",
+      "totalInstances": 6,
+      "sites": [
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 2
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 2
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 2
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+      "totalInstances": 501,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 71
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+      "totalInstances": 22,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 1
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 1
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 1
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 1
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 1
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 1
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 1
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 1
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 12
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 1
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+      "totalInstances": 473,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 71
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+      "totalInstances": 258,
+      "sites": [
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 10
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 9
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 20
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 10
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 45
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 5
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 29
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 5
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 7
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 16
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 4
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 19
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 61
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 8
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 10
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+      "totalInstances": 76,
+      "sites": [
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 3
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 5
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 3
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 21
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 5
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 2
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 4
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 1
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 5
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 17
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 3
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 3
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+      "totalInstances": 501,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 71
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+      "totalInstances": 2296,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 155
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 35
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 65
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 55
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 60
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 75
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 145
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 5
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 181
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 508
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 70
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 100
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 25
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 48
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 15
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 215
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 344
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 140
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 55
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+      "totalInstances": 123,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 1
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 1
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 4
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 9
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 72
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 5
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 7
+        }
+      ]
+    },
+    {
+      "component": "authorableComponents/core/components/brs-pharma-us/component-definitions/video-teaser",
+      "totalInstances": 31,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 5
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 12
+        }
+      ]
+    },
+    {
+      "component": "boreas/components/accordionboreas",
+      "totalInstances": 158,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 8
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 2
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 2
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 1
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 5
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 13
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 4
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 38
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 2
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 2
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 2
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 6
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 18
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 44
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 10
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 1
+        }
+      ]
+    },
+    {
+      "component": "boreas/components/accordioncontainer",
+      "totalInstances": 447,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 30
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 6
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 16
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 1
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 16
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 27
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 33
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 75
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 16
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 4
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 9
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 6
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 23
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 151
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 32
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 2
+        }
+      ]
+    },
+    {
+      "component": "boreas/components/columncontrol",
+      "totalInstances": 1066,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 54
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 12
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 46
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 23
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 17
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 33
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 78
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 3
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 111
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 197
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 49
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 60
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 8
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 21
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 156
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 78
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 88
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 32
+        }
+      ]
+    },
+    {
+      "component": "boreas/components/container",
+      "totalInstances": 1964,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 52
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 56
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 45
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 43
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 50
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 215
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 9
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 234
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 475
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 50
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 76
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 16
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 29
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 227
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 214
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 96
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 46
+        }
+      ]
+    },
+    {
+      "component": "boreas/components/downloadresources",
+      "totalInstances": 41,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 2
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 6
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 2
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 24
+        }
+      ]
+    },
+    {
+      "component": "boreas/components/experiencefragment",
+      "totalInstances": 649,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 28
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 22
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 13
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 80
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 90
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 257
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 18
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 21
+        }
+      ]
+    },
+    {
+      "component": "boreas/components/page",
+      "totalInstances": 501,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 71
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "boreas/components/proxyexitnotification",
+      "totalInstances": 501,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 71
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "boreas/components/proxyfooter",
+      "totalInstances": 501,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 71
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "boreas/components/proxyheader",
+      "totalInstances": 501,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 31
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 7
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 13
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 11
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 15
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 29
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 1
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 45
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 127
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 14
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 20
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 5
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 3
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 43
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 71
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 28
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 11
+        }
+      ]
+    },
+    {
+      "component": "nt:unstructured",
+      "totalInstances": 12,
+      "sites": [
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 12
+        }
+      ]
+    },
+    {
+      "component": "wcm/foundation/components/responsivegrid",
+      "totalInstances": 1146,
+      "sites": [
+        {
+          "domain": "arexvyhcp.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 62
+        },
+        {
+          "domain": "blenrep.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 14
+        },
+        {
+          "domain": "blenrephcp.com",
+          "clientlib": "0.6.128",
+          "totalInstances": 26
+        },
+        {
+          "domain": "blujepa.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 22
+        },
+        {
+          "domain": "blujepahcp.com",
+          "clientlib": "0.10.107",
+          "totalInstances": 30
+        },
+        {
+          "domain": "gskforyou.com",
+          "clientlib": "0.11.101",
+          "totalInstances": 30
+        },
+        {
+          "domain": "gskpaf.org",
+          "clientlib": "0.6.5",
+          "totalInstances": 58
+        },
+        {
+          "domain": "myjemperlijourney.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 3
+        },
+        {
+          "domain": "nucala.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 99
+        },
+        {
+          "domain": "nucalahcp.com",
+          "clientlib": "0.11.138",
+          "totalInstances": 345
+        },
+        {
+          "domain": "ojjaara.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 28
+        },
+        {
+          "domain": "ojjaarahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 51
+        },
+        {
+          "domain": "penmenvy.com",
+          "clientlib": "0.5.122",
+          "totalInstances": 10
+        },
+        {
+          "domain": "penmenvyhcp.com",
+          "clientlib": "0.6.13",
+          "totalInstances": 24
+        },
+        {
+          "domain": "rsvinadults.com",
+          "clientlib": "0.10.1",
+          "totalInstances": 6
+        },
+        {
+          "domain": "shingrixhcp.com",
+          "clientlib": "0.11.109",
+          "totalInstances": 88
+        },
+        {
+          "domain": "togetherwithgsk.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 142
+        },
+        {
+          "domain": "zejula.com",
+          "clientlib": "0.9.5",
+          "totalInstances": 84
+        },
+        {
+          "domain": "zejulahcp.com",
+          "clientlib": "0.10.100",
+          "totalInstances": 24
+        }
+      ]
+    }
+  ]
+}
