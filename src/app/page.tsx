@@ -78,7 +78,7 @@ export default function Home() {
         <ChartExample
           data={percentages}
           heightClass="h-1500"
-          baseOn="websites"
+          basedOn="websites"
         />
         <div className="text-center">
           The following core infrastructure components have been excluded to
