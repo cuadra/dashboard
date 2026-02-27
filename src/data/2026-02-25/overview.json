@@ -1,0 +1,248 @@
+{
+  "clientlibs": [
+    {
+      "name": "0.10.1",
+      "domains": [
+        "blenrep.com"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "name": "boreas/components/page",
+      "instances": 8
+    },
+    {
+      "name": "wcm/foundation/components/responsivegrid",
+      "instances": 8
+    },
+    {
+      "name": "boreas/components/proxyheader",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+      "instances": 8
+    },
+    {
+      "name": "boreas/components/proxyexitnotification",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+      "instances": 5
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+      "instances": 4
+    },
+    {
+      "name": "boreas/components/columncontrol",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+      "instances": 5
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+      "instances": 5
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/gigya-form",
+      "instances": 1
+    },
+    {
+      "name": "boreas/components/proxyfooter",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+      "instances": 8
+    },
+    {
+      "name": "boreas/components/experiencefragment",
+      "instances": 8
+    },
+    {
+      "name": "boreas/components/container",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/help-center-card",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+      "instances": 6
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+      "instances": 6
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+      "instances": 4
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+      "instances": 4
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/externalapp",
+      "instances": 1
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+      "instances": 1
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+      "instances": 1
+    },
+    {
+      "name": "boreas/components/downloadresources",
+      "instances": 1
+    }
+  ],
+  "latestPages": [
+    {
+      "url": "https://www.blenrep.com/support-resources/",
+      "lastModified": 1764745853242
+    },
+    {
+      "url": "https://www.blenrep.com/about-blenrep/",
+      "lastModified": 1764671689640
+    },
+    {
+      "url": "https://www.blenrep.com/side-effects/",
+      "lastModified": 1761847407618
+    },
+    {
+      "url": "https://www.blenrep.com/about-multiple-myeloma/",
+      "lastModified": 1761847264760
+    },
+    {
+      "url": "https://www.blenrep.com/taking-blenrep/",
+      "lastModified": 1761846883312
+    },
+    {
+      "url": "https://www.blenrep.com/",
+      "lastModified": 1761833131893
+    },
+    {
+      "url": "https://www.blenrep.com/find-eye-doctor/",
+      "lastModified": 1761763289640
+    },
+    {
+      "url": "https://www.blenrep.com/study-results/",
+      "lastModified": 1761763114804
+    }
+  ],
+  "totalSites": 1,
+  "totalPages": 8,
+  "tokens": [
+    {
+      "name": "gsk-blenrep-dtc-v1.json",
+      "domains": [
+        "blenrep.com"
+      ]
+    }
+  ],
+  "errorMessages": {
+    "https://www.blenrep.com/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://www.blenrep.com/about-blenrep/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://www.blenrep.com/study-results/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://www.blenrep.com/side-effects/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.blenrep.com/taking-blenrep/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://www.blenrep.com/about-multiple-myeloma/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://www.blenrep.com/find-eye-doctor/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://www.blenrep.com/support-resources/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ]
+  }
+}

@@ -1,0 +1,1248 @@
+{
+  "clientlibs": [
+    {
+      "name": "0.10.1",
+      "domains": [
+        "blenrep.com",
+        "rsvinadults.com",
+        "arexvyhcp.com"
+      ]
+    },
+    {
+      "name": "0.9.5",
+      "domains": [
+        "togetherwithgsk.com",
+        "myjemperlijourney.com",
+        "zejula.com"
+      ]
+    },
+    {
+      "name": "0.6.128",
+      "domains": [
+        "blenrephcp.com"
+      ]
+    },
+    {
+      "name": "0.10.100",
+      "domains": [
+        "ojjaarahcp.com",
+        "ojjaara.com",
+        "zejulahcp.com"
+      ]
+    },
+    {
+      "name": "0.11.101",
+      "domains": [
+        "blujepa.com",
+        "gskforyou.com"
+      ]
+    },
+    {
+      "name": "0.10.107",
+      "domains": [
+        "blujepahcp.com"
+      ]
+    },
+    {
+      "name": "0.6.13",
+      "domains": [
+        "penmenvyhcp.com"
+      ]
+    },
+    {
+      "name": "0.5.122",
+      "domains": [
+        "penmenvy.com"
+      ]
+    },
+    {
+      "name": "0.11.138",
+      "domains": [
+        "nucala.com",
+        "nucalahcp.com"
+      ]
+    },
+    {
+      "name": "0.6.5",
+      "domains": [
+        "gskpaf.org"
+      ]
+    },
+    {
+      "name": "0.11.109",
+      "domains": [
+        "shingrixhcp.com"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "name": "boreas/components/page",
+      "instances": 501
+    },
+    {
+      "name": "wcm/foundation/components/responsivegrid",
+      "instances": 501
+    },
+    {
+      "name": "boreas/components/proxyheader",
+      "instances": 501
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+      "instances": 199
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+      "instances": 501
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+      "instances": 501
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+      "instances": 501
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+      "instances": 501
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+      "instances": 501
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+      "instances": 501
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+      "instances": 391
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+      "instances": 501
+    },
+    {
+      "name": "boreas/components/proxyexitnotification",
+      "instances": 501
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+      "instances": 482
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+      "instances": 211
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+      "instances": 421
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+      "instances": 188
+    },
+    {
+      "name": "boreas/components/columncontrol",
+      "instances": 417
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+      "instances": 312
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+      "instances": 290
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/gigya-form",
+      "instances": 34
+    },
+    {
+      "name": "boreas/components/proxyfooter",
+      "instances": 501
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+      "instances": 367
+    },
+    {
+      "name": "boreas/components/experiencefragment",
+      "instances": 393
+    },
+    {
+      "name": "boreas/components/container",
+      "instances": 486
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+      "instances": 373
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/help-center-card",
+      "instances": 126
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+      "instances": 155
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+      "instances": 501
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+      "instances": 473
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+      "instances": 112
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+      "instances": 171
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+      "instances": 76
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+      "instances": 92
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/externalapp",
+      "instances": 117
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+      "instances": 176
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+      "instances": 102
+    },
+    {
+      "name": "boreas/components/downloadresources",
+      "instances": 13
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+      "instances": 178
+    },
+    {
+      "name": "boreas/components/accordionboreas",
+      "instances": 109
+    },
+    {
+      "name": "boreas/components/accordioncontainer",
+      "instances": 109
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+      "instances": 57
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+      "instances": 22
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/more-links",
+      "instances": 18
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/error-page",
+      "instances": 4
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+      "instances": 136
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/five-star-voc",
+      "instances": 106
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/data-highlight",
+      "instances": 14
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video-teaser",
+      "instances": 10
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-2-0",
+      "instances": 33
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/screener",
+      "instances": 6
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/information-box",
+      "instances": 1
+    },
+    {
+      "name": "nt:unstructured",
+      "instances": 12
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-teaser",
+      "instances": 7
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/authorable-container",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-eligibility-table",
+      "instances": 20
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/quick-links",
+      "instances": 74
+    }
+  ],
+  "latestPages": [
+    {
+      "url": "https://gskforyou.com/",
+      "lastModified": 1772038544777
+    },
+    {
+      "url": "https://nucalahcp.com/copd/dosing-and-administration/at-home/",
+      "lastModified": 1772015550567
+    },
+    {
+      "url": "https://www.nucala.com/eosinophilic-granulomatosis-polyangiitis/nucala-for-egpa/nucala-efficacy/",
+      "lastModified": 1771954715838
+    },
+    {
+      "url": "https://www.nucala.com/copd/nucala-for-copd/nucala-efficacy/",
+      "lastModified": 1771953689289
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/efficacy-safety/exacerbation-reduction/",
+      "lastModified": 1771935835282
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/dosing-and-administration/pediatric/",
+      "lastModified": 1771935585812
+    },
+    {
+      "url": "https://www.nucala.com/support-resources/patient-support-program/",
+      "lastModified": 1771932127826
+    },
+    {
+      "url": "https://nucalahcp.com/hes/dosing-and-administration/at-home/",
+      "lastModified": 1771928932086
+    },
+    {
+      "url": "https://nucalahcp.com/egpa/dosing-and-administration/at-home/",
+      "lastModified": 1771928561924
+    },
+    {
+      "url": "https://www.nucala.com/copd/nucala-for-copd/how-does-nucala-work/",
+      "lastModified": 1771882499736
+    },
+    {
+      "url": "https://www.nucala.com/copd/nucala-for-copd/uncontrolled-copd/",
+      "lastModified": 1771882223762
+    },
+    {
+      "url": "https://nucalahcp.com/egpa/efficacy-safety/safety-profile/",
+      "lastModified": 1771864732071
+    },
+    {
+      "url": "https://www.nucala.com/es-us/",
+      "lastModified": 1771857744838
+    },
+    {
+      "url": "https://www.nucala.com/",
+      "lastModified": 1771857711914
+    },
+    {
+      "url": "https://www.nucala.com/severe-eosinophilic-asthma/nucala-for-sea/nucala-efficacy/",
+      "lastModified": 1771599560711
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/resources/video-library/nucala-mechanical-reconstitution-instructions/",
+      "lastModified": 1771500864257
+    },
+    {
+      "url": "https://nucalahcp.com/",
+      "lastModified": 1771500180315
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/efficacy-safety/comorbidity-data/",
+      "lastModified": 1771417174610
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/efficacy-safety/long-term-data-safety/",
+      "lastModified": 1771416313687
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/efficacy-safety/safety-profile/",
+      "lastModified": 1771415436797
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/access-support/mynucala/",
+      "lastModified": 1771414974399
+    },
+    {
+      "url": "https://nucalahcp.com/copd/access-support/patient-enrollment/",
+      "lastModified": 1771414655224
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/dosing-and-administration/in-office/",
+      "lastModified": 1771414501691
+    },
+    {
+      "url": "https://nucalahcp.com/copd/access-support/mynucala/",
+      "lastModified": 1771414314257
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/access-support/patient-enrollment/",
+      "lastModified": 1771412991968
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/access-support/billing-reimbursement/",
+      "lastModified": 1771412535139
+    },
+    {
+      "url": "https://nucalahcp.com/copd/efficacy-safety/efficacy/",
+      "lastModified": 1771412524810
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/dosing-and-administration/at-home/",
+      "lastModified": 1771412066922
+    },
+    {
+      "url": "https://nucalahcp.com/copd/dosing-and-administration/in-office/",
+      "lastModified": 1771411500349
+    },
+    {
+      "url": "https://nucalahcp.com/hes/access-support/billing-reimbursement/",
+      "lastModified": 1771407031823
+    },
+    {
+      "url": "https://nucalahcp.com/egpa/access-support/billing-reimbursement/",
+      "lastModified": 1771406921063
+    },
+    {
+      "url": "https://nucalahcp.com/egpa/access-support/patient-enrollment/",
+      "lastModified": 1771406188753
+    },
+    {
+      "url": "https://nucalahcp.com/hes/access-support/mynucala/",
+      "lastModified": 1771402181312
+    },
+    {
+      "url": "https://nucalahcp.com/nasal-polyps/eosinophils-moa/",
+      "lastModified": 1771399719431
+    },
+    {
+      "url": "https://nucalahcp.com/nasal-polyps/efficacy-safety/nasal-obstruction-np-size/",
+      "lastModified": 1771399287890
+    },
+    {
+      "url": "https://nucalahcp.com/hes/efficacy-safety/safety-profile/",
+      "lastModified": 1771393358896
+    },
+    {
+      "url": "https://nucalahcp.com/hes/dosing-and-administration/in-office/",
+      "lastModified": 1771392841922
+    },
+    {
+      "url": "https://nucalahcp.com/nasal-polyps/efficacy-safety/comorbidity-data/",
+      "lastModified": 1771351736115
+    },
+    {
+      "url": "https://nucalahcp.com/nasal-polyps/dosing-and-administration/in-office/",
+      "lastModified": 1771349605859
+    },
+    {
+      "url": "https://nucalahcp.com/nasal-polyps/dosing-and-administration/at-home/",
+      "lastModified": 1771348588450
+    }
+  ],
+  "totalSites": 19,
+  "totalPages": 501,
+  "tokens": [
+    {
+      "name": "gsk-blenrep-dtc-v1.json",
+      "domains": [
+        "blenrep.com"
+      ]
+    },
+    {
+      "name": "gsk-led-v0.json",
+      "domains": [
+        "togetherwithgsk.com",
+        "gskforyou.com",
+        "gskpaf.org"
+      ]
+    },
+    {
+      "name": "gsk-blenrep-hcp-v0.json",
+      "domains": [
+        "blenrephcp.com"
+      ]
+    },
+    {
+      "name": "gsk-ojjaara-hcp-v0.json",
+      "domains": [
+        "ojjaarahcp.com"
+      ]
+    },
+    {
+      "name": "gsk-blujepa-dtc-v1.json",
+      "domains": [
+        "blujepa.com"
+      ]
+    },
+    {
+      "name": "gsk-blujepa-hcp-v2.json",
+      "domains": [
+        "blujepahcp.com"
+      ]
+    },
+    {
+      "name": "gsk-pentafullpromo-hcp-v0.json",
+      "domains": [
+        "penmenvyhcp.com"
+      ]
+    },
+    {
+      "name": "gsk-penmenvy-dtc-v3.json",
+      "domains": [
+        "penmenvy.com"
+      ]
+    },
+    {
+      "name": "gsk-ojjaara-dtc-v0.json",
+      "domains": [
+        "ojjaara.com"
+      ]
+    },
+    {
+      "name": "gsk-myjemperlijourney-dtc-v0.json",
+      "domains": [
+        "myjemperlijourney.com"
+      ]
+    },
+    {
+      "name": "gsk-nucala-dtc-v2.json",
+      "domains": [
+        "nucala.com"
+      ]
+    },
+    {
+      "name": "gsk-nucala-hcp-v2.json",
+      "domains": [
+        "nucalahcp.com"
+      ]
+    },
+    {
+      "name": "gsk-zejula-dtc-v0.json",
+      "domains": [
+        "zejula.com"
+      ]
+    },
+    {
+      "name": "gsk-zejula-hcp-v2.json",
+      "domains": [
+        "zejulahcp.com"
+      ]
+    },
+    {
+      "name": "gsk-shingrix-hcp-v2.json",
+      "domains": [
+        "shingrixhcp.com"
+      ]
+    },
+    {
+      "name": "gsk-rsvinadults-hcp-v1.json",
+      "domains": [
+        "rsvinadults.com"
+      ]
+    },
+    {
+      "name": "gsk-arexvy-hcp-v0.json",
+      "domains": [
+        "arexvyhcp.com"
+      ]
+    }
+  ],
+  "errorMessages": {
+    "https://www.blenrep.com/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://www.blenrep.com/about-blenrep/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://www.blenrep.com/study-results/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://www.blenrep.com/side-effects/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.blenrep.com/about-multiple-myeloma/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://www.blenrep.com/find-eye-doctor/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://www.blenrep.com/support-resources/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://www.togetherwithgsk.com/jemperli/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.togetherwithgsk.com/jemperli/hcp/enroll/enroll-online/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.togetherwithgsk.com/nucala/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.togetherwithgsk.com/nucala/hcp/enroll/enroll-online/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.togetherwithgsk.com/ojjaara/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.togetherwithgsk.com/zejula/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.blenrephcp.com/about-blenrep/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.blenrephcp.com/safety/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.blenrephcp.com/resources-and-support/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/home/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/efficacy/jak-inhibitor-experienced/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/efficacy/jak-inhibitor-naive/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/safety/jak-inhibitor-experienced/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/safety/jak-inhibitor-naive/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/dosing-and-moa/dosing/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/dosing-and-moa/moa/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/patient-profiles/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/resources-and-support/ojjaara-resources/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/resources-and-support/reimbursement-support/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/resources-and-support/ojjaara-videos/get-to-know-ojjaara-dr-safah/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/resources-and-support/ojjaara-videos/simplify-1-dr-fazal/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaarahcp.com/resources-and-support/ojjaara-videos/momentum-dr-fleischman/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepa.com/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepa.com/savings-support/savings/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepa.com/about-utis/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepa.com/how-is-blujepa-different/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepa.com/why-blujepa/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepa.com/risks-side-effects/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepa.com/how-to-take-blujepa/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepa.com/savings-support/support/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepa.com/savings-support/sign-up/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepa.com/savings-support/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepa.com/savings-support/savings/thank-you/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepahcp.com/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://blujepahcp.com/sign-up/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://blujepahcp.com/efficacy/primary-endpoint/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://blujepahcp.com/efficacy/safety-profile/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://blujepahcp.com/efficacy/trial-design/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://blujepahcp.com/efficacy/trial-population/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://blujepahcp.com/patient-considerations/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://blujepahcp.com/subgroup-analyses/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://blujepahcp.com/moa/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://blujepahcp.com/dosing/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://blujepahcp.com/access-savings/coverage-finder-tool/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://blujepahcp.com/access-savings/patient-savings/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://blujepahcp.com/efficacy/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepahcp.com/access-savings/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://blujepahcp.com/search-results/": [
+      "Missing metadata tag: og:image"
+    ],
+    "https://gskforyou.com/home/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://gskforyou.com/programs/gsk-coupons-free-trials/": [
+      "Unexpected metadata name: title:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://gskforyou.com/search-results/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://penmenvyhcp.com/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://penmenvyhcp.com/about/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://penmenvyhcp.com/efficacy-safety/safety-tolerability/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://penmenvyhcp.com/implementing/gsk-partnership/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://penmenvyhcp.com/implementing/insurance-codes/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://penmenvyhcp.com/search/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://penmenvy.com/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://penmenvy.com/what-is-meningitis/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://penmenvy.com/about-penmenvy/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://penmenvy.com/risks-side-effects/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://penmenvy.com/frequently-asked-questions/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaara.com/home/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ojjaara.com/about-ojjaara/benefits-of-ojjaara/": [
+      "Unexpected metadata name:  twitter:description",
+      "Missing metadata tag: twitter:description"
+    ],
+    "https://ojjaara.com/about-ojjaara/ojjaara-patient-stories/": [
+      "Unexpected metadata name:  twitter:description",
+      "Missing metadata tag: twitter:description"
+    ],
+    "https://ojjaara.com/savings-and-support/find-doctor/": [
+      "Unexpected metadata name: x:title",
+      "Unexpected metadata name: x:description",
+      "Unexpected metadata name: x:image"
+    ],
+    "https://ojjaara.com/about-ojjaara/how-ojjaara-works/benefits-of-ojjaara/": [
+      "Unexpected metadata name:  twitter:description",
+      "Missing metadata tag: twitter:description"
+    ],
+    "https://www.nucala.com/es-us/": [
+      "Unexpected metadata name: twitter:name",
+      "Missing metadata tag: twitter:title"
+    ],
+    "https://www.nucala.com/": [
+      "Unexpected metadata name: twitter:name",
+      "Missing metadata tag: twitter:title"
+    ],
+    "https://www.nucala.com/support-resources/sign-up-for-information/": [
+      "Unexpected metadata name: format-detection"
+    ],
+    "https://www.nucala.com/terms-conditions/": [
+      "Unexpected metadata name: format-detection"
+    ],
+    "https://nucalahcp.com/": [
+      "Unexpected metadata name: format-detection"
+    ],
+    "https://nucalahcp.com/severe-eosinophilic-asthma/patient-types/": [
+      "Unexpected metadata name: description"
+    ],
+    "https://nucalahcp.com/egpa/access-support/mynucala/": [
+      "Unexpected metadata name: description"
+    ],
+    "https://nucalahcp.com/copd/access-support/nucala-delivery/": [
+      "Unexpected metadata name: description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://nucalahcp.com/copd/access-support/billing-reimbursement/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://nucalahcp.com/copd/resources/video-library/nucala-manual-reconstitution-instructions/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://nucalahcp.com/copd/resources/video-library/nucala-mechanical-reconstitution-instructions/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://nucalahcp.com/egpa/egpa-patient-types/identifying-egpa/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://nucalahcp.com/egpa/efficacy-safety/ocs-reduction/": [
+      "Unexpected metadata name: description"
+    ],
+    "https://nucalahcp.com/egpa/efficacy-safety/relapse-reduction/": [
+      "Unexpected metadata name: description"
+    ],
+    "https://nucalahcp.com/egpa/resources/video-library/how-to-use-nucala-autoinjector/": [
+      "Unexpected metadata property: twitter:image:alt",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://nucalahcp.com/hes/identifying-hes/": [
+      "Unexpected metadata name: description"
+    ],
+    "https://nucalahcp.com/hes/efficacy-safety/study-design/": [
+      "Unexpected metadata name: description"
+    ],
+    "https://nucalahcp.com/nasal-polyps/efficacy-safety/np-symptoms-sense-smell/": [
+      "Unexpected metadata name: description"
+    ],
+    "https://nucalahcp.com/nasal-polyps/resources/video-library/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://nucalahcp.com/nasal-polyps/resources/video-library/how-to-use-nucala-autoinjector/": [
+      "Unexpected metadata name: twitter:image:alt",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://nucalahcp.com/severe-eosinophilic-asthma/efficacy-safety/study-designs/": [
+      "Unexpected metadata name: description"
+    ],
+    "https://nucalahcp.com/severe-eosinophilic-asthma/access-support/patient-enrollment/": [
+      "Unexpected metadata name: description"
+    ],
+    "https://nucalahcp.com/severe-eosinophilic-asthma/resources/video-library/nucala-mechanical-reconstitution-instructions/": [
+      "Unexpected metadata name: description"
+    ],
+    "https://gskpaf.org/home/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://gskpaf.org/privacy-notice/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://zejula.com/home/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://zejula.com/es-us/home/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://zejulahcp.com/about-ovarian-cancer/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://zejulahcp.com/safety/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://zejulahcp.com/resources-downloads/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://zejulahcp.com/access-support/free-trial-dose-modification/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://zejulahcp.com/access-support/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/recommend-administer/coadministration/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/home-ic/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/about-shingles/impact-of-shingles/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/about-shingles/risk-factors-comorbidities/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/efficacy-safety/efficacy-data/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/efficacy-safety/adverse-reactions/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/efficacy-safety/mechanism-of-action/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/recommend-administer/confidence/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/recommend-administer/dosing-storage/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/cost-coverage/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/resources/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/pharmacists-nurses/support-pharmacists/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/pharmacists-nurses/support-nurses/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/home-ic/efficacy-safety/overview/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/home-ic/efficacy-safety/efficacy-data/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/home-ic/efficacy-safety/adverse-reactions/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/home-ic/efficacy-safety/mechanism-of-action/": [
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/home-ic/immunogenicity-data/solid-tumor-malignancies/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/home-ic/immunogenicity-data/human-immunodeficiency-virus/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/home-ic/in-your-practice/overview/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/home-ic/in-your-practice/shingles-presentation/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/home-ic/in-your-practice/patient-counseling/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/efficacy-safety/efficacy-data1/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://shingrixhcp.com/cost-coverage/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/resources/prefilled-syringe-presentation-video/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://ShingrixHCP.com/epic-ehr-platform-resources/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.rsvinadults.com/rsv-risk-comorbidities/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.rsvinadults.com/rsv-vaccination/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://www.rsvinadults.com/search-results/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/efficacy-safety/immunobridge/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/efficacy-safety/safety-profile/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/practice-education/refer-arexvy/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/efficacy-safety/efficacy/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/hcps/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/efficacy-safety/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/efficacy-safety/secondary-endpoint-results/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/administration/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/pharmacists/reconstitution-video/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/practice-education/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/practice-education/cdc-recommendation/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/practice-education/coverage/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/practice-education/coding-reimbursement/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/": [
+      "Missing metadata tag: og:title",
+      "Missing metadata tag: og:description",
+      "Missing metadata tag: og:image",
+      "Missing metadata tag: twitter:title",
+      "Missing metadata tag: twitter:description",
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/hcps/acip-recommendation-video/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/hcps/tom-story-video/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/hcps/tracy-story-video/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/hcps/ana-story-video/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/pharmacists/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/pharmacists/acip-recommendation-video/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/pharmacists/tom-story-video/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/pharmacists/tracy-story-video/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/pharmacists/deborah-story-video/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/pharmacists/michele-story-video/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/pharmacists/ana-story-video/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/rsv-resources/frequently-asked-questions/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/search-results/": [
+      "Missing metadata tag: twitter:image"
+    ],
+    "https://arexvyhcp.com/retail/": [
+      "Missing metadata tag: twitter:image"
+    ]
+  }
+}

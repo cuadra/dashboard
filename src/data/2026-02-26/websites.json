@@ -1,0 +1,3058 @@
+{
+  "websites": [
+    {
+      "lastModified": 1765204665735,
+      "clientlib": "0.10.1",
+      "designToken": "gsk-arexvy-hcp-v0.json",
+      "totalInstances": 1868,
+      "domain": "arexvyhcp.com",
+      "componentCount": 43,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 585
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 16
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 19
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 6
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/data-highlight",
+          "instances": 17
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 37
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 19
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 31
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/externalapp",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 31
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/five-star-voc",
+          "instances": 23
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 31
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 31
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 31
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 31
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+          "instances": 31
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/more-links",
+          "instances": 10
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 31
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/quick-links",
+          "instances": 31
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 143
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 31
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 31
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 31
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 155
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video-teaser",
+          "instances": 14
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 8
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 30
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 54
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 52
+        },
+        {
+          "name": "boreas/components/downloadresources",
+          "instances": 7
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 28
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 31
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 31
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 31
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 31
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 62
+        }
+      ]
+    },
+    {
+      "lastModified": 1764745853242,
+      "clientlib": "0.10.1",
+      "designToken": "gsk-blenrep-dtc-v1.json",
+      "totalInstances": 545,
+      "domain": "blenrep.com",
+      "componentCount": 38,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 187
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 6
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 17
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 7
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 6
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 17
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/externalapp",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/gigya-form",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/help-center-card",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 40
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+          "instances": 1
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 15
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 37
+        },
+        {
+          "name": "boreas/components/downloadresources",
+          "instances": 2
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 8
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 8
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 8
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 8
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 8
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 17
+        }
+      ]
+    },
+    {
+      "lastModified": 1765812451467,
+      "clientlib": "0.6.128",
+      "designToken": "gsk-blenrep-hcp-v0.json",
+      "totalInstances": 752,
+      "domain": "blenrephcp.com",
+      "componentCount": 35,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 204
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 22
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 19
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 16
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 25
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+          "instances": 7
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 39
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 9
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 65
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 2
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 6
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 46
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 56
+        },
+        {
+          "name": "boreas/components/downloadresources",
+          "instances": 6
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 11
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 13
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 13
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 13
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 13
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 26
+        }
+      ]
+    },
+    {
+      "lastModified": 1770841920617,
+      "clientlib": "0.11.101",
+      "designToken": "gsk-blujepa-dtc-v1.json",
+      "totalInstances": 723,
+      "domain": "blujepa.com",
+      "componentCount": 39,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 247
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 23
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 19
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 23
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/gigya-form",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/help-center-card",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-2-0",
+          "instances": 10
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/screener",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 55
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 2
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 16
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 23
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 45
+        },
+        {
+          "name": "boreas/components/downloadresources",
+          "instances": 2
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 22
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 11
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 11
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 11
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 11
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 22
+        }
+      ]
+    },
+    {
+      "lastModified": 1769463128530,
+      "clientlib": "0.10.107",
+      "designToken": "gsk-blujepa-hcp-v2.json",
+      "totalInstances": 774,
+      "domain": "blujepahcp.com",
+      "componentCount": 39,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 237
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 7
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 9
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 9
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/externalapp",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/gigya-form",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-2-0",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+          "instances": 7
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+          "instances": 9
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 60
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+          "instances": 1
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 1
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 1
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 17
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 43
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 13
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 15
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 15
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 15
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 15
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 30
+        }
+      ]
+    },
+    {
+      "lastModified": 1772038544777,
+      "clientlib": "0.11.101",
+      "designToken": "gsk-led-v0.json",
+      "totalInstances": 1063,
+      "domain": "gskforyou.com",
+      "componentCount": 37,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 7
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 340
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 6
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 66
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 27
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 66
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/five-star-voc",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/help-center-card",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/information-box",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+          "instances": 6
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 100
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/screener",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 10
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 75
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 5
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 16
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 33
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 50
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 15
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 15
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 15
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 15
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 30
+        }
+      ]
+    },
+    {
+      "lastModified": 1770193031175,
+      "clientlib": "0.6.5",
+      "designToken": "gsk-led-v0.json",
+      "totalInstances": 2246,
+      "domain": "gskpaf.org",
+      "componentCount": 36,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 41
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-teaser",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 621
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 83
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 49
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 83
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 29
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/five-star-voc",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 29
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 24
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 29
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 26
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 29
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 29
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-eligibility-table",
+          "instances": 80
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 29
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 168
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/screener",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 29
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 29
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 45
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 21
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 29
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 145
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 13
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 27
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 78
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 215
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 80
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 29
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 29
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 29
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 29
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 58
+        }
+      ]
+    },
+    {
+      "lastModified": 1771342642655,
+      "clientlib": "0.9.5",
+      "designToken": "gsk-myjemperlijourney-dtc-v0.json",
+      "totalInstances": 79,
+      "domain": "myjemperlijourney.com",
+      "componentCount": 29,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 24
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/gigya-form",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/help-center-card",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+          "instances": 4
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 3
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 9
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 1
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 1
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 1
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 1
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 3
+        }
+      ]
+    },
+    {
+      "lastModified": 1764689656555,
+      "clientlib": "mixed",
+      "designToken": "gsk-nucala-dtc-v0.json",
+      "totalInstances": 3075,
+      "domain": "nucala.com",
+      "componentCount": 46,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 17
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 923
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 139
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 6
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/data-highlight",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 6
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 119
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/externalapp",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 56
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/five-star-voc",
+          "instances": 9
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 51
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/gigya-form",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/help-center-card",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 37
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+          "instances": 6
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/modal",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/more-links",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 165
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 26
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 177
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+          "instances": 9
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 5
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 37
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 108
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 232
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 92
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 44
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 44
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 44
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 44
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 99
+        }
+      ]
+    },
+    {
+      "lastModified": 1772015550567,
+      "clientlib": "0.11.138",
+      "designToken": "gsk-nucala-hcp-v2.json",
+      "totalInstances": 7677,
+      "domain": "nucalahcp.com",
+      "componentCount": 41,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 62
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-teaser",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/authorable-container",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 2122
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 140
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 319
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 65
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 285
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 127
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/externalapp",
+          "instances": 102
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 127
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 127
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 48
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 127
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-2-0",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+          "instances": 44
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 127
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 127
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 126
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+          "instances": 127
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/more-links",
+          "instances": 26
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 127
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+          "instances": 46
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 383
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 127
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 127
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 127
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 508
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+          "instances": 72
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 38
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 75
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 197
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 475
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 257
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 127
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 127
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 127
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 127
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 345
+        }
+      ]
+    },
+    {
+      "lastModified": 1765396075663,
+      "clientlib": "0.10.100",
+      "designToken": "gsk-ojjaara-dtc-v0.json",
+      "totalInstances": 1078,
+      "domain": "ojjaara.com",
+      "componentCount": 41,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-teaser",
+          "instances": 7
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 346
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 75
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 69
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/externalapp",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/five-star-voc",
+          "instances": 10
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/gigya-form",
+          "instances": 6
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/help-center-card",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 50
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 7
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 70
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+          "instances": 11
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 2
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 16
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 49
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 50
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 14
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 14
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 14
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 14
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 14
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 28
+        }
+      ]
+    },
+    {
+      "lastModified": 1764093692163,
+      "clientlib": "0.10.100",
+      "designToken": "gsk-ojjaara-hcp-v0.json",
+      "totalInstances": 1453,
+      "domain": "ojjaarahcp.com",
+      "componentCount": 43,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 468
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 18
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 78
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 18
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/data-highlight",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 78
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/five-star-voc",
+          "instances": 17
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 9
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 17
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 18
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+          "instances": 9
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 57
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 16
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 100
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video-teaser",
+          "instances": 5
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 2
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 4
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 60
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 76
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 18
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 20
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 20
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 20
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 20
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 51
+        }
+      ]
+    },
+    {
+      "lastModified": 1757944890665,
+      "clientlib": "0.5.122",
+      "designToken": "gsk-penmenvy-dtc-v3.json",
+      "totalInstances": 276,
+      "domain": "penmenvy.com",
+      "componentCount": 30,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 97
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/help-center-card",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 6
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 25
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 2
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 9
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 8
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 16
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 5
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 5
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 5
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 5
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 5
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 10
+        }
+      ]
+    },
+    {
+      "lastModified": 1767820488888,
+      "clientlib": "0.6.13",
+      "designToken": "gsk-pentafullpromo-hcp-v0.json",
+      "totalInstances": 728,
+      "domain": "penmenvyhcp.com",
+      "componentCount": 37,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 252
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 10
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+          "instances": 9
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 38
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 48
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 6
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 6
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 21
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 29
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 12
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 12
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 12
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 12
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 12
+        },
+        {
+          "name": "nt:unstructured",
+          "instances": 12
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 24
+        }
+      ]
+    },
+    {
+      "lastModified": 1757578099813,
+      "clientlib": "0.10.1",
+      "designToken": "gsk-rsvinadults-hcp-v1.json",
+      "totalInstances": 97,
+      "domain": "rsvinadults.com",
+      "componentCount": 18,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 33
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 15
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 3
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 3
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 3
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 3
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 6
+        }
+      ]
+    },
+    {
+      "lastModified": 1770757738483,
+      "clientlib": "0.11.109",
+      "designToken": "gsk-shingrix-hcp-v2.json",
+      "totalInstances": 3494,
+      "domain": "shingrixhcp.com",
+      "componentCount": 45,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 15
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 1057
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 18
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 106
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 36
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/data-highlight",
+          "instances": 33
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 120
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 97
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/externalapp",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/five-star-voc",
+          "instances": 25
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 51
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+          "instances": 22
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/more-links",
+          "instances": 9
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/quick-links",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+          "instances": 33
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 323
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 19
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 43
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 215
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+          "instances": 7
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video-teaser",
+          "instances": 12
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 18
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 23
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 156
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 227
+        },
+        {
+          "name": "boreas/components/downloadresources",
+          "instances": 24
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 43
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 43
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 43
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 43
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 43
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 88
+        }
+      ]
+    },
+    {
+      "lastModified": 1770663508864,
+      "clientlib": "0.9.5",
+      "designToken": "gsk-led-v0.json",
+      "totalInstances": 4174,
+      "domain": "togetherwithgsk.com",
+      "componentCount": 37,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 92
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 1354
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 16
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 157
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 80
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 157
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/error-page",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 71
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/externalapp",
+          "instances": 5
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 13
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 71
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 7
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 71
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 69
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+          "instances": 29
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 71
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/more-links",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 71
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 241
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 71
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 71
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 61
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 17
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 71
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 344
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 44
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 151
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 78
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 214
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 71
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 71
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 71
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 71
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 142
+        }
+      ]
+    },
+    {
+      "lastModified": 1758820321762,
+      "clientlib": "0.9.5",
+      "designToken": "gsk-zejula-dtc-v0.json",
+      "totalInstances": 1979,
+      "domain": "zejula.com",
+      "componentCount": 41,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 30
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-teaser",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 620
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 106
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 12
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/data-highlight",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 7
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 80
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 17
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/five-star-voc",
+          "instances": 9
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/gigya-form",
+          "instances": 6
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/help-center-card",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 29
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+          "instances": 38
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 76
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 28
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 140
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 10
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 32
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 88
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 96
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 28
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 28
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 28
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 28
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 28
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 84
+        }
+      ]
+    },
+    {
+      "lastModified": 1765563006157,
+      "clientlib": "0.10.100",
+      "designToken": "gsk-zejula-hcp-v2.json",
+      "totalInstances": 766,
+      "domain": "zejulahcp.com",
+      "componentCount": 41,
+      "components": [
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+          "instances": 178
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+          "instances": 4
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/data-highlight",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+          "instances": 22
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+          "instances": 14
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/five-star-voc",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+          "instances": 8
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-2-0",
+          "instances": 2
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+          "instances": 20
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+          "instances": 10
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/more-links",
+          "instances": 7
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+          "instances": 6
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+          "instances": 97
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+          "instances": 1
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+          "instances": 10
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+          "instances": 3
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+          "instances": 11
+        },
+        {
+          "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+          "instances": 55
+        },
+        {
+          "name": "boreas/components/accordionboreas",
+          "instances": 1
+        },
+        {
+          "name": "boreas/components/accordioncontainer",
+          "instances": 2
+        },
+        {
+          "name": "boreas/components/columncontrol",
+          "instances": 32
+        },
+        {
+          "name": "boreas/components/container",
+          "instances": 46
+        },
+        {
+          "name": "boreas/components/experiencefragment",
+          "instances": 21
+        },
+        {
+          "name": "boreas/components/page",
+          "instances": 11
+        },
+        {
+          "name": "boreas/components/proxyexitnotification",
+          "instances": 11
+        },
+        {
+          "name": "boreas/components/proxyfooter",
+          "instances": 11
+        },
+        {
+          "name": "boreas/components/proxyheader",
+          "instances": 11
+        },
+        {
+          "name": "wcm/foundation/components/responsivegrid",
+          "instances": 24
+        }
+      ]
+    }
+  ]
+}

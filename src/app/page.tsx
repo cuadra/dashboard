@@ -1,7 +1,9 @@
-import overview from "@/data/overview.json";
-import { ChartExample } from "./components/Charts";
-import { PChart } from "./components/Charts/clientlibs";
-import { ComponentStackBar } from "./components/Charts/component-stack-bar";
+import overview from "@/src/data/overview.json";
+import { ChartExample } from "@/src/components/Charts/horizontalBars";
+import { PChart } from "@/src/components/Charts/clientlibs";
+import { ComponentStackBar } from "@/src/components/Charts/component-stack-bar";
+import { filteredComponents } from "@/features/filters/excludeComponents";
+import { excludedList } from "@/src/data/excludedComponents";
 import {
   Library,
   Coins,
@@ -12,35 +14,7 @@ import {
   Bug,
 } from "lucide-react";
 export default function Home() {
-  const excludeList = [
-    "page",
-    "responsivegrid",
-    "proxyheader",
-    "proxyfooter",
-    "proxyexitnotification",
-    "button",
-    "header",
-    "footer",
-    "primary-nav",
-    "utility-nav",
-    "language-selector",
-    "utility-navigation-item",
-    "exit-overlay",
-    "container",
-    "search-box",
-    "indication-picker",
-    "socialmediaicons",
-    "experiencefragment",
-    "rte",
-    "columncontrol",
-    "fab",
-    "isi",
-    "error-page",
-  ];
-  const components = overview.components.filter((c) => {
-    const shortened = c.name.split("/").pop();
-    return !excludeList.includes((shortened ?? "").toLowerCase());
-  });
+  const components = filteredComponents(overview.components);
 
   const totalInstances = components.reduce((sum, c) => sum + c.instances, 0);
 
@@ -53,12 +27,6 @@ export default function Home() {
     name: clientlib.name,
     percentage:
       ((clientlib.domains.length / overview.totalSites) * 100).toFixed(2) + "%",
-  }));
-
-  const chartData = percentages.map((component) => ({
-    name: component.name.split("/").pop() || component.name,
-    percentage: parseFloat(component.percentage),
-    instances: component.instances,
   }));
 
   const chartClientlibData = clientlibPercentages.map((clientlib) => ({
@@ -105,14 +73,18 @@ export default function Home() {
             <Sparkles />
             Component popularity
           </h2>
-          <ComponentStackBar data={chartData} />
+          <ComponentStackBar data={filteredComponents(percentages)} />
         </div>
-        <ChartExample data={chartData} />
+        <ChartExample
+          data={percentages}
+          heightClass="h-1500"
+          basedOn="websites"
+        />
         <div className="text-center">
           The following core infrastructure components have been excluded to
           focus attention on optional and content-driven components.
           <br />
-          {excludeList.map((comp) => (
+          {excludedList.map((comp) => (
             <span key={comp} className="badge">
               {comp}
             </span>

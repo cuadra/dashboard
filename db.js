@@ -1,7 +1,7 @@
 import scrutari from "scrutari";
-import { writeFile } from "node:fs/promises";
-import { domains } from "./sites.js";
-import { crawler, condensePageComponent } from "./crawler/utils/crawler.ts";
+import { mkdir, writeFile } from "node:fs/promises";
+import { domains } from "./src/data/sites.js";
+import { crawler, condensePageComponent } from "./crawler.ts";
 
 const sites = [];
 const errorMessages = new Map();
@@ -40,7 +40,7 @@ const SitePromises = sets.map(async (url) => {
   const whitelistedExternalDomains = res["whitelistedExternalDomains"] || [];
   const trealiumDatalayer = res["trealiumDataLayer"] || {};
   const wizardAttributes = res["wizardAttributes"] || {};
-  const designToken = res["designTokenFilePath"] || {};
+  const designToken = res["designTokenFilePath"] || null;
   const googleAPIKey =
     res["genericConfigurationMap"]?.Generic.googleApiKey || null;
   const lastModified = res["lastModifiedDate"] || null;
@@ -219,136 +219,151 @@ overview.tokens = [...overview.tokens.entries()].map(([key, value]) => ({
   domains: value,
 }));
 
-console.log(overview);
-await writeFile(
-  `./data/overview.json`,
-  JSON.stringify(overview, null, 2),
-  "utf8",
-);
-
 //console.log(allSites);
-/*
-const websitesWithTotals = domains.map((domain) => {
-  const pagesMap = websitesMap.get(domain);
-  if (!pagesMap) {
-    return { domain, totalComponents: 0 };
-  }
 
-  const componentSet = new Set();
-  for (const meta of pagesMap.values()) {
-    meta.components.forEach((component) => componentSet.add(component));
-  }
-  return { domain, totalComponents: componentSet.size };
-});
+const stamp = new Date().toISOString().split("T")[0];
 
-const overview = generateOverviewJSON(
-  domains,
-  temp,
-  websitesWithTotals,
-  clientlibs,
-);
-//console.log("allComponents:", [...allComponents].sort());
-//console.log("overview:", JSON.stringify(overview, null, 2));
+await mkdir(`./src/data/${stamp}`, { recursive: true });
 
-await mkdir("./data/components", { recursive: true });
 await writeFile(
-  "./data/overview.json",
+  `./src/data/${stamp}/overview.json`,
   JSON.stringify(overview, null, 2),
   "utf8",
 );
+////////////////////////// create website overview JSON
 
-const componentItems = [];
+const websitesJson = {};
+websitesJson.websites = [...allSites.entries()]
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([domain, pages]) => {
+    let lastModified = null;
+    let totalInstances = 0;
+    let componentSet = new Map();
+    const clientlibs = new Set();
+    const tokens = new Set();
 
-for (const [component, refs] of temp.entries()) {
-  const sitesMap = new Map();
-  const clientlibsForComponent = new Set();
+    pages.forEach((page) => {
+      if (page?.clientlib) {
+        clientlibs.add(page.clientlib);
+      }
+      if (page?.designToken) {
+        tokens.add(page.designToken);
+      }
 
-  for (const { domain, page, clientlib } of refs) {
-    if (!sitesMap.has(domain)) {
-      sitesMap.set(domain, new Set());
-    }
-    sitesMap.get(domain).add(page);
+      const pageLast =
+        typeof page.lastModified === "number"
+          ? page.lastModified
+          : Number.isFinite(Date.parse(page.lastModified))
+            ? Date.parse(page.lastModified)
+            : null;
+      if (
+        pageLast !== null &&
+        (lastModified === null || pageLast > lastModified)
+      ) {
+        lastModified = pageLast;
+      }
 
-    if (clientlib) {
-      clientlibsForComponent.add(clientlib);
-    }
-  }
-
-  const websites = [...sitesMap.entries()]
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([domain, pages]) => {
-      const pageList = [...pages].sort();
-      return {
-        M: {
-          domain: { S: domain },
-          pageCount: { N: String(pageList.length) },
-          pages: {
-            L: pageList.map((p) => ({ S: p })),
-          },
-        },
-      };
+      for (const [key, value] of page.components) {
+        const count = value?.total ?? 0;
+        totalInstances += count;
+        componentSet.set(key, (componentSet.get(key) ?? 0) + count);
+      }
     });
 
-  const totalPages = [...sitesMap.values()].reduce(
-    (sum, pageSet) => sum + pageSet.size,
-    0,
-  );
+    const clientlib =
+      clientlibs.size === 1
+        ? [...clientlibs][0]
+        : clientlibs.size === 0
+          ? null
+          : "mixed";
+    const token =
+      tokens.size === 1 ? [...tokens][0] : tokens.size === 0 ? null : "mixed";
 
-  const item = {
-    PK: { S: "DATASET#CURRENT" },
-    SK: { S: `COMPONENT#${component}` },
-    component: {
-      M: {
-        name: { S: component },
-        websiteCount: { N: String(websites.length) },
-        totalPages: { N: String(totalPages) },
-        websites: { L: websites },
-        clientlibs: {
-          L: [...clientlibsForComponent].sort().map((c) => ({ S: c })),
-        },
-      },
-    },
-  };
+    componentSet = [...componentSet.entries()]
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([name, instances]) => ({
+        name,
+        instances,
+      }));
 
-  componentItems.push(item);
+    return {
+      lastModified: lastModified,
+      clientlib: clientlib,
+      designToken: token,
+      totalInstances: totalInstances,
+      domain,
+      componentCount: componentSet.length,
+      components: componentSet,
+    };
+  });
 
-  const safeFileName = component.replace(/[^\w.-]+/g, "_");
-  await writeFile(
-    `./data/components/${safeFileName}.json`,
-    JSON.stringify(item, null, 2),
-    "utf8",
-  );
-}
 await writeFile(
-  "./data/components/items.json",
-  JSON.stringify(componentItems, null, 2),
+  `./src/data/${stamp}/websites.json`,
+  JSON.stringify(websitesJson, null, 2),
   "utf8",
 );
+const componentsJsonMap = new Map();
 
-await mkdir("./data/websites", { recursive: true });
-const websiteItems = [];
+for (const [site, siteValue] of allSites) {
+  siteValue.forEach((page) => {
+    for (const [component, componentValue] of page.components) {
+      const pageInstances = componentValue?.total ?? 0;
+      if (!componentsJsonMap.has(component)) {
+        componentsJsonMap.set(component, new Map());
+      }
 
-for (const [domain, pagesMap] of websitesMap.entries()) {
-  websiteItems.push(getWebsiteJSON(pages, domain));
+      const sitesMap = componentsJsonMap.get(component);
+      if (!sitesMap.has(site)) {
+        sitesMap.set(site, {
+          clientlibs: new Set(),
+          totalInstances: 0,
+        });
+      }
 
-  const safeFileName = domain.replace(/[^\w.-]+/g, "_");
-  await writeFile(
-    `./data/websites/${safeFileName}.json`,
-    JSON.stringify(item, null, 2),
-    "utf8",
-  );
+      const siteComponentData = sitesMap.get(site);
+      siteComponentData.clientlibs.add(page.clientlib ?? null);
+      siteComponentData.totalInstances += pageInstances;
+    }
+  });
 }
-*/
-/*
+
+const componentsJson = {
+  components: [...componentsJsonMap.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([component, sitesMap]) => {
+      const sites = [...sitesMap.entries()]
+        .sort(([a], [b]) => a.localeCompare(b))
+        .map(([domain, siteData]) => {
+          const clientlibs = [...siteData.clientlibs].filter(
+            (value) => value !== null,
+          );
+          const clientlib =
+            clientlibs.length === 1
+              ? clientlibs[0]
+              : clientlibs.length === 0
+                ? null
+                : "mixed";
+          return {
+            domain,
+            clientlib,
+            totalInstances: siteData.totalInstances,
+          };
+        });
+
+      const totalInstances = sites.reduce(
+        (sum, site) => sum + (site.totalInstances ?? 0),
+        0,
+      );
+
+      return {
+        component,
+        totalInstances,
+        sites,
+      };
+    }),
+};
 await writeFile(
-  "./data/websites/items.json",
-  JSON.stringify(websiteItems, null, 2),
+  `./src/data/${stamp}/components.json`,
+  JSON.stringify(componentsJson, null, 2),
   "utf8",
 );
-*/
-
-//console.log("entireMap:", temp);
-// console.log("processedPages:", processedPages);
-// console.log("errorPages:", errorPages);
-
-// await writeFile("./data/componentsMap.json", JSON.stringify(Object.fromEntries(temp), null, 2), "utf8");
