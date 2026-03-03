@@ -15,7 +15,6 @@ export const domains = [
   "gskpaf.org",
   "zejula.com",
   "zejulahcp.com",
-  //"jemperlihcp.com", //issue
   "shingrixhcp.com",
   "rsvinadults.com",
   "arexvyhcp.com",
