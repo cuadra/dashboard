@@ -3,11 +3,57 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { domains } from "./src/data/sites.js";
 import { crawler, condensePageComponent } from "./crawler.ts";
 
+const toSafePathSegment = (value) =>
+  String(value)
+    .trim()
+    .replace(/[^a-zA-Z0-9._-]+/g, "-")
+    .replace(/^-+|-+$/g, "") || "index";
+
+const serializePageForJson = (page) => ({
+  ...page,
+  components: [...page.components.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([name, value]) => ({
+      name,
+      ...value,
+    })),
+});
+
+const getPageJsonOutput = (stamp, page) => {
+  const url = new URL(page.url);
+  const domain = toSafePathSegment(page.domain);
+  const pathSegments = url.pathname
+    .split("/")
+    .filter(Boolean)
+    .map((segment) => toSafePathSegment(decodeURIComponent(segment)));
+  const querySuffix = url.search
+    ? `--${toSafePathSegment(url.search.slice(1))}`
+    : "";
+
+  if (pathSegments.length === 0) {
+    return {
+      dir: `./src/data/${stamp}/websites/${domain}`,
+      file: `index${querySuffix}.json`,
+    };
+  }
+
+  const fileStem = `${pathSegments[pathSegments.length - 1]}${querySuffix}`;
+  const nestedDir = pathSegments.slice(0, -1).join("/");
+
+  return {
+    dir: nestedDir
+      ? `./src/data/${stamp}/websites/${domain}/${nestedDir}`
+      : `./src/data/${stamp}/websites/${domain}`,
+    file: `${fileStem}.json`,
+  };
+};
+
 const sites = [];
 const errorMessages = new Map();
 
 for (const domain of domains) {
   const s = await scrutari({ origin: `https://${domain}` });
+
   sites.push(s.split(", "));
 }
 
@@ -35,10 +81,11 @@ const SitePromises = sets.map(async (url) => {
   //Collect all clientlibs
   const clientlib = String(res.clientAppVersion ?? "Not Found");
   const pageComponentMap = crawler(res, clientlib, url, new Map());
-  const pageComponents = condensePageComponent(pageComponentMap, clientlib);
+  const pageComponents = condensePageComponent(pageComponentMap);
   const metadata = res["metaTags"] || {};
   const whitelistedExternalDomains = res["whitelistedExternalDomains"] || [];
   const trealiumDatalayer = res["trealiumDataLayer"] || {};
+
   const wizardAttributes = res["wizardAttributes"] || {};
   const designToken = res["designTokenFilePath"] || null;
   const googleAPIKey =
@@ -302,6 +349,21 @@ await writeFile(
   JSON.stringify(websitesJson, null, 2),
   "utf8",
 );
+
+await Promise.all(
+  [...allSites.entries()].flatMap(([_, pages]) =>
+    pages.map(async (page) => {
+      const output = getPageJsonOutput(stamp, page);
+      await mkdir(output.dir, { recursive: true });
+      await writeFile(
+        `${output.dir}/${output.file}`,
+        JSON.stringify(serializePageForJson(page), null, 2),
+        "utf8",
+      );
+    }),
+  ),
+);
+
 const componentsJsonMap = new Map();
 
 for (const [site, siteValue] of allSites) {

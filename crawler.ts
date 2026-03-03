@@ -1,6 +1,5 @@
 interface Components {
   url: string;
-  clientlib: string;
 }
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
@@ -18,7 +17,7 @@ export const crawler = (
   if (typeof nodeType === "string") {
     const t = nodeType;
     const arr = components.get(t) ?? [];
-    arr.push({ clientlib, url });
+    arr.push({ url });
     components.set(t, arr);
   }
 
@@ -40,12 +39,10 @@ export const crawler = (
 
 export const condensePageComponent = (
   pageComponentMap: Map<string, Components[]>,
-  clientlib: string,
 ) => {
-  const pageComponentTotals: Map<string, { total: number; clientlib: string }> =
-    new Map();
+  const pageComponentTotals: Map<string, { total: number }> = new Map();
   for (const [key, value] of pageComponentMap.entries()) {
-    pageComponentTotals.set(key, { total: value.length, clientlib: clientlib });
+    pageComponentTotals.set(key, { total: value.length });
   }
   return pageComponentTotals;
 };
