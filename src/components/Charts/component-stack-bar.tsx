@@ -33,7 +33,10 @@ type ComponentDatum = {
   percentage: number;
 };
 
-export function ComponentStackBar(props: { data: ComponentDatum[] }) {
+export function ComponentStackBar(props: {
+  legend: boolean;
+  data: ComponentDatum[];
+}) {
   const sorted = [...props.data].sort((a, b) => b.percentage - a.percentage);
 
   const data = {
@@ -59,6 +62,7 @@ export function ComponentStackBar(props: { data: ComponentDatum[] }) {
           padding: 12,
         },
       },
+
       tooltip: {
         enabled: true,
         callbacks: {

@@ -1,4 +1,4 @@
-import overview from "@/src/data/overview.json";
+import overview from "@/src/data/2026-03-04/overview.json";
 import { ChartExample } from "@/src/components/Charts/horizontalBars";
 import { PChart } from "@/src/components/Charts/clientlibs";
 import { ComponentStackBar } from "@/src/components/Charts/component-stack-bar";
@@ -20,21 +20,22 @@ export default function Home() {
 
   const percentages = components.map((component) => ({
     ...component,
-    percentage: ((component.instances / totalInstances) * 100).toFixed(2) + "%",
+    percentage: Number(
+      ((component.instances / totalInstances) * 100).toFixed(2),
+    ),
   }));
 
   const clientlibPercentages = overview.clientlibs.map((clientlib) => ({
     name: clientlib.name,
-    percentage:
-      ((clientlib.domains.length / overview.totalSites) * 100).toFixed(2) + "%",
+    percentage: Number(
+      ((clientlib.domains.length / overview.totalSites) * 100).toFixed(2),
+    ),
   }));
 
   const chartClientlibData = clientlibPercentages.map((clientlib) => ({
     name: clientlib.name,
-    percentage: parseFloat(clientlib.percentage),
+    percentage: clientlib.percentage,
   }));
-
-  console.log(overview);
 
   return (
     <>
@@ -68,13 +69,6 @@ export default function Home() {
         </div>
       </section>
       <div className="section-pad">
-        <div className="mt-lg">
-          <h2 className="text-center">
-            <Sparkles />
-            Component popularity
-          </h2>
-          <ComponentStackBar data={filteredComponents(percentages)} />
-        </div>
         <ChartExample
           data={percentages}
           heightClass="h-1500"

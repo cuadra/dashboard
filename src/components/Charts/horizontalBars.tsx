@@ -35,6 +35,7 @@ export function ChartExample({
   heightClass: string;
   basedOn?: string;
 }) {
+  console.log("Received data for ChartExample 2:", data);
   const chartData = data.map((component) => ({
     name: component.name.split("/").pop() || component.name,
     //percentage: parseFloat(component.percentage),
@@ -43,16 +44,34 @@ export function ChartExample({
 
   const sorted = [...chartData].sort((a, b) => b.instances - a.instances);
 
+  const values = sorted.map((item) => item.instances);
+  const max = Math.max(...values);
+  const remaining = values.map((v) => max - v);
+
   const d = {
     labels: sorted.map((item) => friendlyMapping[item.name] || item.name),
     datasets: [
       {
         label: "Instances",
-        data: sorted.map((item) => item.instances),
-        backgroundColor: "rgb(30, 41, 75)",
+        data: values,
+        backgroundColor: "rgb(76, 89, 123)",
         borderRadius: 6,
-        barThickness: 7,
+        barThickness: 15,
         categoryPercentage: 0.9,
+        stack: "track",
+      },
+      {
+        data: remaining,
+        backgroundColor: "rgb(30, 41, 75)",
+        hoverBackgroundColor: "rgb(30, 41, 75)",
+        borderRadius: 6,
+        barThickness: 15,
+        categoryPercentage: 0.9,
+        stack: "track",
+        order: 2,
+        datalabels: {
+          display: false,
+        },
       },
     ],
   };
@@ -67,10 +86,19 @@ export function ChartExample({
       },
       tooltip: {
         enabled: true,
+
+        filter: (item) => item.dataset.label === "Instances",
+        callbacks: {
+          label: (ctx) => `${ctx.raw} instances`,
+        },
       },
     },
     scales: {
       x: {
+        stacked: true,
+        display: false,
+        beginAtZero: true,
+        max,
         ticks: {
           display: false,
         },
@@ -104,7 +132,7 @@ export function ChartExample({
         {basedOn && (
           <>
             <ChartBarDecreasing />
-            `Component Usage based on ${basedOn}`
+            {`Component Usage based on ${basedOn}`}
           </>
         )}
       </h2>
