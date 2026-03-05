@@ -1,9 +1,12 @@
 import overview from "@/src/data/2026-03-04/overview.json";
+import Graph from "@/src/components/Graphs/index";
 import { ChartExample } from "@/src/components/Charts/horizontalBars";
 import { PChart } from "@/src/components/Charts/clientlibs";
 import { ComponentStackBar } from "@/src/components/Charts/component-stack-bar";
 import { filteredComponents } from "@/features/filters/excludeComponents";
 import { excludedList } from "@/src/data/excludedComponents";
+import { friendlyMapping } from "@/src/data/friendlyMapping";
+import { ChartBarDecreasing } from "lucide-react";
 import {
   Library,
   Coins,
@@ -36,7 +39,27 @@ export default function Home() {
     name: clientlib.name,
     percentage: clientlib.percentage,
   }));
+  console.log(percentages);
 
+  const maxInstances = Math.max(...percentages.map((c) => c.instances));
+
+  const simplifiedName = (name: string) => {
+    return name.split("/").pop() || name;
+  };
+  const friendlyMapped = (name: string) => {
+    return friendlyMapping[simplifiedName(name)] || simplifiedName(name);
+  };
+
+  const conformed = percentages.map((component) => ({
+    xLabel: friendlyMapped(component.name),
+    yLabel: "test",
+    value: (component.instances / maxInstances) * 100,
+    tip: `${component.instances} ${component.instances === 1 ? "instance" : "instances"}`,
+  }));
+
+  const conformedSorted = conformed.sort((a, b) => b.value - a.value);
+
+  console.log(conformed);
   return (
     <>
       <section className="layout-row">
@@ -69,10 +92,20 @@ export default function Home() {
         </div>
       </section>
       <div className="section-pad">
-        <ChartExample
-          data={percentages}
-          heightClass="h-1500"
-          basedOn="websites"
+        <h2 className="text-center">
+          <ChartBarDecreasing />
+          Component Usage based on Websites
+        </h2>
+        <small className="subtitle">
+          This chart provides a comparative view of component deployment volume,
+          identifying which components are most heavily leveraged within the
+          current implementation landscape.
+        </small>
+        <Graph
+          horizontal={true}
+          barBackgroundColor="#1e294b"
+          barColor="grey"
+          data={conformedSorted}
         />
         <div className="text-center">
           The following core infrastructure components have been excluded to

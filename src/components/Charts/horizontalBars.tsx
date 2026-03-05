@@ -54,10 +54,11 @@ export function ChartExample({
       {
         label: "Instances",
         data: values,
-        backgroundColor: "rgb(76, 89, 123)",
+        backgroundColor: "rgb(156, 90, 26)",
         borderRadius: 6,
-        barThickness: 15,
+        barThickness: 5,
         categoryPercentage: 0.9,
+        barPercentage: 1,
         stack: "track",
       },
       {
@@ -65,8 +66,9 @@ export function ChartExample({
         backgroundColor: "rgb(30, 41, 75)",
         hoverBackgroundColor: "rgb(30, 41, 75)",
         borderRadius: 6,
-        barThickness: 15,
+        barThickness: 5,
         categoryPercentage: 0.9,
+        barPercentage: 1,
         stack: "track",
         order: 2,
         datalabels: {
@@ -111,9 +113,9 @@ export function ChartExample({
       },
       y: {
         ticks: {
-          color: "#666",
+          color: "#A6ADC8",
           font: {
-            size: 12,
+            size: 14,
           },
         },
         grid: {
