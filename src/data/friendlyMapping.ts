@@ -32,4 +32,5 @@ export const friendlyMapping: Record<string, string> = {
   "hero-banner": "Hero Banner",
   externalapp: "External App",
   "search-results": "Search Results",
+  "coupon-button": "Coupon Button",
 };

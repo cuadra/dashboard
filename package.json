@@ -19,9 +19,12 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@stylexjs/babel-plugin": "^0.18.0",
+    "@stylexjs/postcss-plugin": "^0.18.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.27",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "recharts": "^3.7.0",
