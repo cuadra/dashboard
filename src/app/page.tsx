@@ -231,7 +231,7 @@ export default function Home() {
   return (
     <>
       <header>
-        <h1 {...stylex.props(fonts.default, fonts.h1)}>Dashboard</h1>
+        <h1 {...stylex.props(fonts.default, fonts.h1)}>Overview</h1>
       </header>
       <section {...stylex.props(cards.container)}>
         <div {...stylex.props(cards.card)}>
