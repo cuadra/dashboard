@@ -1,19 +1,22 @@
 import * as stylex from "@stylexjs/stylex";
 import { Fragment } from "react";
 const styles = stylex.create({
+  graph: {
+    margin: "40px 0",
+  },
   labelContainer: (barColor) => ({
     padding: "0 10px",
     width: "10%",
     height: "22px",
     textAlign: "right",
-    color: "#333",
+    color: "grey",
     display: "flex",
     alignItems: "center",
     boxSizing: "border-box",
-    backgroundColor: barColor,
     borderTopLeftRadius: "4px",
     borderBottomLeftRadius: "4px",
     overflow: "hidden",
+    opacity: 0.6,
   }),
   label: {
     width: "100%",
@@ -50,12 +53,13 @@ const styles = stylex.create({
     backgroundColor: barColor,
     "::after": {
       padding: "0 5px",
-      color: "#CCC",
+      color: "rgba(255,255,255,.2)",
       content: `"${tip}"`,
       display: "block",
       fontSize: "11px",
       position: "relative",
       top: "5px",
+      fontStyle: "italic",
       textOverflow: "ellipsis",
       whiteSpace: "nowrap",
     },
@@ -83,7 +87,7 @@ export default ({
   barBackgroundColor,
 }: BarChartProps) => {
   return (
-    <div>
+    <div {...stylex.props(styles.graph)}>
       <div {...stylex.props(styles.container)}>
         {data.map((bar, i) => (
           <div key={i} {...stylex.props(styles.row)}>

@@ -1,13 +1,17 @@
-import overview from "@/src/data/2026-03-04/overview.json";
-import Graph from "@/src/components/Graphs/index";
+import { Fragment } from "react";
+import * as stylex from "@stylexjs/stylex";
+import overview from "@/src/data/2026-03-06/overview.json";
+import HorizontalBarChart from "@/src/components/Charts/HorizontalBarChart/index";
 import { ChartExample } from "@/src/components/Charts/horizontalBars";
 import { PChart } from "@/src/components/Charts/clientlibs";
 import { ComponentStackBar } from "@/src/components/Charts/component-stack-bar";
 import { filteredComponents } from "@/features/filters/excludeComponents";
 import { excludedList } from "@/src/data/excludedComponents";
 import { friendlyMapping } from "@/src/data/friendlyMapping";
-import { ChartBarDecreasing } from "lucide-react";
+import Badges from "@/src/components/Badge";
 import {
+  ChartPie,
+  ChartBarDecreasing,
   Library,
   Coins,
   Layers,
@@ -15,6 +19,7 @@ import {
   AppWindow,
   Sparkles,
   Bug,
+  Newspaper,
 } from "lucide-react";
 export default function Home() {
   const components = filteredComponents(overview.components);
@@ -58,212 +63,428 @@ export default function Home() {
   }));
 
   const conformedSorted = conformed.sort((a, b) => b.value - a.value);
+  const COLORS = [
+    "#ff4d4d",
+    "#ff7a4d",
+    "#ffa64d",
+    "#ffd24d",
+    "#ffff4d",
+    "#d2ff4d",
+    "#a6ff4d",
+    "#7aff4d",
+    "#4dff4d",
+    "#4dff7a",
 
-  console.log(conformed);
+    "#4dffa6",
+    "#4dffd2",
+    "#4dffff",
+    "#4dd2ff",
+    "#4da6ff",
+    "#4d7aff",
+    "#4d4dff",
+    "#7a4dff",
+    "#a64dff",
+    "#d24dff",
+
+    "#ff4dff",
+    "#ff4dd2",
+    "#ff4da6",
+    "#ff4d7a",
+    "#ff4d99",
+    "#ff6680",
+    "#ff8059",
+    "#ffaa33",
+    "#ffd11a",
+    "#e6ff1a",
+
+    "#bfff1a",
+    "#80ff1a",
+    "#40ff1a",
+    "#1aff66",
+    "#1affb3",
+    "#1ae6ff",
+    "#1ab3ff",
+    "#1a80ff",
+    "#1a4dff",
+    "#661aff",
+  ];
+
+  const legal = stylex.create({
+    default: {
+      fontSize: 12,
+      color: "#999",
+      textAlign: "center",
+      margin: "20px 0",
+      opacity: 0.3,
+    },
+  });
+  const cards = stylex.create({
+    container: {
+      margin: "16px 0",
+      gap: 16,
+      display: "flex",
+    },
+    card: {
+      padding: 16,
+      width: "50%",
+      textAlign: "center",
+      backgroundColor: "rgb(30, 41, 75)",
+      borderRadius: 10,
+      flexGrow: 1,
+    },
+  });
+  const smallCards = stylex.create({
+    container: {
+      marginTop: 16,
+      gap: 8,
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "space-around",
+      boxSizing: "border-box",
+    },
+    card: {
+      padding: 8,
+      fontSize: 14,
+      flexGrow: 1,
+      textAlign: "left",
+      backgroundColor: "rgba(255, 255, 255, 0.05)",
+      borderRadius: 4,
+    },
+    list: {
+      paddingLeft: 24,
+      color: "rgba(255, 255, 255, 0.3)",
+    },
+  });
+
+  const fonts = stylex.create({
+    line0: {
+      lineHeight: "0",
+    },
+    default: {
+      color: "#eee",
+      family: "'Manrope', sans-serif",
+    },
+    h1: {
+      margin: "0",
+      fontSize: 50,
+      fontWeight: 200,
+      textAlign: "center",
+    },
+    h2: {
+      marginTop: "10px",
+      marginBottom: 0,
+      fontSize: 70,
+      color: "grey",
+      fontWeight: 200,
+      lineHeight: "50px",
+    },
+    h3: {
+      marginTop: "5px",
+      color: "grey",
+      fontSize: 30,
+      fontWeight: 200,
+    },
+    description: {
+      marginTop: "20px",
+      marginBottom: "10px",
+      fontSize: 14,
+      display: "block",
+      fontWeight: 600,
+      textAlign: "center",
+      color: "rgba(255, 255, 255, 0.2)",
+    },
+  });
+  const layouts = stylex.create({
+    main: {
+      margin: "100px 100px",
+    },
+  });
+  const list = stylex.create({
+    title: {
+      fontSize: 16,
+      color: "#eee",
+      fontWeight: 600,
+      marginBottom: 4,
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+      textAlign: "left",
+    },
+    description: {
+      marginLeft: 0,
+      fontSize: 14,
+      color: "rgba(255, 255, 255, 0.2)",
+      marginBottom: 16,
+      textAlign: "left",
+    },
+  });
+  const notification = stylex.create({
+    default: {
+      marginLeft: 8,
+      padding: "2px 6px",
+      fontSize: 12,
+      backgroundColor: "rgba(255, 255, 255, 0.1)",
+      borderRadius: 4,
+      color: "#eee",
+    },
+  });
   return (
     <>
-      <section className="layout-row">
-        <div className="card card-flex">
-          <AppWindow />
-          {overview.totalSites} <small>websites</small>
+      <header>
+        <h1 {...stylex.props(fonts.default, fonts.h1)}>Dashboard</h1>
+      </header>
+      <section {...stylex.props(cards.container)}>
+        <div {...stylex.props(cards.card)}>
+          <AppWindow color="#0f172a" size={30} />
+          <h2 {...stylex.props(fonts.h2)}>
+            {overview.totalSites}{" "}
+            <span {...stylex.props(fonts.description, fonts.line0)}>
+              websites
+            </span>
+          </h2>
         </div>
-        <div className="card card-flex">
-          <Library />
-          {overview.clientlibs.length} <small>clientlibs</small>
+        <div {...stylex.props(cards.card)}>
+          <Library color="#0f172a" size={30} />
+          <h2 {...stylex.props(fonts.h2)}>
+            {overview.clientlibs.length}{" "}
+            <span {...stylex.props(fonts.description, fonts.line0)}>
+              clientlibs
+            </span>
+          </h2>
         </div>
-        <div className="card card-flex">
-          <Coins />
-          {overview.tokens.length} <small>token files</small>
+        <div {...stylex.props(cards.card)}>
+          <Coins color="#0f172a" size={30} />
+          <h2 {...stylex.props(fonts.h2)}>
+            {overview.tokens.length}
+
+            <span {...stylex.props(fonts.description, fonts.line0)}>
+              token files
+            </span>
+          </h2>
         </div>
-        <div className="card card-flex">
-          <Layers />
-          {overview.totalPages} <small>pages</small>
+        <div {...stylex.props(cards.card)}>
+          <Layers color="#0f172a" size={30} />
+          <h2 {...stylex.props(fonts.h2)}>
+            {overview.totalPages}
+            <span {...stylex.props(fonts.description, fonts.line0)}>pages</span>
+          </h2>
         </div>
-        <div className="card card-flex">
-          <Settings />
-          {components.length} <small>component types</small>
+        <div {...stylex.props(cards.card)}>
+          <Settings color="#0f172a" size={30} />
+          <h2 {...stylex.props(fonts.h2)}>
+            {components.length}
+            <span {...stylex.props(fonts.description, fonts.line0)}>
+              component types
+            </span>
+          </h2>
         </div>
       </section>
-      <section className="layout-row mt-md">
-        <div className="card card-grow text-center">
-          <blockquote>
-            {totalInstances} <small>components have been used</small>
-          </blockquote>
+      <section {...stylex.props(cards.container)}>
+        <div {...stylex.props(cards.card)}>
+          <h2 {...stylex.props(fonts.h2)}>
+            {totalInstances}+
+            <span {...stylex.props(fonts.description, fonts.line0)}>
+              total components in the wild
+            </span>
+          </h2>
         </div>
       </section>
-      <div className="section-pad">
-        <h2 className="text-center">
-          <ChartBarDecreasing />
-          Component Usage based on Websites
-        </h2>
-        <small className="subtitle">
+
+      <section {...stylex.props(cards.container)}>
+        <div {...stylex.props(cards.card)}>
+          <ChartPie color="#0f172a" size={30} />
+          <h2 {...stylex.props(fonts.h3)}>Client Libraries Usage</h2>
+          <PChart data={chartClientlibData} />
+
+          <div {...stylex.props(smallCards.container)}>
+            {[...overview.clientlibs]
+              .sort((a, b) => b.domains.length - a.domains.length)
+              .map((lib, i) => (
+                <div key={i} {...stylex.props(smallCards.card)}>
+                  <div>{lib.name}</div>
+                  <ol {...stylex.props(smallCards.list)}>
+                    {lib.domains.map((domain) => (
+                      <li key={domain}>{domain}</li>
+                    ))}
+                  </ol>
+                </div>
+              ))}
+          </div>
+        </div>
+        <div {...stylex.props(cards.card)}>
+          <Coins color="#0f172a" size={30} />
+          <h2 {...stylex.props(fonts.h3)}>Token Usage</h2>
+          <svg width="100%" height="330" viewBox="0 0 200 240">
+            {(() => {
+              type Token = {
+                name: string;
+                domains: string[];
+              };
+
+              const sorted: Token[] = [...overview.tokens].sort(
+                (a, b) => a.domains.length - b.domains.length,
+              );
+
+              const maxDomains = Math.max(
+                ...sorted.map((t) => t.domains.length),
+              );
+
+              const ringGap = 2;
+              const minWidth = 0.5;
+
+              const maxWidth = 10;
+              const startPad = 17;
+
+              const widths: number[] = sorted.map((t) => {
+                const frac = maxDomains ? t.domains.length / maxDomains : 0;
+                return minWidth + frac * (maxWidth - minWidth);
+              });
+
+              const radii: number[] = widths.reduce(
+                (acc: number[], width: number, i: number) => {
+                  if (i === 0) {
+                    acc.push(startPad + width / 2);
+                  } else {
+                    const prevR = acc[i - 1];
+                    const prevW = widths[i - 1];
+                    acc.push(prevR + prevW / 2 + ringGap + width / 2);
+                  }
+                  return acc;
+                },
+                [],
+              );
+
+              return sorted.map((token: Token, i: number) => {
+                const strokeWidth = widths[i];
+                const r = radii[i];
+
+                const C = 2 * Math.PI * r;
+                const n = token.domains.length || 1;
+
+                const gap = 0;
+                const seg = Math.max(0, (C - n * gap) / n);
+
+                return (
+                  <g key={token.name} transform="rotate(-90 100 100)">
+                    {token.domains.map((domain: string, index: number) => (
+                      <circle
+                        key={`${token.name}:${domain}:${index}`}
+                        cx="80"
+                        cy="100"
+                        r={r}
+                        fill="none"
+                        stroke={COLORS[(i * 7 + index * 13) % COLORS.length]}
+                        strokeWidth={strokeWidth}
+                        strokeOpacity={token.domains.length === 1 ? 0.3 : 0.9}
+                        strokeLinecap="butt"
+                        strokeDasharray={`${seg} ${C}`}
+                        strokeDashoffset={-(index * (seg + gap))}
+                      >
+                        <title>
+                          {`${token.name} - ${token.domains.length} sites`}
+                        </title>
+                      </circle>
+                    ))}
+                  </g>
+                );
+              });
+            })()}
+          </svg>
+
+          <div {...stylex.props(smallCards.container)}>
+            {[...overview.tokens]
+              .sort((a, b) => b.domains.length - a.domains.length)
+              .map((token, i) => (
+                <div key={i} {...stylex.props(smallCards.card)}>
+                  <div>
+                    {token.name.replace(".json", "").replace("gsk-", "")}
+                  </div>
+                  <ol {...stylex.props(smallCards.list)}>
+                    {token.domains.map((domain) => (
+                      <li key={domain}>{domain}</li>
+                    ))}
+                  </ol>
+                </div>
+              ))}
+          </div>
+        </div>
+      </section>
+
+      <main {...stylex.props(layouts.main)}>
+        <div className="text-center">
+          <ChartBarDecreasing color="rgb(30, 41, 75)" size={40} />
+          <h2 {...stylex.props(fonts.h3)}>Component Usage</h2>
+        </div>
+        <div {...stylex.props(fonts.description)}>
           This chart provides a comparative view of component deployment volume,
           identifying which components are most heavily leveraged within the
           current implementation landscape.
-        </small>
-        <Graph
+        </div>
+        <HorizontalBarChart
           horizontal={true}
           barBackgroundColor="#1e294b"
-          barColor="grey"
+          barColor="#79C1D1"
           data={conformedSorted}
         />
-        <div className="text-center">
+        <div {...stylex.props(legal.default)}>
           The following core infrastructure components have been excluded to
           focus attention on optional and content-driven components.
-          <br />
-          {excludedList.map((comp) => (
-            <span key={comp} className="badge">
-              {comp}
-            </span>
-          ))}
         </div>
-      </div>
+        <Badges list={excludedList} />
+      </main>
+      <section {...stylex.props(cards.container)}>
+        <div {...stylex.props(cards.card)}>
+          <Newspaper color="#0f172a" size={30} />
+          <h2 {...stylex.props(fonts.h3)}>Latest 10 Pages</h2>
+          <dl>
+            {overview.latestPages.slice(0, 10).map((page, i) => (
+              <Fragment key={i}>
+                <dt {...stylex.props(list.title)}>
+                  <a target="_blank" href={page.url.toLowerCase()}>
+                    {page.url.toLowerCase()}
+                  </a>
+                </dt>
+                <dd {...stylex.props(list.description)}>
+                  {new Date(page.lastModified).toLocaleString()}
+                </dd>
+              </Fragment>
+            ))}
+          </dl>
+        </div>
 
-      <section className="layout-row">
-        <div className="card card-flex">
-          <PChart data={chartClientlibData} />
-          <table className="table table--mt">
-            <caption>per last modified date</caption>
-            <thead>
-              <tr>
-                <th className="text-left">Clientlib</th>
-                <th className="text-right">Sites</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[...overview.clientlibs]
-                .sort((a, b) => b.domains.length - a.domains.length)
-                .map((lib) => (
-                  <tr key={lib.name} className="table-row">
-                    <td>
-                      <details open>
-                        <summary>{lib.name}</summary>
+        <div {...stylex.props(cards.card)}>
+          <div className="section-pad-lg">
+            <Bug color="#0f172a" size={30} />
+            <h2 {...stylex.props(fonts.h3)}>10 Errors</h2>
+            <dl>
+              {Object.entries(overview.errorMessages)
+                .slice(0, 10)
+                .map(([key, value], i) => (
+                  <Fragment key={i}>
+                    <dt {...stylex.props(list.title)}>
+                      <a target="_blank" href={key.toLowerCase()}>
+                        {key.toLowerCase()}
+                      </a>
+                      <span {...stylex.props(notification.default)}>
+                        {value.length}
+                      </span>
+                    </dt>
+                    <dd {...stylex.props(list.description)}>
+                      <details>
+                        <summary>View error messages</summary>
                         <ol>
-                          {lib.domains.map((domain) => (
-                            <li key={domain}>{domain}</li>
+                          {value.map((message, index) => (
+                            <li key={index}>{message}</li>
                           ))}
                         </ol>
                       </details>
-                    </td>
-                    <td className="text-right">{lib.domains.length}</td>
-                  </tr>
+                    </dd>
+                  </Fragment>
                 ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="card card-flex">
-          <h2 className="text-center">Token breakdown</h2>
-          <table className="table table--mt">
-            <caption>tokens by site usage</caption>
-            <thead>
-              <tr>
-                <th className="text-left">Token</th>
-                <th className="text-right">Sites</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[...overview.tokens]
-                .sort((a, b) => b.domains.length - a.domains.length)
-                .map((token) => (
-                  <tr key={token.name} className="table-row">
-                    <td>
-                      <details open>
-                        <summary>{token.name.replace(".json", "")}</summary>
-                        <ol>
-                          {token.domains.map((domain) => (
-                            <li key={domain}>{domain}</li>
-                          ))}
-                        </ol>
-                      </details>
-                    </td>
-                    <td className="text-right">{token.domains.length}</td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
+            </dl>
+          </div>
         </div>
       </section>
-      <h2 className="text-center">Latest Published Pages</h2>
-      <div className="section-pad-lg">
-        <table className="table">
-          <caption>per last modified date</caption>
-          <thead>
-            <tr>
-              <th style={{ width: 30 }} className="text-left">
-                ID
-              </th>
-              <th style={{ width: 100 }} className="text-left">
-                Domain
-              </th>
-              <th className="text-left">Web page</th>
-              <th className="text-left">When?</th>
-              <th className="text-right">Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            {overview.latestPages.map((page, i) => (
-              <tr key={page.url} className="table-row">
-                <td className="text-muted text-left py-10">{i + 1}</td>
-                <td className="text-muted text-left py-10">
-                  {new URL(page.url).hostname}
-                </td>
-                <td className="text-muted">{page.url.toLowerCase()}</td>
-                <td>
-                  <small>{new Date(page.lastModified).toLocaleString()}</small>
-                </td>
-                <td className="text-right">
-                  <a target="_blank" href={page.url.toLowerCase()}>
-                    View
-                  </a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <div className="section-pad-lg">
-        <h2 id="errors" className="text-center">
-          <Bug />
-          Errors
-        </h2>
-        <table className="table">
-          <caption>Issues</caption>
-          <thead>
-            <tr>
-              <th style={{ width: 30 }} className="text-left">
-                ID
-              </th>
-              <th className="text-left">Webpage</th>
-              <th className="text-left">Errors</th>
-              <th className="text-right">Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            {Object.entries(overview.errorMessages).map(([key, value], i) => (
-              <tr key={key} className="table-row">
-                <td className="text-muted text-left py-10">{i + 1}</td>
-                <td className="text-muted text-left py-10">
-                  {key.toLowerCase()}
-                  <details open={value.length < 6}>
-                    <summary>View error messages</summary>
-                    <ol>
-                      {value.map((message, index) => (
-                        <li key={index}>{message}</li>
-                      ))}
-                    </ol>
-                  </details>
-                </td>
-                <td className="text-muted">{value.length}</td>
-                <td className="text-right">
-                  <a target="_blank" href={key.toLowerCase()}>
-                    View
-                  </a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
     </>
   );
 }
