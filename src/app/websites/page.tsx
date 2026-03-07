@@ -2,8 +2,9 @@ import { Fragment } from "react";
 import { ComponentStackBar } from "@/src/components/Charts/component-stack-bar";
 import { Sparkles } from "lucide-react";
 import { ChartExample } from "@/src/components/Charts/horizontalBars";
-import websites from "@/src/data/2026-02-26/websites.json";
+import websites from "@/src/data/2026-03-06/websites.json";
 import { filteredComponents } from "@/features/filters/excludeComponents";
+import * as stylex from "@stylexjs/stylex";
 
 export default async function Home({
   searchParams,
@@ -14,8 +15,79 @@ export default async function Home({
 
   void status;
 
+  const box = stylex.create({
+    default: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      borderRadius: 8,
+      backgroundColor: "rgba(255, 255, 255, 0.01)",
+    },
+    sized: {
+      width: 100,
+      height: 100,
+      backgroundColor: "rgba(255, 255, 255, 0.1)",
+    },
+
+    border: {
+      borderWidth: 1,
+      borderStyle: "solid",
+      borderColor: "rgba(255, 255, 255, 0.1)",
+    },
+    row: {
+      gap: 20,
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "flex-start",
+    },
+    column: {
+      gap: 20,
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "start",
+    },
+  });
+
   return (
     <>
+      <div {...stylex.props(box.default, box.row)}>
+        <div {...stylex.props(box.default, box.sized)}>test</div>
+        <div {...stylex.props(box.default, box.column)}>
+          <div {...stylex.props(box.default, box.row)}>
+            <div {...stylex.props(box.default, box.sized)}>test</div>
+          </div>
+
+          <div {...stylex.props(box.default, box.row, box.border)}>
+            <div {...stylex.props(box.default, box.sized)}>test</div>
+            <div {...stylex.props(box.default, box.column)}>
+              <div {...stylex.props(box.default, box.sized)}>test</div>
+              <div {...stylex.props(box.default, box.sized)}>test</div>
+              <div {...stylex.props(box.default, box.sized)}>test</div>
+            </div>
+          </div>
+
+          <div {...stylex.props(box.default, box.row, box.border)}>
+            <div {...stylex.props(box.default, box.sized)}>test</div>
+            <div {...stylex.props(box.default, box.column)}>
+              <div {...stylex.props(box.default, box.sized)}>test</div>
+
+              <div {...stylex.props(box.default, box.row, box.border)}>
+                <div {...stylex.props(box.default, box.sized)}>test</div>
+                <div {...stylex.props(box.default, box.column)}>
+                  <div {...stylex.props(box.default, box.sized)}>test</div>
+                  <div {...stylex.props(box.default, box.sized)}>test</div>
+                  <div {...stylex.props(box.default, box.sized)}>test</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div {...stylex.props(box.default, box.row)}>
+            <div {...stylex.props(box.default, box.sized)}>test</div>
+          </div>
+        </div>
+      </div>
+
       <div className="flex flex-col items-center justify-center h-screen gap-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <table className="table w-full">
