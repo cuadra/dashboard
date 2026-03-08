@@ -6,6 +6,7 @@ export type TPage = {
   instances?: number;
   token?: string;
   lastModified?: number;
+  fullUrl: string;
 };
 
 export type TChildren = TPage[];
