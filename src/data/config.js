@@ -19,3 +19,5 @@ export const domains = [
   "rsvinadults.com",
   "arexvyhcp.com",
 ];
+
+export const folder = "2026-03-07";

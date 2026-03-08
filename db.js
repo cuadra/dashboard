@@ -1,6 +1,6 @@
 import scrutari from "scrutari";
 import { mkdir, writeFile } from "node:fs/promises";
-import { domains } from "./src/data/sites.js";
+import { domains } from "./src/data/config.js";
 import { crawler, condensePageComponent } from "./crawler.ts";
 
 const toSafePathSegment = (value) =>
@@ -341,6 +341,7 @@ websitesJson.websites = [...allSites.entries()]
       domain,
       componentCount: componentSet.length,
       components: componentSet,
+      pages: pages.map((page) => page.url),
     };
   });
 

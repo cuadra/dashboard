@@ -1,14 +1,14 @@
 import { Fragment } from "react";
 import * as stylex from "@stylexjs/stylex";
-import overview from "@/src/data/2026-03-06/overview.json";
+import overview from "@/src/data/2026-03-07/overview.json";
+
 import HorizontalBarChart from "@/src/components/Charts/HorizontalBarChart/index";
-import { ChartExample } from "@/src/components/Charts/horizontalBars";
 import { PChart } from "@/src/components/Charts/clientlibs";
-import { ComponentStackBar } from "@/src/components/Charts/component-stack-bar";
 import { filteredComponents } from "@/features/filters/excludeComponents";
 import { excludedList } from "@/src/data/excludedComponents";
 import { friendlyMapping } from "@/src/data/friendlyMapping";
-import Badges from "@/src/components/Badge";
+import Chips from "@/src/components/Chips/Chips";
+import Badge from "@/src/components/Badge/Badge";
 import {
   ChartPie,
   ChartBarDecreasing,
@@ -218,16 +218,6 @@ export default function Home() {
       textAlign: "left",
     },
   });
-  const notification = stylex.create({
-    default: {
-      marginLeft: 8,
-      padding: "2px 6px",
-      fontSize: 12,
-      backgroundColor: "rgba(255, 255, 255, 0.1)",
-      borderRadius: 4,
-      color: "#eee",
-    },
-  });
   return (
     <>
       <header>
@@ -430,7 +420,7 @@ export default function Home() {
           The following core infrastructure components have been excluded to
           focus attention on optional and content-driven components.
         </div>
-        <Badges list={excludedList} />
+        <Chips list={excludedList} />
       </main>
       <section {...stylex.props(cards.container)}>
         <div {...stylex.props(cards.card)}>
@@ -465,9 +455,7 @@ export default function Home() {
                       <a target="_blank" href={key.toLowerCase()}>
                         {key.toLowerCase()}
                       </a>
-                      <span {...stylex.props(notification.default)}>
-                        {value.length}
-                      </span>
+                      <Badge v={value.length} />
                     </dt>
                     <dd {...stylex.props(list.description)}>
                       <details>
