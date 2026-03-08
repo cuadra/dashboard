@@ -1,13 +1,9 @@
-import { domains, folder } from "@/src/data/config.js";
 import { Fragment } from "react";
 import * as stylex from "@stylexjs/stylex";
-
-const overview = (await import(`@/src/data/${folder}/overview.json`)).default;
+import overview from "@/src/data/2026-03-07/overview.json";
 
 import HorizontalBarChart from "@/src/components/Charts/HorizontalBarChart/index";
-import { ChartExample } from "@/src/components/Charts/horizontalBars";
 import { PChart } from "@/src/components/Charts/clientlibs";
-import { ComponentStackBar } from "@/src/components/Charts/component-stack-bar";
 import { filteredComponents } from "@/features/filters/excludeComponents";
 import { excludedList } from "@/src/data/excludedComponents";
 import { friendlyMapping } from "@/src/data/friendlyMapping";

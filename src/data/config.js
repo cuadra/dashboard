@@ -20,4 +20,4 @@ export const domains = [
   "arexvyhcp.com",
 ];
 
-export const folder = "2026-03-06";
+export const folder = "2026-03-07";
