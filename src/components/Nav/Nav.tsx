@@ -22,6 +22,7 @@ export default () => {
   activeNavStyle.set("/", nav.navigation1);
   activeNavStyle.set("/components", nav.navigation2);
   activeNavStyle.set("/websites", nav.navigation3);
+  activeNavStyle.set("/bugs", nav.navigation4);
 
   return (
     <nav {...stylex.props(nav.navigation, activeNavStyle.get(pathname))}>
@@ -48,7 +49,7 @@ export default () => {
       </Link>
       <Link
         {...stylex.props(nav.link, activeBugsLink)}
-        href="#"
+        href="/bugs"
         aria-label="Errors"
       >
         <Bug />

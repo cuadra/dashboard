@@ -110,6 +110,7 @@ const SitePromises = sets.map(async (url) => {
 const results = await Promise.allSettled(SitePromises);
 const processedPages = [];
 const errorPages = [];
+const errors = {};
 const overview = {
   clientlibs: new Map(),
   components: new Map(), //include instances
@@ -234,7 +235,7 @@ results.forEach((r) => {
   }
 });
 
-overview.errorMessages = Object.fromEntries(errorMessages);
+errors.errorMessages = Object.fromEntries(errorMessages);
 
 overview.latestPages = [...allSites.values()]
   .flat()
@@ -275,6 +276,12 @@ await mkdir(`./src/data/${stamp}`, { recursive: true });
 await writeFile(
   `./src/data/${stamp}/overview.json`,
   JSON.stringify(overview, null, 2),
+  "utf8",
+);
+
+await writeFile(
+  `./src/data/${stamp}/errors.json`,
+  JSON.stringify(errors, null, 2),
   "utf8",
 );
 ////////////////////////// create website overview JSON

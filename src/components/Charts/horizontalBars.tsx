@@ -35,7 +35,6 @@ export function ChartExample({
   heightClass: string;
   basedOn?: string;
 }) {
-  console.log("Received data for ChartExample 2:", data);
   const chartData = data.map((component) => ({
     name: component.name.split("/").pop() || component.name,
     //percentage: parseFloat(component.percentage),

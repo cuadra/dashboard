@@ -44,7 +44,6 @@ export default function Home() {
     name: clientlib.name,
     percentage: clientlib.percentage,
   }));
-  console.log(percentages);
 
   const maxInstances = Math.max(...percentages.map((c) => c.instances));
 
