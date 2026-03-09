@@ -7,5 +7,5 @@ export const colors = stylex.defineVars({
   accent: "#32abdb",
   accent2: "#fcba03",
   accent3: "#f87171",
-  accent4: "#34d399",
+  accent4: "red",
 });

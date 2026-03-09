@@ -30,6 +30,11 @@ export const nav = stylex.create({
     borderRightColor: colors.accent3,
     borderRightStyle: "solid",
   },
+  navigation4: {
+    borderRightWidth: "1px",
+    borderRightColor: colors.accent4,
+    borderRightStyle: "solid",
+  },
   link: {
     padding: "8px",
     width: "100%",
@@ -65,7 +70,7 @@ export const nav = stylex.create({
     },
   },
   bugsActive: {
-    backgroundColor: colors.accent2,
+    backgroundColor: colors.accent4,
     position: "relative",
     borderTopLeftRadius: "20px",
     borderBottomLeftRadius: "20px",
@@ -78,7 +83,7 @@ export const nav = stylex.create({
       height: "20px",
       transform: "translateY(-20px)",
       borderBottomRightRadius: "20px",
-      boxShadow: `4px 4px 0 4px ${colors.accent2}`,
+      boxShadow: `4px 4px 0 4px ${colors.accent4}`,
     },
     ":after": {
       content: '""',
@@ -89,7 +94,7 @@ export const nav = stylex.create({
       height: "20px",
       transform: "translateY(+20px)",
       borderTopRightRadius: "20px",
-      boxShadow: `4px -4px 0 4px ${colors.accent2}`,
+      boxShadow: `4px -4px 0 4px ${colors.accent4}`,
     },
   },
   componentsActive: {
