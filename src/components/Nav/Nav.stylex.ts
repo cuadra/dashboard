@@ -2,7 +2,7 @@ import * as stylex from "@stylexjs/stylex";
 import { colors } from "@/src/styles/tokens/index.stylex";
 export const nav = stylex.create({
   navigation: {
-    paddingTop: "env(safe-area-inset-top)",
+    paddingTop: "calc(env(safe-area-inset-top) + 30px)",
     "@media (min-width: 768px)": {
       paddingTop: "60px",
     },
@@ -12,11 +12,11 @@ export const nav = stylex.create({
     flexDirection: "column",
     alignItems: "center",
     gap: "16px",
-    backgroundColor: "var(--card)",
+    backgroundColor: colors.primary,
+    overflow: "hidden",
     position: "fixed",
     left: 0,
     top: 0,
-    overflow: "hidden",
   },
   navigation1: {
     borderRightWidth: "1px",
