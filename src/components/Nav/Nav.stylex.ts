@@ -2,9 +2,12 @@ import * as stylex from "@stylexjs/stylex";
 import { colors } from "@/src/styles/tokens/index.stylex";
 export const nav = stylex.create({
   navigation: {
-    paddingTop: "15px",
+    paddingTop: "env(safe-area-inset-top)",
+    "@media (min-width: 768px)": {
+      paddingTop: "60px",
+    },
     width: "50px",
-    height: "100vh",
+    height: "100dvh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

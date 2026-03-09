@@ -16,7 +16,6 @@ export default function Bugs() {
           <li key={url}>
             <details open>
               <summary>{url}</summary>
-
               <ul>
                 {errors.map((error, index) => (
                   <li key={`${url}-${index}`}>{error}</li>
