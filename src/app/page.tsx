@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import * as stylex from "@stylexjs/stylex";
-import overview from "@/src/data/2026-03-07/overview.json";
+import overview from "@/src/data/2026-03-09/overview.json";
 
 import HorizontalBarChart from "@/src/components/Charts/HorizontalBarChart/index";
 import { PChart } from "@/src/components/Charts/clientlibs";
@@ -8,7 +8,6 @@ import { filteredComponents } from "@/features/filters/excludeComponents";
 import { excludedList } from "@/src/data/excludedComponents";
 import { friendlyMapping } from "@/src/data/friendlyMapping";
 import Chips from "@/src/components/Chips/Chips";
-import Badge from "@/src/components/Badge/Badge";
 import {
   ChartPie,
   ChartBarDecreasing,
@@ -122,14 +121,21 @@ export default function Home() {
       margin: "16px 0",
       gap: 16,
       display: "flex",
+      flexDirection: "column",
+      "@media (min-width: 768px)": {
+        flexDirection: "row",
+      },
     },
     card: {
       padding: 16,
-      width: "50%",
+      "@media (min-width: 768px)": {
+        width: "50%",
+      },
       textAlign: "center",
       backgroundColor: "rgb(30, 41, 75)",
       borderRadius: 10,
       flexGrow: 1,
+      overflow: "hidden",
     },
   });
   const smallCards = stylex.create({
@@ -195,7 +201,9 @@ export default function Home() {
   });
   const layouts = stylex.create({
     main: {
-      margin: "100px 100px",
+      "@media (min-width: 768px)": {
+        margin: "100px 100px",
+      },
     },
   });
   const list = stylex.create({
@@ -439,37 +447,6 @@ export default function Home() {
               </Fragment>
             ))}
           </dl>
-        </div>
-
-        <div {...stylex.props(cards.card)}>
-          <div className="section-pad-lg">
-            <Bug color="#0f172a" size={30} />
-            <h2 {...stylex.props(fonts.h3)}>10 Errors</h2>
-            <dl>
-              {Object.entries(overview.errorMessages)
-                .slice(0, 10)
-                .map(([key, value], i) => (
-                  <Fragment key={i}>
-                    <dt {...stylex.props(list.title)}>
-                      <a target="_blank" href={key.toLowerCase()}>
-                        {key.toLowerCase()}
-                      </a>
-                      <Badge v={value.length} />
-                    </dt>
-                    <dd {...stylex.props(list.description)}>
-                      <details>
-                        <summary>View error messages</summary>
-                        <ol>
-                          {value.map((message, index) => (
-                            <li key={index}>{message}</li>
-                          ))}
-                        </ol>
-                      </details>
-                    </dd>
-                  </Fragment>
-                ))}
-            </dl>
-          </div>
         </div>
       </section>
     </>
