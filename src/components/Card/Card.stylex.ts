@@ -3,8 +3,6 @@ import { colors } from "@/src/styles/tokens/index.stylex";
 
 export const card = stylex.create({
   default: {
-    padding: "1px",
-
     width: {
       "@media (min-width: 768px)": "40%",
       "@media (min-width: 1200px)": "20%",
@@ -42,8 +40,8 @@ export const fonts = stylex.create({
   title: {
     margin: "0",
     padding: 16,
-    color: colors.primary,
-    fontSize: "clamp(20px, 2vw, 30px)",
+    color: "white",
+    fontSize: "18px",
     fontWeight: 200,
     backgroundColor: colors.accent,
   },

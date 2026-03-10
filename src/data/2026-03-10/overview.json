@@ -1,0 +1,577 @@
+{
+  "clientlibs": [
+    {
+      "name": "0.10.1",
+      "domains": [
+        "blenrep.com",
+        "rsvinadults.com",
+        "arexvyhcp.com"
+      ]
+    },
+    {
+      "name": "0.9.5",
+      "domains": [
+        "togetherwithgsk.com",
+        "myjemperlijourney.com",
+        "zejula.com"
+      ]
+    },
+    {
+      "name": "0.6.128",
+      "domains": [
+        "blenrephcp.com"
+      ]
+    },
+    {
+      "name": "0.10.100",
+      "domains": [
+        "ojjaarahcp.com",
+        "ojjaara.com",
+        "zejulahcp.com"
+      ]
+    },
+    {
+      "name": "0.11.101",
+      "domains": [
+        "blujepa.com",
+        "gskforyou.com"
+      ]
+    },
+    {
+      "name": "0.11.138",
+      "domains": [
+        "blujepahcp.com",
+        "nucala.com",
+        "nucalahcp.com"
+      ]
+    },
+    {
+      "name": "0.6.13",
+      "domains": [
+        "penmenvyhcp.com"
+      ]
+    },
+    {
+      "name": "0.5.122",
+      "domains": [
+        "penmenvy.com"
+      ]
+    },
+    {
+      "name": "0.6.5",
+      "domains": [
+        "gskpaf.org"
+      ]
+    },
+    {
+      "name": "0.11.109",
+      "domains": [
+        "shingrixhcp.com"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "name": "boreas/components/page",
+      "instances": 502
+    },
+    {
+      "name": "wcm/foundation/components/responsivegrid",
+      "instances": 502
+    },
+    {
+      "name": "boreas/components/proxyheader",
+      "instances": 502
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/marketing-message-bar",
+      "instances": 200
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/button",
+      "instances": 502
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/header",
+      "instances": 502
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-box",
+      "instances": 502
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/indication-picker",
+      "instances": 502
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/primary-nav",
+      "instances": 502
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-nav",
+      "instances": 502
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/language-selector",
+      "instances": 392
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/utility-navigation-item",
+      "instances": 502
+    },
+    {
+      "name": "boreas/components/proxyexitnotification",
+      "instances": 502
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/exit-overlay",
+      "instances": 483
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-banner",
+      "instances": 212
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/rte",
+      "instances": 422
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/divider",
+      "instances": 188
+    },
+    {
+      "name": "boreas/components/columncontrol",
+      "instances": 419
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-box",
+      "instances": 313
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/dropdown",
+      "instances": 291
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/gigya-form",
+      "instances": 34
+    },
+    {
+      "name": "boreas/components/proxyfooter",
+      "instances": 502
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/fab",
+      "instances": 368
+    },
+    {
+      "name": "boreas/components/experiencefragment",
+      "instances": 394
+    },
+    {
+      "name": "boreas/components/container",
+      "instances": 487
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/isi",
+      "instances": 374
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/help-center-card",
+      "instances": 127
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-support-card",
+      "instances": 156
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footer",
+      "instances": 502
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/socialmediaicons",
+      "instances": 474
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/content-card",
+      "instances": 113
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/callout-text",
+      "instances": 174
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-link",
+      "instances": 77
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/sticky-anchor-container",
+      "instances": 93
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/externalapp",
+      "instances": 117
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/footnote",
+      "instances": 176
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video",
+      "instances": 102
+    },
+    {
+      "name": "boreas/components/downloadresources",
+      "instances": 13
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-content",
+      "instances": 178
+    },
+    {
+      "name": "boreas/components/accordionboreas",
+      "instances": 109
+    },
+    {
+      "name": "boreas/components/accordioncontainer",
+      "instances": 109
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/icons-with-text",
+      "instances": 57
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/search-results",
+      "instances": 22
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/more-links",
+      "instances": 18
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/error-page",
+      "instances": 4
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/references",
+      "instances": 136
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/five-star-voc",
+      "instances": 106
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/data-highlight",
+      "instances": 14
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/video-teaser",
+      "instances": 10
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/hero-2-0",
+      "instances": 33
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/screener",
+      "instances": 6
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/coupon-button",
+      "instances": 1
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/information-box",
+      "instances": 1
+    },
+    {
+      "name": "nt:unstructured",
+      "instances": 12
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/article-teaser",
+      "instances": 7
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/authorable-container",
+      "instances": 8
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/patient-eligibility-table",
+      "instances": 20
+    },
+    {
+      "name": "authorableComponents/core/components/brs-pharma-us/component-definitions/quick-links",
+      "instances": 74
+    }
+  ],
+  "latestPages": [
+    {
+      "url": "https://gskpaf.org/",
+      "lastModified": 1772734644675
+    },
+    {
+      "url": "https://www.nucala.com/es-us/",
+      "lastModified": 1772729835945
+    },
+    {
+      "url": "https://www.togetherwithgsk.com/jemperli/hcp/coverage/",
+      "lastModified": 1772704165016
+    },
+    {
+      "url": "https://www.blenrep.com/taking-blenrep/",
+      "lastModified": 1772650224123
+    },
+    {
+      "url": "https://ojjaarahcp.com/",
+      "lastModified": 1772642019680
+    },
+    {
+      "url": "https://www.nucala.com/copd/nucala-for-copd/how-does-nucala-work/",
+      "lastModified": 1772624765998
+    },
+    {
+      "url": "https://www.nucala.com/copd/nucala-for-copd/nucala-efficacy/",
+      "lastModified": 1772624750973
+    },
+    {
+      "url": "https://www.nucala.com/copd/nucala-for-copd/uncontrolled-copd/",
+      "lastModified": 1772624607746
+    },
+    {
+      "url": "https://www.nucala.com/support-resources/patient-support-program/",
+      "lastModified": 1772563909463
+    },
+    {
+      "url": "https://myjemperlijourney.com/",
+      "lastModified": 1772491386679
+    },
+    {
+      "url": "https://www.togetherwithgsk.com/exdensur/hcp/coverage/",
+      "lastModified": 1772091329853
+    },
+    {
+      "url": "https://gskforyou.com/",
+      "lastModified": 1772038544777
+    },
+    {
+      "url": "https://blujepa.com/how-to-take-blujepa/",
+      "lastModified": 1772032061937
+    },
+    {
+      "url": "https://blujepa.com/how-is-blujepa-different/",
+      "lastModified": 1772031978037
+    },
+    {
+      "url": "https://nucalahcp.com/copd/dosing-and-administration/at-home/",
+      "lastModified": 1772015550567
+    },
+    {
+      "url": "https://www.nucala.com/eosinophilic-granulomatosis-polyangiitis/nucala-for-egpa/nucala-efficacy/",
+      "lastModified": 1771954715838
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/efficacy-safety/exacerbation-reduction/",
+      "lastModified": 1771935835282
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/dosing-and-administration/pediatric/",
+      "lastModified": 1771935585812
+    },
+    {
+      "url": "https://nucalahcp.com/hes/dosing-and-administration/at-home/",
+      "lastModified": 1771928932086
+    },
+    {
+      "url": "https://nucalahcp.com/egpa/dosing-and-administration/at-home/",
+      "lastModified": 1771928561924
+    },
+    {
+      "url": "https://www.togetherwithgsk.com/nucala/hcp/coverage/",
+      "lastModified": 1771915150814
+    },
+    {
+      "url": "https://nucalahcp.com/egpa/efficacy-safety/safety-profile/",
+      "lastModified": 1771864732071
+    },
+    {
+      "url": "https://www.nucala.com/",
+      "lastModified": 1771857711914
+    },
+    {
+      "url": "https://www.nucala.com/severe-eosinophilic-asthma/nucala-for-sea/nucala-efficacy/",
+      "lastModified": 1771599560711
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/resources/video-library/nucala-mechanical-reconstitution-instructions/",
+      "lastModified": 1771500864257
+    },
+    {
+      "url": "https://nucalahcp.com/",
+      "lastModified": 1771500180315
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/efficacy-safety/comorbidity-data/",
+      "lastModified": 1771417174610
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/efficacy-safety/long-term-data-safety/",
+      "lastModified": 1771416313687
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/efficacy-safety/safety-profile/",
+      "lastModified": 1771415436797
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/access-support/mynucala/",
+      "lastModified": 1771414974399
+    },
+    {
+      "url": "https://nucalahcp.com/copd/access-support/patient-enrollment/",
+      "lastModified": 1771414655224
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/dosing-and-administration/in-office/",
+      "lastModified": 1771414501691
+    },
+    {
+      "url": "https://nucalahcp.com/copd/access-support/mynucala/",
+      "lastModified": 1771414314257
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/access-support/patient-enrollment/",
+      "lastModified": 1771412991968
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/access-support/billing-reimbursement/",
+      "lastModified": 1771412535139
+    },
+    {
+      "url": "https://nucalahcp.com/copd/efficacy-safety/efficacy/",
+      "lastModified": 1771412524810
+    },
+    {
+      "url": "https://nucalahcp.com/severe-eosinophilic-asthma/dosing-and-administration/at-home/",
+      "lastModified": 1771412066922
+    },
+    {
+      "url": "https://nucalahcp.com/copd/dosing-and-administration/in-office/",
+      "lastModified": 1771411500349
+    },
+    {
+      "url": "https://nucalahcp.com/hes/access-support/billing-reimbursement/",
+      "lastModified": 1771407031823
+    },
+    {
+      "url": "https://nucalahcp.com/egpa/access-support/billing-reimbursement/",
+      "lastModified": 1771406921063
+    }
+  ],
+  "totalSites": 19,
+  "totalPages": 502,
+  "tokens": [
+    {
+      "name": "gsk-blenrep-dtc-v1.json",
+      "domains": [
+        "blenrep.com"
+      ]
+    },
+    {
+      "name": "gsk-led-v0.json",
+      "domains": [
+        "togetherwithgsk.com",
+        "gskforyou.com",
+        "gskpaf.org"
+      ]
+    },
+    {
+      "name": "gsk-blenrep-hcp-v0.json",
+      "domains": [
+        "blenrephcp.com"
+      ]
+    },
+    {
+      "name": "gsk-ojjaara-hcp-v0.json",
+      "domains": [
+        "ojjaarahcp.com"
+      ]
+    },
+    {
+      "name": "gsk-blujepa-dtc-v1.json",
+      "domains": [
+        "blujepa.com"
+      ]
+    },
+    {
+      "name": "gsk-blujepa-hcp-v2.json",
+      "domains": [
+        "blujepahcp.com"
+      ]
+    },
+    {
+      "name": "gsk-pentafullpromo-hcp-v0.json",
+      "domains": [
+        "penmenvyhcp.com"
+      ]
+    },
+    {
+      "name": "gsk-penmenvy-dtc-v3.json",
+      "domains": [
+        "penmenvy.com"
+      ]
+    },
+    {
+      "name": "gsk-ojjaara-dtc-v0.json",
+      "domains": [
+        "ojjaara.com"
+      ]
+    },
+    {
+      "name": "gsk-myjemperlijourney-dtc-v0.json",
+      "domains": [
+        "myjemperlijourney.com"
+      ]
+    },
+    {
+      "name": "gsk-nucala-dtc-v2.json",
+      "domains": [
+        "nucala.com"
+      ]
+    },
+    {
+      "name": "gsk-nucala-hcp-v2.json",
+      "domains": [
+        "nucalahcp.com"
+      ]
+    },
+    {
+      "name": "gsk-zejula-dtc-v0.json",
+      "domains": [
+        "zejula.com"
+      ]
+    },
+    {
+      "name": "gsk-zejula-hcp-v2.json",
+      "domains": [
+        "zejulahcp.com"
+      ]
+    },
+    {
+      "name": "gsk-shingrix-hcp-v2.json",
+      "domains": [
+        "shingrixhcp.com"
+      ]
+    },
+    {
+      "name": "gsk-rsvinadults-hcp-v1.json",
+      "domains": [
+        "rsvinadults.com"
+      ]
+    },
+    {
+      "name": "gsk-arexvy-hcp-v0.json",
+      "domains": [
+        "arexvyhcp.com"
+      ]
+    }
+  ]
+}

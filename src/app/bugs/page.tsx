@@ -1,5 +1,6 @@
-import json from "@/src/data/2026-03-09/errors.json";
+import json from "@/src/data/2026-03-10/errors.json";
 import * as stylex from "@stylexjs/stylex";
+import Details from "@/src/components/Details/Details";
 import typography from "@/src/styles/typography";
 
 export default function Bugs() {
@@ -11,20 +12,9 @@ export default function Bugs() {
         <h1 {...stylex.props(typography.default, typography.h1)}>Bugs</h1>
       </header>
 
-      <ul>
-        {Object.entries(errorMessages).map(([url, errors]) => (
-          <li key={url}>
-            <details open>
-              <summary>{url}</summary>
-              <ul>
-                {errors.map((error, index) => (
-                  <li key={`${url}-${index}`}>{error}</li>
-                ))}
-              </ul>
-            </details>
-          </li>
-        ))}
-      </ul>
+      {Object.entries(errorMessages).map(([url, errors]) => (
+        <Details key={url} url={url} errors={errors} />
+      ))}
     </>
   );
 }

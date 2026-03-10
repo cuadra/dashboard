@@ -30,7 +30,7 @@ const box = stylex.create({
   },
   sticky: {
     position: "sticky",
-    top: 20,
+    top: 70,
     alignSelf: "flex-start",
   },
   details: {
