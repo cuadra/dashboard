@@ -1,7 +1,8 @@
 import { Fragment } from "react";
 import * as stylex from "@stylexjs/stylex";
-import overview from "@/src/data/2026-03-09/overview.json";
+import overview from "@/src/data/2026-03-10/overview.json";
 
+import typography from "@/src/styles/typography";
 import HorizontalBarChart from "@/src/components/Charts/HorizontalBarChart/index";
 import { PChart } from "@/src/components/Charts/clientlibs";
 import { filteredComponents } from "@/features/filters/excludeComponents";
@@ -202,7 +203,7 @@ export default function Home() {
   const layouts = stylex.create({
     main: {
       "@media (min-width: 768px)": {
-        margin: "100px 100px",
+        margin: "100px 30px",
       },
     },
   });
@@ -228,7 +229,7 @@ export default function Home() {
   return (
     <>
       <header>
-        <h1 {...stylex.props(fonts.default, fonts.h1)}>Overview</h1>
+        <h1 {...stylex.props(typography.default, typography.h1)}>Overview</h1>
       </header>
       <section {...stylex.props(cards.container)}>
         <div {...stylex.props(cards.card)}>
@@ -410,7 +411,7 @@ export default function Home() {
       <main {...stylex.props(layouts.main)}>
         <div className="text-center">
           <ChartBarDecreasing color="rgb(30, 41, 75)" size={40} />
-          <h2 {...stylex.props(fonts.h3)}>Component Usage</h2>
+          <h2 {...stylex.props(typography.h2)}>Component Usage</h2>
         </div>
         <div {...stylex.props(fonts.description)}>
           This chart provides a comparative view of component deployment volume,

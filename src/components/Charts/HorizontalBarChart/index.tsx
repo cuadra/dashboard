@@ -1,14 +1,15 @@
 import * as stylex from "@stylexjs/stylex";
-import { Fragment } from "react";
 const styles = stylex.create({
   graph: {
     margin: "40px 0",
   },
   labelContainer: (barColor) => ({
-    padding: "0 10px",
-    width: "10%",
+    "@media (min-width:769px)": {
+      padding: "0 10px",
+      width: "10%",
+      textAlign: "right",
+    },
     height: "22px",
-    textAlign: "right",
     color: "grey",
     display: "flex",
     alignItems: "center",
@@ -21,9 +22,12 @@ const styles = stylex.create({
   label: {
     width: "100%",
     fontSize: "14px",
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-    whiteSpace: "nowrap",
+
+    "@media (min-width:769px)": {
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+    },
   },
   container: {
     display: "flex",
@@ -31,8 +35,10 @@ const styles = stylex.create({
   },
   row: {
     marginBottom: "10px",
-    display: "flex",
-    alignItems: "center",
+    "@media (min-width:769px)": {
+      display: "flex",
+      alignItems: "center",
+    },
   },
   barContainer: (barBackgroundColor) => ({
     width: "100%",
@@ -60,6 +66,7 @@ const styles = stylex.create({
       position: "relative",
       top: "5px",
       fontStyle: "italic",
+
       textOverflow: "ellipsis",
       whiteSpace: "nowrap",
     },

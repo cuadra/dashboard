@@ -1,4 +1,4 @@
-import websites from "@/src/data/2026-03-07/websites.json";
+import websites from "@/src/data/2026-03-10/websites.json";
 import * as stylex from "@stylexjs/stylex";
 import Sitemap from "@/src/components/Sitemap/page";
 import { TPage, TChildren } from "@/src/components/Sitemap/sitemap.types";
@@ -75,7 +75,7 @@ export default async function Home({
         display: "flex",
         gap: "16px",
       },
-      ":nth-child(odd)": {
+      ":nth-child(even)": {
         "@media (min-width: 768px)": {
           backgroundColor: "rgba(255, 255, 255, 0.05)",
         },
@@ -138,7 +138,7 @@ export default async function Home({
   return (
     <>
       <header>
-        <h1 {...stylex.props(typography.default, typography.h1)}>High level</h1>
+        <h1 {...stylex.props(typography.default, typography.h1)}>Websites</h1>
       </header>
       <dl {...stylex.props(inbox.container, inbox.hideMobile)}>
         <dt {...stylex.props(inbox.domain)}>Domain</dt>

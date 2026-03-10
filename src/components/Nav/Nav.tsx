@@ -8,16 +8,6 @@ import { nav } from "./Nav.stylex";
 export default () => {
   const pathname = usePathname();
 
-  const activeHomeLink = pathname === "/" ? nav.homeActive : null;
-
-  const activeWebsitesLink =
-    pathname === "/websites" ? nav.websitesActive : null;
-
-  const activeComponentsLink =
-    pathname === "/components" ? nav.componentsActive : null;
-
-  const activeBugsLink = pathname === "/bugs" ? nav.bugsActive : null;
-
   const activeNavStyle = new Map();
   activeNavStyle.set("/", nav.navigation1);
   activeNavStyle.set("/components", nav.navigation2);
@@ -26,34 +16,28 @@ export default () => {
 
   return (
     <nav {...stylex.props(nav.navigation, activeNavStyle.get(pathname))}>
-      <Link
-        {...stylex.props(nav.link, activeHomeLink)}
-        href="/"
-        aria-label="Overview"
-      >
-        <House />
-      </Link>
-      <Link
-        {...stylex.props(nav.link, activeComponentsLink)}
-        href="/components"
-        aria-label="Components"
-      >
-        <Settings />
-      </Link>
-      <Link
-        {...stylex.props(nav.link, activeWebsitesLink)}
-        href="/websites"
-        aria-label="Websites"
-      >
-        <AppWindow />
-      </Link>
-      <Link
-        {...stylex.props(nav.link, activeBugsLink)}
-        href="/bugs"
-        aria-label="Errors"
-      >
-        <Bug />
-      </Link>
+      <div {...stylex.props(nav.container)}>
+        <Link {...stylex.props(nav.link)} href="/" aria-label="Overview">
+          <House />
+        </Link>
+        <Link
+          {...stylex.props(nav.link)}
+          href="/components"
+          aria-label="Components"
+        >
+          <Settings />
+        </Link>
+        <Link
+          {...stylex.props(nav.link)}
+          href="/websites"
+          aria-label="Websites"
+        >
+          <AppWindow />
+        </Link>
+        <Link {...stylex.props(nav.link)} href="/bugs" aria-label="Errors">
+          <Bug />
+        </Link>
+      </div>
     </nav>
   );
 };

@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${manrope.className} antialiased`}>
         <Nav />
-        {children}
+        <main className="container">{children}</main>
       </body>
     </html>
   );
