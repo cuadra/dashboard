@@ -1,4 +1,4 @@
-import websites from "@/src/data/2026-03-10/websites.json";
+import websites from "@/src/data/2026-03-12/websites.json";
 import * as stylex from "@stylexjs/stylex";
 import Sitemap from "@/src/components/Sitemap/page";
 import { TPage, TChildren } from "@/src/components/Sitemap/sitemap.types";

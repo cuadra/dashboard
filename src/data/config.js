@@ -1,4 +1,6 @@
 export const domains = [
+  "jemperlihcpstories.com",
+  "jemperlihcp.com",
   "blenrep.com",
   "togetherwithgsk.com",
   "blenrephcp.com",
@@ -18,6 +20,7 @@ export const domains = [
   "shingrixhcp.com",
   "rsvinadults.com",
   "arexvyhcp.com",
+  //"dontbeembarrased.com",
 ];
 
-export const folder = "2026-03-07";
+export const folder = "2026-03-12";
