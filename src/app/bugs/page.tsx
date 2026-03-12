@@ -1,4 +1,4 @@
-import json from "@/src/data/2026-03-10/errors.json";
+import json from "@/src/data/2026-03-12/errors.json";
 import * as stylex from "@stylexjs/stylex";
 import Details from "@/src/components/Details/Details";
 import typography from "@/src/styles/typography";

@@ -1,4 +1,4 @@
-import json from "@/src/data/2026-03-10/components.json";
+import json from "@/src/data/2026-03-12/components.json";
 import { excludedList } from "@/src/data/excludedComponents";
 import { friendlyMapping } from "@/src/data/friendlyMapping";
 import * as stylex from "@stylexjs/stylex";
