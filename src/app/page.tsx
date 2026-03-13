@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import * as stylex from "@stylexjs/stylex";
 import overview from "@/src/data/2026-03-12/overview.json";
 
+import Nav from "@/src/components/Nav/Nav";
 import typography from "@/src/styles/typography";
 import HorizontalBarChart from "@/src/components/Charts/HorizontalBarChart/index";
 import { PChart } from "@/src/components/Charts/clientlibs";
@@ -21,7 +22,20 @@ import {
   Bug,
   Newspaper,
 } from "lucide-react";
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ user?: string; pass?: string }>;
+}) {
+  const params = await searchParams;
+  let isAuthenticated = false;
+  if (
+    params.user === process.env.USER_NAME &&
+    params.pass === process.env.USER_PASSWORD
+  ) {
+    isAuthenticated = true;
+  }
+
   const components = filteredComponents(overview.components);
 
   const totalInstances = components.reduce((sum, c) => sum + c.instances, 0);
@@ -228,228 +242,247 @@ export default function Home() {
   });
   return (
     <>
-      <header>
-        <h1 {...stylex.props(typography.default, typography.h1)}>Overview</h1>
-      </header>
-      <section {...stylex.props(cards.container)}>
-        <div {...stylex.props(cards.card)}>
-          <AppWindow color="#0f172a" size={30} />
-          <h2 {...stylex.props(fonts.h2)}>
-            {overview.totalSites}{" "}
-            <span {...stylex.props(fonts.description, fonts.line0)}>
-              websites
-            </span>
-          </h2>
-        </div>
-        <div {...stylex.props(cards.card)}>
-          <Library color="#0f172a" size={30} />
-          <h2 {...stylex.props(fonts.h2)}>
-            {overview.clientlibs.length}{" "}
-            <span {...stylex.props(fonts.description, fonts.line0)}>
-              clientlibs
-            </span>
-          </h2>
-        </div>
-        <div {...stylex.props(cards.card)}>
-          <Coins color="#0f172a" size={30} />
-          <h2 {...stylex.props(fonts.h2)}>
-            {overview.tokens.length}
+      {isAuthenticated && (
+        <>
+          <Nav user={params.user} pass={params.pass} />
+          <div className="container">
+            <header>
+              <h1 {...stylex.props(typography.default, typography.h1)}>
+                Overview
+              </h1>
+            </header>
+            <section {...stylex.props(cards.container)}>
+              <div {...stylex.props(cards.card)}>
+                <AppWindow color="#0f172a" size={30} />
+                <h2 {...stylex.props(fonts.h2)}>
+                  {overview.totalSites}{" "}
+                  <span {...stylex.props(fonts.description, fonts.line0)}>
+                    websites
+                  </span>
+                </h2>
+              </div>
+              <div {...stylex.props(cards.card)}>
+                <Library color="#0f172a" size={30} />
+                <h2 {...stylex.props(fonts.h2)}>
+                  {overview.clientlibs.length}{" "}
+                  <span {...stylex.props(fonts.description, fonts.line0)}>
+                    clientlibs
+                  </span>
+                </h2>
+              </div>
+              <div {...stylex.props(cards.card)}>
+                <Coins color="#0f172a" size={30} />
+                <h2 {...stylex.props(fonts.h2)}>
+                  {overview.tokens.length}
 
-            <span {...stylex.props(fonts.description, fonts.line0)}>
-              token files
-            </span>
-          </h2>
-        </div>
-        <div {...stylex.props(cards.card)}>
-          <Layers color="#0f172a" size={30} />
-          <h2 {...stylex.props(fonts.h2)}>
-            {overview.totalPages}
-            <span {...stylex.props(fonts.description, fonts.line0)}>pages</span>
-          </h2>
-        </div>
-        <div {...stylex.props(cards.card)}>
-          <Settings color="#0f172a" size={30} />
-          <h2 {...stylex.props(fonts.h2)}>
-            {components.length}
-            <span {...stylex.props(fonts.description, fonts.line0)}>
-              component types
-            </span>
-          </h2>
-        </div>
-      </section>
-      <section {...stylex.props(cards.container)}>
-        <div {...stylex.props(cards.card)}>
-          <h2 {...stylex.props(fonts.h2)}>
-            {totalInstances}+
-            <span {...stylex.props(fonts.description, fonts.line0)}>
-              total components in the wild
-            </span>
-          </h2>
-        </div>
-      </section>
+                  <span {...stylex.props(fonts.description, fonts.line0)}>
+                    token files
+                  </span>
+                </h2>
+              </div>
+              <div {...stylex.props(cards.card)}>
+                <Layers color="#0f172a" size={30} />
+                <h2 {...stylex.props(fonts.h2)}>
+                  {overview.totalPages}
+                  <span {...stylex.props(fonts.description, fonts.line0)}>
+                    pages
+                  </span>
+                </h2>
+              </div>
+              <div {...stylex.props(cards.card)}>
+                <Settings color="#0f172a" size={30} />
+                <h2 {...stylex.props(fonts.h2)}>
+                  {components.length}
+                  <span {...stylex.props(fonts.description, fonts.line0)}>
+                    component types
+                  </span>
+                </h2>
+              </div>
+            </section>
+            <section {...stylex.props(cards.container)}>
+              <div {...stylex.props(cards.card)}>
+                <h2 {...stylex.props(fonts.h2)}>
+                  {totalInstances}+
+                  <span {...stylex.props(fonts.description, fonts.line0)}>
+                    total components in the wild
+                  </span>
+                </h2>
+              </div>
+            </section>
 
-      <section {...stylex.props(cards.container)}>
-        <div {...stylex.props(cards.card)}>
-          <ChartPie color="#0f172a" size={30} />
-          <h2 {...stylex.props(fonts.h3)}>Client Libraries Usage</h2>
-          <PChart data={chartClientlibData} />
+            <section {...stylex.props(cards.container)}>
+              <div {...stylex.props(cards.card)}>
+                <ChartPie color="#0f172a" size={30} />
+                <h2 {...stylex.props(fonts.h3)}>Client Libraries Usage</h2>
+                <PChart data={chartClientlibData} />
 
-          <div {...stylex.props(smallCards.container)}>
-            {[...overview.clientlibs]
-              .sort((a, b) => b.domains.length - a.domains.length)
-              .map((lib, i) => (
-                <div key={i} {...stylex.props(smallCards.card)}>
-                  <div>{lib.name}</div>
-                  <ol {...stylex.props(smallCards.list)}>
-                    {lib.domains.map((domain) => (
-                      <li key={domain}>{domain}</li>
+                <div {...stylex.props(smallCards.container)}>
+                  {[...overview.clientlibs]
+                    .sort((a, b) => b.domains.length - a.domains.length)
+                    .map((lib, i) => (
+                      <div key={i} {...stylex.props(smallCards.card)}>
+                        <div>{lib.name}</div>
+                        <ol {...stylex.props(smallCards.list)}>
+                          {lib.domains.map((domain) => (
+                            <li key={domain}>{domain}</li>
+                          ))}
+                        </ol>
+                      </div>
                     ))}
-                  </ol>
                 </div>
-              ))}
-          </div>
-        </div>
-        <div {...stylex.props(cards.card)}>
-          <Coins color="#0f172a" size={30} />
-          <h2 {...stylex.props(fonts.h3)}>Token Usage</h2>
-          <svg width="100%" height="330" viewBox="0 0 200 240">
-            {(() => {
-              type Token = {
-                name: string;
-                domains: string[];
-              };
+              </div>
+              <div {...stylex.props(cards.card)}>
+                <Coins color="#0f172a" size={30} />
+                <h2 {...stylex.props(fonts.h3)}>Token Usage</h2>
+                <svg width="100%" height="330" viewBox="0 0 200 240">
+                  {(() => {
+                    type Token = {
+                      name: string;
+                      domains: string[];
+                    };
 
-              const sorted: Token[] = [...overview.tokens].sort(
-                (a, b) => a.domains.length - b.domains.length,
-              );
+                    const sorted: Token[] = [...overview.tokens].sort(
+                      (a, b) => a.domains.length - b.domains.length,
+                    );
 
-              const maxDomains = Math.max(
-                ...sorted.map((t) => t.domains.length),
-              );
+                    const maxDomains = Math.max(
+                      ...sorted.map((t) => t.domains.length),
+                    );
 
-              const ringGap = 2;
-              const minWidth = 0.5;
+                    const ringGap = 2;
+                    const minWidth = 0.5;
 
-              const maxWidth = 10;
-              const startPad = 17;
+                    const maxWidth = 10;
+                    const startPad = 17;
 
-              const widths: number[] = sorted.map((t) => {
-                const frac = maxDomains ? t.domains.length / maxDomains : 0;
-                return minWidth + frac * (maxWidth - minWidth);
-              });
+                    const widths: number[] = sorted.map((t) => {
+                      const frac = maxDomains
+                        ? t.domains.length / maxDomains
+                        : 0;
+                      return minWidth + frac * (maxWidth - minWidth);
+                    });
 
-              const radii: number[] = widths.reduce(
-                (acc: number[], width: number, i: number) => {
-                  if (i === 0) {
-                    acc.push(startPad + width / 2);
-                  } else {
-                    const prevR = acc[i - 1];
-                    const prevW = widths[i - 1];
-                    acc.push(prevR + prevW / 2 + ringGap + width / 2);
-                  }
-                  return acc;
-                },
-                [],
-              );
+                    const radii: number[] = widths.reduce(
+                      (acc: number[], width: number, i: number) => {
+                        if (i === 0) {
+                          acc.push(startPad + width / 2);
+                        } else {
+                          const prevR = acc[i - 1];
+                          const prevW = widths[i - 1];
+                          acc.push(prevR + prevW / 2 + ringGap + width / 2);
+                        }
+                        return acc;
+                      },
+                      [],
+                    );
 
-              return sorted.map((token: Token, i: number) => {
-                const strokeWidth = widths[i];
-                const r = radii[i];
+                    return sorted.map((token: Token, i: number) => {
+                      const strokeWidth = widths[i];
+                      const r = radii[i];
 
-                const C = 2 * Math.PI * r;
-                const n = token.domains.length || 1;
+                      const C = 2 * Math.PI * r;
+                      const n = token.domains.length || 1;
 
-                const gap = 0;
-                const seg = Math.max(0, (C - n * gap) / n);
+                      const gap = 0;
+                      const seg = Math.max(0, (C - n * gap) / n);
 
-                return (
-                  <g key={token.name} transform="rotate(-90 100 100)">
-                    {token.domains.map((domain: string, index: number) => (
-                      <circle
-                        key={`${token.name}:${domain}:${index}`}
-                        cx="80"
-                        cy="100"
-                        r={r}
-                        fill="none"
-                        stroke={COLORS[(i * 7 + index * 13) % COLORS.length]}
-                        strokeWidth={strokeWidth}
-                        strokeOpacity={token.domains.length === 1 ? 0.3 : 0.9}
-                        strokeLinecap="butt"
-                        strokeDasharray={`${seg} ${C}`}
-                        strokeDashoffset={-(index * (seg + gap))}
-                      >
-                        <title>
-                          {`${token.name} - ${token.domains.length} sites`}
-                        </title>
-                      </circle>
+                      return (
+                        <g key={token.name} transform="rotate(-90 100 100)">
+                          {token.domains.map(
+                            (domain: string, index: number) => (
+                              <circle
+                                key={`${token.name}:${domain}:${index}`}
+                                cx="80"
+                                cy="100"
+                                r={r}
+                                fill="none"
+                                stroke={
+                                  COLORS[(i * 7 + index * 13) % COLORS.length]
+                                }
+                                strokeWidth={strokeWidth}
+                                strokeOpacity={
+                                  token.domains.length === 1 ? 0.3 : 0.9
+                                }
+                                strokeLinecap="butt"
+                                strokeDasharray={`${seg} ${C}`}
+                                strokeDashoffset={-(index * (seg + gap))}
+                              >
+                                <title>
+                                  {`${token.name} - ${token.domains.length} sites`}
+                                </title>
+                              </circle>
+                            ),
+                          )}
+                        </g>
+                      );
+                    });
+                  })()}
+                </svg>
+
+                <div {...stylex.props(smallCards.container)}>
+                  {[...overview.tokens]
+                    .sort((a, b) => b.domains.length - a.domains.length)
+                    .map((token, i) => (
+                      <div key={i} {...stylex.props(smallCards.card)}>
+                        <div>
+                          {token.name.replace(".json", "").replace("gsk-", "")}
+                        </div>
+                        <ol {...stylex.props(smallCards.list)}>
+                          {token.domains.map((domain) => (
+                            <li key={domain}>{domain}</li>
+                          ))}
+                        </ol>
+                      </div>
                     ))}
-                  </g>
-                );
-              });
-            })()}
-          </svg>
-
-          <div {...stylex.props(smallCards.container)}>
-            {[...overview.tokens]
-              .sort((a, b) => b.domains.length - a.domains.length)
-              .map((token, i) => (
-                <div key={i} {...stylex.props(smallCards.card)}>
-                  <div>
-                    {token.name.replace(".json", "").replace("gsk-", "")}
-                  </div>
-                  <ol {...stylex.props(smallCards.list)}>
-                    {token.domains.map((domain) => (
-                      <li key={domain}>{domain}</li>
-                    ))}
-                  </ol>
                 </div>
-              ))}
-          </div>
-        </div>
-      </section>
+              </div>
+            </section>
 
-      <main {...stylex.props(layouts.main)}>
-        <div className="text-center">
-          <ChartBarDecreasing color="rgb(30, 41, 75)" size={40} />
-          <h2 {...stylex.props(typography.h2)}>Component Usage</h2>
-        </div>
-        <div {...stylex.props(fonts.description)}>
-          This chart provides a comparative view of component deployment volume,
-          identifying which components are most heavily leveraged within the
-          current implementation landscape.
-        </div>
-        <HorizontalBarChart
-          horizontal={true}
-          barBackgroundColor="#1e294b"
-          barColor="#79C1D1"
-          data={conformedSorted}
-        />
-        <div {...stylex.props(legal.default)}>
-          The following core infrastructure components have been excluded to
-          focus attention on optional and content-driven components.
-        </div>
-        <Chips list={excludedList} />
-      </main>
-      <section {...stylex.props(cards.container)}>
-        <div {...stylex.props(cards.card)}>
-          <Newspaper color="#0f172a" size={30} />
-          <h2 {...stylex.props(fonts.h3)}>Latest 10 Pages</h2>
-          <dl>
-            {overview.latestPages.slice(0, 10).map((page, i) => (
-              <Fragment key={i}>
-                <dt {...stylex.props(list.title)}>
-                  <a target="_blank" href={page.url.toLowerCase()}>
-                    {page.url.toLowerCase()}
-                  </a>
-                </dt>
-                <dd {...stylex.props(list.description)}>
-                  {new Date(page.lastModified).toLocaleString()}
-                </dd>
-              </Fragment>
-            ))}
-          </dl>
-        </div>
-      </section>
+            <main {...stylex.props(layouts.main)}>
+              <div className="text-center">
+                <ChartBarDecreasing color="rgb(30, 41, 75)" size={40} />
+                <h2 {...stylex.props(typography.h2)}>Component Usage</h2>
+              </div>
+              <div {...stylex.props(fonts.description)}>
+                This chart provides a comparative view of component deployment
+                volume, identifying which components are most heavily leveraged
+                within the current implementation landscape.
+              </div>
+              <HorizontalBarChart
+                horizontal={true}
+                barBackgroundColor="#1e294b"
+                barColor="#79C1D1"
+                data={conformedSorted}
+              />
+              <div {...stylex.props(legal.default)}>
+                The following core infrastructure components have been excluded
+                to focus attention on optional and content-driven components.
+              </div>
+              <Chips list={excludedList} />
+            </main>
+            <section {...stylex.props(cards.container)}>
+              <div {...stylex.props(cards.card)}>
+                <Newspaper color="#0f172a" size={30} />
+                <h2 {...stylex.props(fonts.h3)}>Latest 10 Pages</h2>
+                <dl>
+                  {overview.latestPages.slice(0, 10).map((page, i) => (
+                    <Fragment key={i}>
+                      <dt {...stylex.props(list.title)}>
+                        <a target="_blank" href={page.url.toLowerCase()}>
+                          {page.url.toLowerCase()}
+                        </a>
+                      </dt>
+                      <dd {...stylex.props(list.description)}>
+                        {new Date(page.lastModified).toLocaleString()}
+                      </dd>
+                    </Fragment>
+                  ))}
+                </dl>
+              </div>
+            </section>
+          </div>
+        </>
+      )}
     </>
   );
 }

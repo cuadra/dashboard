@@ -3,14 +3,20 @@ import * as stylex from "@stylexjs/stylex";
 import Sitemap from "@/src/components/Sitemap/page";
 import { TPage, TChildren } from "@/src/components/Sitemap/sitemap.types";
 import typography from "@/src/styles/typography";
+import Nav from "@/src/components/Nav/Nav";
 export default async function Home({
   searchParams,
 }: {
-  searchParams?: { status?: string };
+  searchParams: Promise<{ user?: string; pass?: string }>;
 }) {
-  const { status = "all" } = searchParams ?? {};
-
-  void status;
+  const params = await searchParams;
+  let isAuthenticated = false;
+  if (
+    params.user === process.env.USER_NAME &&
+    params.pass === process.env.USER_PASSWORD
+  ) {
+    isAuthenticated = true;
+  }
 
   const website = stylex.create({
     site: {
@@ -137,69 +143,82 @@ export default async function Home({
 
   return (
     <>
-      <header>
-        <h1 {...stylex.props(typography.default, typography.h1)}>Websites</h1>
-      </header>
-      <dl {...stylex.props(inbox.container, inbox.hideMobile)}>
-        <dt {...stylex.props(inbox.domain)}>Domain</dt>
-        <dd {...stylex.props(inbox.definition, inbox.clientlib)}>
-          <span {...stylex.props()}>Clientlib:</span>
-        </dd>
-        <dd {...stylex.props(inbox.definition, inbox.token)}>
-          <span {...stylex.props()}>Token:</span>
-        </dd>
-        <dd {...stylex.props(inbox.definition, inbox.components)}>
-          <span {...stylex.props()}>Components:</span>
-        </dd>
-        <dd {...stylex.props(inbox.definition, inbox.instances)}>
-          <span {...stylex.props()}>Instances:</span>
-        </dd>
-        <dd {...stylex.props(inbox.definition, inbox.modified)}>
-          <span {...stylex.props()}>Last Modified: </span>
-        </dd>
-      </dl>
+      {isAuthenticated && (
+        <>
+          <Nav user={params.user} pass={params.pass} />
+          <div className="container">
+            <header>
+              <h1 {...stylex.props(typography.default, typography.h1)}>
+                Websites
+              </h1>
+            </header>
+            <dl {...stylex.props(inbox.container, inbox.hideMobile)}>
+              <dt {...stylex.props(inbox.domain)}>Domain</dt>
+              <dd {...stylex.props(inbox.definition, inbox.clientlib)}>
+                <span {...stylex.props()}>Clientlib:</span>
+              </dd>
+              <dd {...stylex.props(inbox.definition, inbox.token)}>
+                <span {...stylex.props()}>Token:</span>
+              </dd>
+              <dd {...stylex.props(inbox.definition, inbox.components)}>
+                <span {...stylex.props()}>Components:</span>
+              </dd>
+              <dd {...stylex.props(inbox.definition, inbox.instances)}>
+                <span {...stylex.props()}>Instances:</span>
+              </dd>
+              <dd {...stylex.props(inbox.definition, inbox.modified)}>
+                <span {...stylex.props()}>Last Modified: </span>
+              </dd>
+            </dl>
 
-      {websites.websites.map((item, i) => (
-        <dl key={i} {...stylex.props(inbox.container)}>
-          <dt {...stylex.props(inbox.domain)}>{item.domain}</dt>
-          <dd {...stylex.props(inbox.definition, inbox.clientlib)}>
-            <span {...stylex.props(inbox.details)}>Clientlib:</span>{" "}
-            {item.clientlib}
-          </dd>
-          <dd {...stylex.props(inbox.definition, inbox.token)}>
-            <span {...stylex.props(inbox.details)}>Token:</span>{" "}
-            {item.designToken}
-          </dd>
-          <dd {...stylex.props(inbox.definition, inbox.components)}>
-            <span {...stylex.props(inbox.details)}>Total components:</span>{" "}
-            {item.componentCount}
-          </dd>
-          <dd {...stylex.props(inbox.definition, inbox.instances)}>
-            <span {...stylex.props(inbox.details)}>Instances:</span>{" "}
-            {item.totalInstances}
-          </dd>
-          <dd {...stylex.props(inbox.definition, inbox.modified)}>
-            <span {...stylex.props(inbox.details)}>Last Modified: </span>
-            {new Date(item.lastModified).toLocaleString("en-US", {
-              dateStyle: "short",
-              timeStyle: "short",
-            })}
-          </dd>
-        </dl>
-      ))}
-      <br />
-      <br />
-      <div {...stylex.props(website.hideMobile)}>
-        <header>
-          <h1 {...stylex.props(typography.default, typography.h1)}>Sitemaps</h1>
-        </header>
-        {mapping.map((item, i) => (
-          <div key={i} {...stylex.props(website.site)}>
-            <h2>{item.url}</h2>
-            <Sitemap page={item} />
+            {websites.websites.map((item, i) => (
+              <dl key={i} {...stylex.props(inbox.container)}>
+                <dt {...stylex.props(inbox.domain)}>{item.domain}</dt>
+                <dd {...stylex.props(inbox.definition, inbox.clientlib)}>
+                  <span {...stylex.props(inbox.details)}>Clientlib:</span>{" "}
+                  {item.clientlib}
+                </dd>
+                <dd {...stylex.props(inbox.definition, inbox.token)}>
+                  <span {...stylex.props(inbox.details)}>Token:</span>{" "}
+                  {item.designToken}
+                </dd>
+                <dd {...stylex.props(inbox.definition, inbox.components)}>
+                  <span {...stylex.props(inbox.details)}>
+                    Total components:
+                  </span>{" "}
+                  {item.componentCount}
+                </dd>
+                <dd {...stylex.props(inbox.definition, inbox.instances)}>
+                  <span {...stylex.props(inbox.details)}>Instances:</span>{" "}
+                  {item.totalInstances}
+                </dd>
+                <dd {...stylex.props(inbox.definition, inbox.modified)}>
+                  <span {...stylex.props(inbox.details)}>Last Modified: </span>
+                  {new Date(item.lastModified).toLocaleString("en-US", {
+                    dateStyle: "short",
+                    timeStyle: "short",
+                  })}
+                </dd>
+              </dl>
+            ))}
+            <br />
+            <br />
+            <div {...stylex.props(website.hideMobile)}>
+              <header>
+                <h1 {...stylex.props(typography.default, typography.h1)}>
+                  Sitemaps
+                </h1>
+              </header>
+              {mapping.map((item, i) => (
+                <div key={i} {...stylex.props(website.site)}>
+                  <h2>{item.url}</h2>
+                  <Sitemap page={item} />
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
+        </>
+      )}
     </>
   );
 }

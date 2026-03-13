@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
+
 import { Manrope } from "next/font/google";
-import Nav from "@/src/components/Nav/Nav";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -26,10 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} antialiased`}>
-        <Nav />
-        <main className="container">{children}</main>
-      </body>
+      <body className={`${manrope.className} antialiased`}>{children}</body>
     </html>
   );
 }
