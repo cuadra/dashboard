@@ -5,7 +5,13 @@ import { usePathname } from "next/navigation";
 import { AppWindow, Settings, Bug, House } from "lucide-react";
 import * as stylex from "@stylexjs/stylex";
 import { nav } from "./Nav.stylex";
-export default () => {
+export default ({
+  user,
+  pass,
+}: {
+  user: string | undefined;
+  pass: string | undefined;
+}) => {
   const pathname = usePathname();
 
   const activeNavStyle = new Map();
@@ -17,24 +23,32 @@ export default () => {
   return (
     <nav {...stylex.props(nav.navigation, activeNavStyle.get(pathname))}>
       <div {...stylex.props(nav.container)}>
-        <Link {...stylex.props(nav.link)} href="/" aria-label="Overview">
+        <Link
+          {...stylex.props(nav.link)}
+          href={`/?user=${user}&pass=${pass}`}
+          aria-label="Overview"
+        >
           <House />
         </Link>
         <Link
           {...stylex.props(nav.link)}
-          href="/components"
+          href={`/components?user=${user}&pass=${pass}`}
           aria-label="Components"
         >
           <Settings />
         </Link>
         <Link
           {...stylex.props(nav.link)}
-          href="/websites"
+          href={`/websites?user=${user}&pass=${pass}`}
           aria-label="Websites"
         >
           <AppWindow />
         </Link>
-        <Link {...stylex.props(nav.link)} href="/bugs" aria-label="Errors">
+        <Link
+          {...stylex.props(nav.link)}
+          href={`/bugs?user=${user}&pass=${pass}`}
+          aria-label="Errors"
+        >
           <Bug />
         </Link>
       </div>
