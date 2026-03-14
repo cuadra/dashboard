@@ -46,3 +46,28 @@ export const condensePageComponent = (
   }
   return pageComponentTotals;
 };
+
+export const crawlPage = (node: unknown, components: string[]) => {
+  if (!isRecord(node)) return components;
+
+  const nodeType = node[":type"];
+  if (typeof nodeType === "string") {
+    const t = nodeType;
+    components.push(t);
+  }
+
+  const items = node[":items"];
+  if (isRecord(items)) {
+    for (const child of Object.values(items)) {
+      crawlPage(child, components);
+    }
+  }
+
+  for (const v of Object.values(node)) {
+    if (Array.isArray(v)) {
+      v.forEach((child) => crawlPage(child, components));
+    }
+  }
+
+  return components;
+};

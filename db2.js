@@ -1,55 +1,9 @@
 import scrutari from "scrutari";
 import { mkdir, writeFile } from "node:fs/promises";
 import { domains } from "./src/data/config.js";
-import { crawler, condensePageComponent } from "./crawler.ts";
-
-const toSafePathSegment = (value) =>
-  String(value)
-    .trim()
-    .replace(/[^a-zA-Z0-9._-]+/g, "-")
-    .replace(/^-+|-+$/g, "") || "index";
-
-const serializePageForJson = (page) => ({
-  ...page,
-  components: [...page.components.entries()]
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([name, value]) => ({
-      name,
-      ...value,
-    })),
-});
-
-const getPageJsonOutput = (stamp, page) => {
-  const url = new URL(page.url);
-  const domain = toSafePathSegment(page.domain);
-  const pathSegments = url.pathname
-    .split("/")
-    .filter(Boolean)
-    .map((segment) => toSafePathSegment(decodeURIComponent(segment)));
-  const querySuffix = url.search
-    ? `--${toSafePathSegment(url.search.slice(1))}`
-    : "";
-
-  if (pathSegments.length === 0) {
-    return {
-      dir: `./src/data/${stamp}/websites/${domain}`,
-      file: `index${querySuffix}.json`,
-    };
-  }
-
-  const fileStem = `${pathSegments[pathSegments.length - 1]}${querySuffix}`;
-  const nestedDir = pathSegments.slice(0, -1).join("/");
-
-  return {
-    dir: nestedDir
-      ? `./src/data/${stamp}/websites/${domain}/${nestedDir}`
-      : `./src/data/${stamp}/websites/${domain}`,
-    file: `${fileStem}.json`,
-  };
-};
+import { crawlPage } from "./crawler.ts";
 
 const sites = [];
-const errorMessages = new Map();
 
 for (const domain of domains) {
   const s = await scrutari({ origin: `https://${domain}` });
@@ -59,11 +13,19 @@ for (const domain of domains) {
 
 const sets = sites.flat();
 
+const domainMap = new Map();
+
+const getDomain = (url) => {
+  url = new URL(url);
+  return url.hostname.replace(/^www\./, "");
+};
+
 const SitePromises = sets.map(async (url) => {
   //returns pageObject
   const j = `${url}.model.json`;
-  const urlObj = new URL(url);
-  let domain = urlObj.hostname.replace(/^www\./, "");
+
+  let domain = getDomain(url);
+  domainMap.set(domain, {});
 
   const response = await fetch(j);
 
@@ -80,11 +42,14 @@ const SitePromises = sets.map(async (url) => {
 
   //Collect all clientlibs
   const clientlib = String(res.clientAppVersion ?? "Not Found");
-  const pageComponentMap = crawler(res, clientlib, url, new Map());
-  const pageComponents = condensePageComponent(pageComponentMap);
+  //const pageComponentMap = crawler(res, clientlib, url, new Map());
+
+  const pageComponentsTest = crawlPage(res, []);
+
+  //const pageComponents = condensePageComponent(pageComponentMap);
   const metadata = res["metaTags"] || {};
   const whitelistedExternalDomains = res["whitelistedExternalDomains"] || [];
-  const trealiumDatalayer = res["trealiumDataLayer"] || {};
+  const tealiumDatalayer = res["tealiumDataLayer"] || {};
 
   const wizardAttributes = res["wizardAttributes"] || {};
   const designToken = res["designTokenFilePath"] || null;
@@ -97,31 +62,19 @@ const SitePromises = sets.map(async (url) => {
     clientlib: clientlib,
     designToken: designToken,
     googleAPIKey: googleAPIKey,
-    trealiumDataLayer: trealiumDatalayer,
+    tealiumDataLayer: tealiumDatalayer,
     wizardAttributes: wizardAttributes,
     whitelistedExternalDomains: whitelistedExternalDomains,
     metadata: metadata,
     domain: domain,
     url: url,
-    components: pageComponents,
+    components: pageComponentsTest,
     raw: res,
   };
   return { ok: true, pageObject: pageObject };
 });
 
 const results = await Promise.allSettled(SitePromises);
-const processedPages = [];
-const errorPages = [];
-const errors = {};
-const overview = {
-  clientlibs: new Map(),
-  components: new Map(), //include instances
-  latestPages: new Map(),
-  totalSites: domains.length,
-  totalPages: 0,
-  tokens: new Map(),
-};
-const allSites = new Map();
 
 const metadataTags = [
   "og:title",
@@ -133,107 +86,86 @@ const metadataTags = [
 ];
 
 const currentTime = new Date().toISOString();
-const component_set = {
-  created_at: currentTime,
-  components: new Set(),
+
+const insetObject = (table, values) => {
+  //insert into table with values, return ID
+  console.log(`Inserting into ${table}:`, values);
+  return 0;
 };
 
 const snapshots = {
   created_at: currentTime,
 };
-//return sanpshot_id
 
-//console.log("Processing results...", results);
+const snapshot_id = insetObject("snapshot", snapshots);
+
+for (const key of domainMap.keys()) {
+  //add domain to site table, return ID, then set in map
+  domainMap.set(key, { id: 0, snapshot_id: snapshot_id });
+}
+
 results.forEach((r) => {
   if (r.status === "fulfilled") {
     if (r.value.ok) {
-      //console.log(`Processed:`, r.value.pageObject);
-
-      //enter values into table
-      const site_table = {
-        host: r.value.pageObject.domain,
-        clientlib: r.value.pageObject.clientlib,
-        designToken: r.value.pageObject.designToken,
-        created_at: currentTime,
-        //snapshot_id: snapshot_id,
-      };
+      const site_id = domainMap.get(r.value.pageObject.domain).id;
       //return site ID
 
-      const pages_table = {
+      const page_row = {
         path: new URL(r.value.pageObject.url).pathname,
-        domain: r.value.pageObject.domain,
+        designToken: r.value.pageObject.designToken,
+        clientlib: r.value.pageObject.clientlib,
         url: r.value.pageObject.url,
         raw: JSON.stringify(r.value.pageObject.raw),
-        //snapshot_id: snapshot_id,
+        lastModified: r.value.pageObject.lastModified,
+        site_id: site_id,
+        snapshot_id: snapshot_id,
       };
+      const page_id = insetObject("page", page_row);
       //returns page ID
 
-      for (const [key, value] of r.value.pageObject.components) {
-        if (!component_set.has(key)) {
-          //keep pushing to component table like an array
-          component_set.add(key);
-          //returns component_ID
+      const tealiumDatalayer_row = {
+        ...r.value.pageObject.tealiumDatalayer,
+        page_id: page_id,
+        snapshot_id: snapshot_id,
+      };
+      const tealiumDatalayer_id = insetObject(
+        "tealium_datalayer",
+        tealiumDatalayer_row,
+      );
 
-          //keep pushing to page_component_indexes like an array
-          //use page_id, component_id, snapshot_id, instance_count to form new set
-          //return page_component_index_id
-        }
+      const wizardAttributes_row = {
+        ...r.value.pageObject.wizardAttributes,
+        page_id: page_id,
+        snapshot_id: snapshot_id,
+      };
+      const wizardAttributes_id = insetObject(
+        "wizard_attributes",
+        wizardAttributes_row,
+      );
+
+      for (const component of r.value.pageObject.components) {
+        //keep pushing to component table like an array
+
+        const component_row = {
+          name: component,
+          snapshot_id: snapshot_id,
+        };
+        const component_id = insetObject("components", component_row);
+        //returns component_ID
+
+        const page_component_index_row = {
+          page_id: page_id,
+          component_id: component_id,
+          snapshot_id: snapshot_id,
+        };
+        const page_component_index_id = insetObject(
+          "page_component_index",
+          page_component_index_row,
+        );
+        //return ID
       }
 
       //create bugs
-
-      console.log(site_table, pages_table);
-    }
-  }
-});
-
-/*
-
-
-results.forEach((r) => {
-  if (r.status === "fulfilled") {
-    if (r.value.ok) {
-      processedPages.push(r.value.pageObject.url);
-
-      r.value.pageObject.components.forEach((value, key) => {
-        if (overview.components.has(key)) {
-          overview.components.set(key, overview.components.get(key) + 1);
-        } else {
-          overview.components.set(key, 1);
-        }
-      });
-
-      if (allSites.has(r.value.pageObject.domain)) {
-        allSites.get(r.value.pageObject.domain).push(r.value.pageObject);
-      } else {
-        allSites.set(r.value.pageObject.domain, [r.value.pageObject]);
-      }
-
-      //Set overview props
-      if (overview.clientlibs.has(r.value.pageObject.clientlib)) {
-        const arr = overview.clientlibs.get(r.value.pageObject.clientlib);
-        if (!arr.includes(r.value.pageObject.domain)) {
-          arr.push(r.value.pageObject.domain);
-        }
-        overview.clientlibs.set(r.value.pageObject.clientlib, [...arr]);
-      } else {
-        overview.clientlibs.set(r.value.pageObject.clientlib, [
-          r.value.pageObject.domain,
-        ]);
-      }
-
-      if (overview.tokens.has(r.value.pageObject.designToken)) {
-        const arr = overview.tokens.get(r.value.pageObject.designToken);
-        if (!arr.includes(r.value.pageObject.domain)) {
-          arr.push(r.value.pageObject.domain);
-        } else {
-          overview.tokens.set(r.value.pageObject.designToken, [...arr]);
-        }
-      } else {
-        overview.tokens.set(r.value.pageObject.designToken, [
-          r.value.pageObject.domain,
-        ]);
-      }
       const metadata = r.value.pageObject["metadata"] || {};
 
       const normalizeMetaTag = (value) =>
@@ -245,27 +177,26 @@ results.forEach((r) => {
         }
         return value;
       };
+
+      const errors_table = [];
       const metadataTagsLower = metadataTags.map((tag) => tag.toLowerCase());
       const missingTags = new Set(metadataTagsLower);
-      const pushError = (message) => {
-        if (errorMessages.has(r.value.pageObject.url)) {
-          const messages = errorMessages.get(r.value.pageObject.url);
-          messages.push(message);
-          errorMessages.set(r.value.pageObject.url, messages);
-        } else {
-          errorMessages.set(r.value.pageObject.url, [message]);
-        }
-      };
 
       metadata.forEach((meta) => {
         if (meta.name) {
           const nameLower = normalizeMetaTag(meta.name);
           const missingTagKey = resolveMissingTagKey(nameLower);
+
           if (missingTags.has(missingTagKey)) {
             missingTags.delete(missingTagKey);
           }
           if (!metadataTagsLower.includes(nameLower)) {
-            pushError(`Unexpected metadata name: ${meta.name}`);
+            errors_table.push({
+              page_id: page_id,
+              type: "metadata",
+              message: `Unexpected metadata name: ${meta.name}`,
+              snapshot_id: snapshot_id,
+            });
           }
         }
 
@@ -276,170 +207,29 @@ results.forEach((r) => {
             missingTags.delete(missingTagKey);
           }
           if (!metadataTagsLower.includes(propertyLower)) {
-            pushError(`Unexpected metadata property: ${meta.property}`);
+            errors_table.push({
+              page_id: page_id,
+              type: "metadata",
+              message: `Unexpected metadata name: ${meta.property}`,
+              snapshot_id: snapshot_id,
+            });
           }
         }
       });
 
       //check if each metadataTag is present, if not add error message
       missingTags.forEach((tag) => {
-        pushError(`Missing metadata tag: ${tag}`);
+        errors_table.push({
+          page_id: page_id,
+          type: "metadata",
+          message: `Missing metadata tag: ${tag}`,
+          snapshot_id: snapshot_id,
+        });
       });
-
-      //check datalayer
-      //quick dom checks
-
-      overview.totalPages += 1;
-    } else errorPages.push(r.value.pageObject);
-  } else {
-    errorPages.push("(promise rejected)");
+      //insert all errors for page
+      errors_table.forEach((error) => insetObject("errors", error));
+    }
   }
 });
-*/
 
-/*
-errors.errorMessages = Object.fromEntries(errorMessages);
-
-overview.latestPages = [...allSites.values()]
-  .flat()
-  .sort((a, b) => b.lastModified - a.lastModified)
-  .map((item) => {
-    return { url: item.url, lastModified: item.lastModified };
-  })
-  .slice(0, 40);
-
-//console.log(overview);
-
-//change map objects to arrays for JSON serialization
-
-overview.clientlibs = [...overview.clientlibs.entries()].map(
-  ([key, value]) => ({
-    name: key,
-    domains: value,
-  }),
-);
-
-overview.components = [...overview.components.entries()].map(
-  ([key, value]) => ({
-    name: key,
-    instances: value,
-  }),
-);
-overview.tokens = [...overview.tokens.entries()].map(([key, value]) => ({
-  name: key,
-  domains: value,
-}));
-*/
-
-//console.log(allSites);
-
-//const stamp = new Date().toISOString().split("T")[0];
-
-//await mkdir(`./src/data/${stamp}`, { recursive: true });
-
-/*
- await writeFile(
-  `./src/data/${stamp}/overview.json`,
-  JSON.stringify(overview, null, 2),
-  "utf8",
-);
-
-await writeFile(
-  `./src/data/${stamp}/errors.json`,
-  JSON.stringify(errors, null, 2),
-  "utf8",
-);
-*/
-////////////////////////// create website overview JSON
-
-/*
-await writeFile(
-  `./src/data/${stamp}/websites.json`,
-  JSON.stringify(websitesJson, null, 2),
-  "utf8",
-);
-
-*/
-/*
-await Promise.all(
-  [...allSites.entries()].flatMap(([_, pages]) =>
-    pages.map(async (page) => {
-      const output = getPageJsonOutput(stamp, page);
-      await mkdir(output.dir, { recursive: true });
-      await writeFile(
-        `${output.dir}/${output.file}`,
-        JSON.stringify(serializePageForJson(page), null, 2),
-        "utf8",
-      );
-    }),
-  ),
-);
-*/
-
-const componentsJsonMap = new Map();
-
-for (const [site, siteValue] of allSites) {
-  siteValue.forEach((page) => {
-    for (const [component, componentValue] of page.components) {
-      const pageInstances = componentValue?.total ?? 0;
-      if (!componentsJsonMap.has(component)) {
-        componentsJsonMap.set(component, new Map());
-      }
-
-      const sitesMap = componentsJsonMap.get(component);
-      if (!sitesMap.has(site)) {
-        sitesMap.set(site, {
-          clientlibs: new Set(),
-          totalInstances: 0,
-        });
-      }
-
-      const siteComponentData = sitesMap.get(site);
-      siteComponentData.clientlibs.add(page.clientlib ?? null);
-      siteComponentData.totalInstances += pageInstances;
-    }
-  });
-}
-
-const componentsJson = {
-  components: [...componentsJsonMap.entries()]
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([component, sitesMap]) => {
-      const sites = [...sitesMap.entries()]
-        .sort(([a], [b]) => a.localeCompare(b))
-        .map(([domain, siteData]) => {
-          const clientlibs = [...siteData.clientlibs].filter(
-            (value) => value !== null,
-          );
-          const clientlib =
-            clientlibs.length === 1
-              ? clientlibs[0]
-              : clientlibs.length === 0
-                ? null
-                : "mixed";
-          return {
-            domain,
-            clientlib,
-            totalInstances: siteData.totalInstances,
-          };
-        });
-
-      const totalInstances = sites.reduce(
-        (sum, site) => sum + (site.totalInstances ?? 0),
-        0,
-      );
-
-      return {
-        component,
-        totalInstances,
-        sites,
-      };
-    }),
-};
-/*
-await writeFile(
-  `./src/data/${stamp}/components.json`,
-  JSON.stringify(componentsJson, null, 2),
-  "utf8",
-);
-*/
+console.log("Domains processed:", domainMap);
