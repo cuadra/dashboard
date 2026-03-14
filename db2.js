@@ -1,4 +1,6 @@
 import scrutari from "scrutari";
+import { Client, Pool } from "pg";
+
 import { mkdir, writeFile } from "node:fs/promises";
 import { domains } from "./src/data/config.js";
 import { crawlPage } from "./crawler.ts";
@@ -87,24 +89,48 @@ const metadataTags = [
 
 const currentTime = new Date().toISOString();
 
-const insetObject = (table, values) => {
+const pool = new Pool({
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
+});
+
+const insetObject = async (table, object) => {
   //insert into table with values, return ID
-  console.log(`Inserting into ${table}:`, values);
-  return 0;
+
+  const [keys, values] = Object.entries(object);
+
+  const insetText = `INSERT INTO ${table} (${keys.join(", ")}) VALUES (${keys.map((_, i) => `$${i + 1}`).join(", ")}) RETURNING id`;
+
+  try {
+    const res = await pool.query(insetText, values);
+    return res.rows[0].id;
+  } catch (err) {
+    console.error(`Error inserting into ${table}:`, err);
+  }
 };
 
 const snapshots = {
   created_at: currentTime,
 };
 
-const snapshot_id = insetObject("snapshot", snapshots);
+const snapshot_id = await insetObject("snapshot", snapshots);
 
 for (const key of domainMap.keys()) {
+  const site_row = {
+    domain: key,
+    snapshot_id: snapshot_id,
+  };
+
+  const site_id = await insetObject("site", site_row);
+
   //add domain to site table, return ID, then set in map
   domainMap.set(key, { id: 0, snapshot_id: snapshot_id });
 }
 
-results.forEach((r) => {
+results.forEach(async (r) => {
   if (r.status === "fulfilled") {
     if (r.value.ok) {
       const site_id = domainMap.get(r.value.pageObject.domain).id;
@@ -120,7 +146,7 @@ results.forEach((r) => {
         site_id: site_id,
         snapshot_id: snapshot_id,
       };
-      const page_id = insetObject("page", page_row);
+      const page_id = await insetObject("page", page_row);
       //returns page ID
 
       const tealiumDatalayer_row = {
@@ -128,7 +154,7 @@ results.forEach((r) => {
         page_id: page_id,
         snapshot_id: snapshot_id,
       };
-      const tealiumDatalayer_id = insetObject(
+      const tealiumDatalayer_id = await insetObject(
         "tealium_datalayer",
         tealiumDatalayer_row,
       );
@@ -138,7 +164,7 @@ results.forEach((r) => {
         page_id: page_id,
         snapshot_id: snapshot_id,
       };
-      const wizardAttributes_id = insetObject(
+      const wizardAttributes_id = await insetObject(
         "wizard_attributes",
         wizardAttributes_row,
       );
@@ -150,7 +176,7 @@ results.forEach((r) => {
           name: component,
           snapshot_id: snapshot_id,
         };
-        const component_id = insetObject("components", component_row);
+        const component_id = await insetObject("components", component_row);
         //returns component_ID
 
         const page_component_index_row = {
@@ -158,7 +184,7 @@ results.forEach((r) => {
           component_id: component_id,
           snapshot_id: snapshot_id,
         };
-        const page_component_index_id = insetObject(
+        const page_component_index_id = await insetObject(
           "page_component_index",
           page_component_index_row,
         );
@@ -227,7 +253,7 @@ results.forEach((r) => {
         });
       });
       //insert all errors for page
-      errors_table.forEach((error) => insetObject("errors", error));
+      errors_table.forEach(async (error) => await insetObject("errors", error));
     }
   }
 });
