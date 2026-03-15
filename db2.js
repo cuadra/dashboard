@@ -1,9 +1,11 @@
+import 'dotenv/config';
 import scrutari from "scrutari";
-import { Client, Pool } from "pg";
 
-import { mkdir, writeFile } from "node:fs/promises";
+import { Pool } from "pg";
+
 import { domains } from "./src/data/config.js";
 import { crawlPage } from "./crawler.ts";
+
 
 const sites = [];
 
@@ -49,7 +51,7 @@ const SitePromises = sets.map(async (url) => {
   const pageComponentsTest = crawlPage(res, []);
 
   //const pageComponents = condensePageComponent(pageComponentMap);
-  const metadata = res["metaTags"] || {};
+  const metadata = res["metaTags"] || [];
   const whitelistedExternalDomains = res["whitelistedExternalDomains"] || [];
   const tealiumDatalayer = res["tealiumDataLayer"] || {};
 
@@ -87,36 +89,62 @@ const metadataTags = [
   "twitter:image",
 ];
 
-const currentTime = new Date().toISOString();
+const tableNames = new Set([
+  "snapshots",
+  "sites",
+  "pages",
+  "tealium_datalayer",
+  "wizard_attributes",
+  "components",
+  "page_component_index",
+  "errors",
+])
+
+
 
 const pool = new Pool({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
+  port: Number(process.env.DB_PORT),
 });
 
-const insetObject = async (table, object) => {
+const insetObject = async (client, table, object) => {
   //insert into table with values, return ID
 
-  const [keys, values] = Object.entries(object);
+  if(!tableNames.has(table)){
+    throw new Error(`Table ${table} is not allowed`);
+  }
+
+  const entries = Object.entries(object);
+  const keys = entries.map(([key]) => key);
+  const values = entries.map(([, value]) => value);
 
   const insetText = `INSERT INTO ${table} (${keys.join(", ")}) VALUES (${keys.map((_, i) => `$${i + 1}`).join(", ")}) RETURNING id`;
 
   try {
-    const res = await pool.query(insetText, values);
+    const res = await client.query(insetText, values);
     return res.rows[0].id;
   } catch (err) {
     console.error(`Error inserting into ${table}:`, err);
+    throw err;
   }
 };
 
-const snapshots = {
-  created_at: currentTime,
-};
 
-const snapshot_id = await insetObject("snapshot", snapshots);
+const client = await pool.connect();
+
+
+try{
+await client.query("BEGIN");
+
+const r = await client.query(
+  `INSERT INTO snapshots DEFAULT VALUES RETURNING id`
+);
+
+const snapshot_id = r.rows[0].id;
+
 
 for (const key of domainMap.keys()) {
   const site_row = {
@@ -124,31 +152,46 @@ for (const key of domainMap.keys()) {
     snapshot_id: snapshot_id,
   };
 
-  const site_id = await insetObject("site", site_row);
+  const site_id = await insetObject(client, "sites", site_row);
 
   //add domain to site table, return ID, then set in map
-  domainMap.set(key, { id: 0, snapshot_id: snapshot_id });
+  domainMap.set(key, { id: site_id, snapshot_id: snapshot_id });
 }
 
-results.forEach(async (r) => {
+const getOrCreateComponentId = async (client, name, snapshot_id) => {
+  const query = `
+    INSERT INTO components (name, snapshot_id)
+    VALUES ($1, $2)
+    ON CONFLICT (snapshot_id, name)
+    DO UPDATE SET name = EXCLUDED.name
+    RETURNING id
+  `;
+
+  const res = await client.query(query, [name, snapshot_id]);
+  return res.rows[0].id;
+};
+
+for (const r of results) {
   if (r.status === "fulfilled") {
     if (r.value.ok) {
       const site_id = domainMap.get(r.value.pageObject.domain).id;
       //return site ID
+console.log('////// last modified', r.value.pageObject.lastModified)
 
       const page_row = {
         path: new URL(r.value.pageObject.url).pathname,
-        designToken: r.value.pageObject.designToken,
+        design_token: r.value.pageObject.designToken,
         clientlib: r.value.pageObject.clientlib,
         url: r.value.pageObject.url,
-        raw: JSON.stringify(r.value.pageObject.raw),
-        lastModified: r.value.pageObject.lastModified,
+        raw: r.value.pageObject.raw,
+        last_modified: new Date(Number(r.value.pageObject.lastModified)).toISOString(),
         site_id: site_id,
         snapshot_id: snapshot_id,
       };
-      const page_id = await insetObject("page", page_row);
+      const page_id = await insetObject(client,"pages", page_row);
       //returns page ID
 
+      /*
       const tealiumDatalayer_row = {
         ...r.value.pageObject.tealiumDatalayer,
         page_id: page_id,
@@ -168,31 +211,30 @@ results.forEach(async (r) => {
         "wizard_attributes",
         wizardAttributes_row,
       );
+      */
 
       for (const component of r.value.pageObject.components) {
         //keep pushing to component table like an array
 
-        const component_row = {
-          name: component,
-          snapshot_id: snapshot_id,
-        };
-        const component_id = await insetObject("components", component_row);
+        const component_id = await getOrCreateComponentId(client, {name:component}, snapshot_id);
         //returns component_ID
 
         const page_component_index_row = {
           page_id: page_id,
           component_id: component_id,
           snapshot_id: snapshot_id,
+          site_id: site_id,
         };
-        const page_component_index_id = await insetObject(
+        await insetObject(
+          client,
           "page_component_index",
           page_component_index_row,
         );
-        //return ID
+
       }
 
       //create bugs
-      const metadata = r.value.pageObject["metadata"] || {};
+      const metadata = r.value.pageObject["metadata"] || [];
 
       const normalizeMetaTag = (value) =>
         typeof value === "string" ? value.toLowerCase() : "";
@@ -219,9 +261,10 @@ results.forEach(async (r) => {
           if (!metadataTagsLower.includes(nameLower)) {
             errors_table.push({
               page_id: page_id,
-              type: "metadata",
-              message: `Unexpected metadata name: ${meta.name}`,
+              bug_type: "metadata",
+              bug_message: `Unexpected metadata name: ${meta.name}`,
               snapshot_id: snapshot_id,
+              severity: "low",
             });
           }
         }
@@ -235,9 +278,10 @@ results.forEach(async (r) => {
           if (!metadataTagsLower.includes(propertyLower)) {
             errors_table.push({
               page_id: page_id,
-              type: "metadata",
-              message: `Unexpected metadata name: ${meta.property}`,
+              bug_type: "metadata",
+              bug_message: `Unexpected metadata name: ${meta.property}`,
               snapshot_id: snapshot_id,
+              severity: "low",
             });
           }
         }
@@ -247,15 +291,27 @@ results.forEach(async (r) => {
       missingTags.forEach((tag) => {
         errors_table.push({
           page_id: page_id,
-          type: "metadata",
-          message: `Missing metadata tag: ${tag}`,
+          bug_type: "metadata",
+          bug_message: `Missing metadata tag: ${tag}`,
           snapshot_id: snapshot_id,
+          severity: "low",
         });
       });
       //insert all errors for page
-      errors_table.forEach(async (error) => await insetObject("errors", error));
+      for (const error of errors_table) {
+        await insetObject(client, "errors", error);
+      }
     }
   }
-});
+};
 
-console.log("Domains processed:", domainMap);
+await client.query("COMMIT");
+
+}catch(err){
+  console.error("Transaction error:", err);
+  await client.query("ROLLBACK");
+  throw err;
+} finally {
+  client.release();
+  await pool.end();
+}
